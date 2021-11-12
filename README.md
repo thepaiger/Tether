@@ -4,9 +4,19 @@
 
 Tether is an e-Commerce application dedicated to high-performance, luxury, electric sports cars or supercars. Browse the site to see beautiful vehicles that are both high-tech and good for the environment. Our goal is to streamline access to purchasing environmentally-friendly supercars.
 
+## Team Members
+
+- Darryl Falls (GitHub: DarrylFalls)
+- Mike Nezzer (GitHub: mnezz113)
+- Paige Hoeppner (GitHub: thepaiger)
+- Tyrus Henry (GitHub: TyrusHenry0x)
+- Brianna Groden (GitHub: bgcuse603) 
+
 ## Wireframe
 
 <a href="https://imgur.com/Hr9zLit"><img src="https://i.imgur.com/Hr9zLit.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/yhnwyPy"><img src="https://i.imgur.com/yhnwyPy.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/5xK8WIv"><img src="https://i.imgur.com/5xK8WIv.jpg" title="source: imgur.com" /></a>
 
 To view complete project wireframes please visit,
 Figma Project Page: https://www.figma.com/file/hL5hx1s2vx825bTnfZORZS/Project-3?node-id=0%3A1
@@ -66,8 +76,8 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 |  Day | Deliverable | Status
 |---|---| ---|
 |Nov 10| Concept Approval, GitHub Setup, Development of "Team Expectations" document | Complete
-|Nov 11| Wireframes and Component Struture | Incomplete
-|Nov 12| Project Approval | Incomplete
+|Nov 11| Wireframes and Component Struture | Complete
+|Nov 12| Project Approval | Complete
 |Nov 13 - 14| Back End Development | Incomplete
 |Nov 15 - 16| Front End and Authentication | Incomplete
 |Nov 17| Debugging | Incomplete
