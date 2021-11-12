@@ -3,6 +3,7 @@
 ## Overview
 
 Tether is an e-Commerce application dedicated to high-performance, luxury, electric sports cars or supercars. 
+
 {Required - 4 to 5 non-technical sentences, summarizing the features, functions, and goals.}
 
 ## Wireframe
@@ -75,16 +76,3 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 |Nov 18 - 19| Styling | Incomplete
 |Nov 20 - 21| Testing and Documentation update | Incomplete
 |Nov 22| Presentation| Incomplete
-
-## Timeframes
-
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| Planning - Develop "Team Expectations" document | H | 3hrs| 2.5hrs | 2.5hrs |
-| Planning - Component structure | H | 3hrs| 3.5hrs | 3.5hrs |
-| Planning - Create application wireframes | H | 3hrs| 2.5hrs | 2.5hrs |
-| Planning - README.md documentation | H | 3hrs| 2.5hrs | 2.5hrs |
-| Server - Pseudo Code | H | 3hrs| 2.5hrs | 2.5hrs |
-| Server - Construct API Data | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
-
