@@ -32,12 +32,15 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 - Document project requirements, schedule and deliverables within README.md file
 - Develop component hierachy & wireframes 
 ### Client (Front End)
-- Home Page
-- Sign In 
-- Create an Account
-- Account Info
-- View Cars
-- Shopping Cart
+- Home Page (Not Signed In)
+- Home Page (Signed In)
+- Sign In
+- Sign Up ("Create an Account")
+- User Account ("Account Info")
+- User Account (Edit Info)
+- Browse Cars
+- Car Detail
+- Cart Edit ("Shopping Cart")
 ### Server (Back End)
 - Login/Authentication 
 - Adding/Saving/Updating/Deleting of Users (CRUD)
@@ -58,7 +61,7 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Nov 10| Concept Approval, GitHub Setup, Development Team Expectations Document | Complete
+|Nov 10| Concept Approval, GitHub Setup, Development of "Team Expectations" document | Complete
 |Nov 11| Wireframes and Component Struture | Incomplete
 |Nov 12| Project Approval | Incomplete
 |Nov 13 - 14| Back End Development | Incomplete
@@ -72,9 +75,11 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Planning - Team Expectations document | H | 3hrs| 2.5hrs | 2.5hrs |
+| Planning - Develop "Team Expectations" document | H | 3hrs| 2.5hrs | 2.5hrs |
 | Planning - Component structure | H | 3hrs| 3.5hrs | 3.5hrs |
-| Planning - Application wireframes | H | 3hrs| 2.5hrs | 2.5hrs |
+| Planning - Create application wireframes | H | 3hrs| 2.5hrs | 2.5hrs |
 | Planning - README.md documentation | H | 3hrs| 2.5hrs | 2.5hrs |
+| Server - Pseudo Code | H | 3hrs| 2.5hrs | 2.5hrs |
+| Server - Construct API Data | H | 3hrs| 2.5hrs | 2.5hrs |
 | Total | H | 6hrs| 5hrs | 5hrs |
 
