@@ -8,6 +8,6 @@ router.get('/cars', controllers.getCars)
 router.get('/cars/:id', controllers.getCar)
 router.post('/cars', controllers.createCar)
 router.put('/cars/:id', controllers.updateCar)
-router.post('/cars/:id', controllers.deleteCar)
+router.delete('/cars/:id', controllers.deleteCar)
 
 export default router
