@@ -1,4 +1,4 @@
-# Project 3: Tether
+# Tether
 
 ## Overview
 
