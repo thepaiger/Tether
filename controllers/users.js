@@ -18,11 +18,23 @@ const today = new Date()
 const exp = new Date(today)
 exp.setDate(today.getDate() + 30)
 
+export const getUsers = async (req, res) => {
+  try {
+    const users = await User.find()
+    res.json(users)
+  } catch (error) {
+    console.log(error.message)
+    res.status(500).json({ error: error.message })
+  }
+}
+
+
+
 export const signUp = async (req, res) => {
   try {
     const { name, email, password, shopping_cart } = req.body
     const password_digest = await bcrypt.hash(password, SALT_ROUNDS)
-    const name = new User({
+    const user = new User({
       name,
       email,
       password_digest,
