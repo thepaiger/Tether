@@ -14,9 +14,9 @@ Figma Project Page: https://www.figma.com/file/hL5hx1s2vx825bTnfZORZS/Project-3?
 
 ## Component Hierarchy
 
-<a href="https://imgur.com/Lev8VFW"><img src="https://i.imgur.com/Lev8VFW.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/i0yNcmZ"><img src="https://i.imgur.com/i0yNcmZ.jpg" title="source: imgur.com" /></a>
 
-Whimsical Flowchart: https://whimsical.com/component-structure-GVBiwLLYnorswDmqqiE5Hm
+Whimsical Flowchart: https://whimsical.com/componentstructurerev01-Wufbh6jN6k2we83hzLuJLb
 
 ## Schema
 
@@ -32,6 +32,7 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 - Document project requirements, schedule and deliverables within README.md file
 - Develop component hierachy & wireframes 
 ### Client (Front End)
+
 - Home Page (Not Signed In)
 - Home Page (Signed In)
 - Sign In
@@ -56,6 +57,10 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 - All team members must issue commits throughout the duration of the project.
 ### GitHub Projects Board
 (INSERT LINK)
+
+## POST MVP
+### Front End and Back End
+- Shopping Cart
 
 ## Project Schedule
 
