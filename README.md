@@ -2,9 +2,7 @@
 
 ## Overview
 
-Tether is an e-Commerce application dedicated to high-performance, luxury, electric sports cars or supercars. 
-
-{Required - 4 to 5 non-technical sentences, summarizing the features, functions, and goals.}
+Tether is an e-Commerce application dedicated to high-performance, luxury, electric sports cars or supercars. Browse the site to see beautiful vehicles that are both high-tech and good for the environment. Our goal is to streamline access to purchasing environmentally-friendly supercars.
 
 ## Wireframe
 
@@ -21,7 +19,7 @@ Whimsical Flowchart: https://whimsical.com/componentstructurerev01-Wufbh6jN6k2we
 
 ## Schema
 
-<a href="https://imgur.com/FRlOpxz"><img src="https://i.imgur.com/FRlOpxz.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/gd38Vdt"><img src="https://i.imgur.com/gd38Vdt.jpg" title="source: imgur.com" /></a>
 
 ## Team Expectations
 Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0SViwj0GDZgNCnhieAhf7pc/edit?usp=sharing
@@ -57,7 +55,7 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 - Commits should total or exceed 50
 - All team members must issue commits throughout the duration of the project.
 ### GitHub Projects Board
-(INSERT LINK)
+- Link: https://github.com/DarrylFalls/P3/projects/1
 
 ## POST MVP
 ### Front End and Back End
