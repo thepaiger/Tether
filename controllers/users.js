@@ -44,9 +44,10 @@ export const signUp = async (req, res) => {
     await user.save()
 
     const payload = {
-      id: user._id,
+      _id: user._id,
       name: user.name,
       email: user.email,
+      shopping_cart: user.shopping_cart,
       exp: parseInt(exp.getTime() / 1000),
     }
 
@@ -66,9 +67,10 @@ export const signIn = async (req, res) => {
     )
     if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
-        id: user._id,
+        _id: user._id,
         name: user.name,
         email: user.email,
+        shopping_cart: user.shopping_cart,
         exp: parseInt(exp.getTime() / 1000),
       }
 
@@ -96,4 +98,24 @@ export const verify = async (req, res) => {
   }
 }
 
-export const changePassword = async (req, res) => {}
+export const changePassword = async (req, res) => { }
+
+export const deleteUser = async (req, res) => {
+  try {
+    const { id } = req.params
+    const deleted = await User.findByIdAndDelete(id)
+    if (deleted) {
+      return res.status(200).send('User deleted')
+    }
+    throw new Error('User not found')
+  } catch (error) {
+    console.log(error.message)
+    res.status(500).json({ error: error.message })
+  }
+}
+
+export const updateUser = async (req, res) => {
+  const { id } = req.params
+  const user = await User.findByIdAndUpdate(id, req.body, { new: true })
+  res.status(200).json(user)
+}
