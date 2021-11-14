@@ -10,7 +10,7 @@ Tether is an e-Commerce application dedicated to high-performance, luxury, elect
 - Mike Nezzer (GitHub: mnezz113)
 - Paige Hoeppner (GitHub: thepaiger)
 - Tyrus Henry (GitHub: TyrusHenry0x)
-- Brianna Groden (GitHub: bgcuse603) 
+- Brianna Groden (GitHub: bgcuse603)
 
 ## Wireframe
 
@@ -32,14 +32,17 @@ Whimsical Flowchart: https://whimsical.com/componentstructurerev01-Wufbh6jN6k2we
 <a href="https://imgur.com/gd38Vdt"><img src="https://i.imgur.com/gd38Vdt.jpg" title="source: imgur.com" /></a>
 
 ## Team Expectations
+
 Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0SViwj0GDZgNCnhieAhf7pc/edit?usp=sharing
 
 ## MVP
 
-### Planning & Collaboration 
+### Planning & Collaboration
+
 - Document 'Team Expectations' in Google Docs
 - Document project requirements, schedule and deliverables within README.md file
-- Develop component hierachy & wireframes 
+- Develop component hierachy & wireframes
+
 ### Client (Front End)
 
 - Home Page (Not Signed In)
@@ -51,36 +54,48 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 - Browse Cars
 - Car Detail
 - Cart Edit ("Shopping Cart")
+
 ### Server (Back End)
-- Login/Authentication 
+
+- Login/Authentication
 - Adding/Saving/Updating/Deleting of Users (CRUD)
+
 ### Styling
+
 - Utilize Flexbox
 - 2 responsive design screens (mobile/desktop)
+
 ### Deployment
+
 - Deploy the fully functional front-end via Netlify.
 - Deploy the back-end via Heroku.
 - Deploy the MongoDB database on MongoDB Atlas.
+
 ### Procedural
+
 - Commits should total or exceed 50
 - All team members must issue commits throughout the duration of the project.
+
 ### GitHub Projects Board
+
 - Link: https://github.com/DarrylFalls/P3/projects/1
 
 ## POST MVP
+
 ### Front End and Back End
+
 - Shopping Cart
 
 ## Project Schedule
 
-|  Day | Deliverable | Status
-|---|---| ---|
-|Nov 10| Concept Approval, GitHub Setup, Development of "Team Expectations" document | Complete
-|Nov 11| Wireframes and Component Struture | Complete
-|Nov 12| Project Approval | Complete
-|Nov 13 - 14| Back End Development | Incomplete
-|Nov 15 - 16| Front End and Authentication | Incomplete
-|Nov 17| Debugging | Incomplete
-|Nov 18 - 19| Styling | Incomplete
-|Nov 20 - 21| Testing and Documentation update | Incomplete
-|Nov 22| Presentation| Incomplete
+| Day         | Deliverable                                                                 | Status      |
+| ----------- | --------------------------------------------------------------------------- | ----------- |
+| Nov 10      | Concept Approval, GitHub Setup, Development of "Team Expectations" document | Complete    |
+| Nov 11      | Wireframes and Component Struture                                           | Complete    |
+| Nov 12      | Project Approval                                                            | Complete    |
+| Nov 13 - 14 | Back End Development                                                        | In-Progress |
+| Nov 15 - 16 | Front End and Authentication                                                | Incomplete  |
+| Nov 17      | Debugging                                                                   | Incomplete  |
+| Nov 18 - 19 | Styling                                                                     | Incomplete  |
+| Nov 20 - 21 | Testing and Documentation update                                            | Incomplete  |
+| Nov 22      | Presentation                                                                | Incomplete  |
