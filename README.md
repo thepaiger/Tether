@@ -78,7 +78,7 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 
 ### GitHub Projects Board
 
-- Link: https://github.com/DarrylFalls/P3/projects/1
+- Link: https://github.com/DarrylFalls/Tether/projects/1
 
 ## POST MVP
 
