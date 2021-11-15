@@ -21,8 +21,8 @@ const Nav = ({ user }) => {
   return (
     <nav>
       <div className="nav">
-        <NavLink className="logo" to="/">
-          <img src={'/images/logo.png'} alt="Logo" /></NavLink>
+        <NavLink to="/">
+          <img src={'/images/logo.png'} alt="Logo" className="logo" /></NavLink>
         <div className="links">
           {user && <div className="link-welcome">Welcome, {user.username}</div>}
           {alwaysOptions}
