@@ -64,14 +64,14 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
   };
 
   return (
-    <div classname="sign-up-display-div">
-      <div classname="sign-up-div">
-        <form classname="sign-up-form" onSubmit={(ev) => handleSubmit(ev)}>
-          <label classname="sign-up-name-label" htmlFor="sign-up-name-input">
+    <div className="sign-up-display-div">
+      <div className="sign-up-div">
+        <form className="sign-up-form" onSubmit={(ev) => handleSubmit(ev)}>
+          <label className="sign-up-name-label" htmlFor="sign-up-name-input">
             Name:
           </label>
           <input
-            classname="sign-up-name-input"
+            className="sign-up-name-input"
             id="sign-up-name-input"
             type="text"
             value={name}
@@ -81,12 +81,12 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
           />
           <br />
 
-          <label classname="sign-up-email-label"
+          <label className="sign-up-email-label"
             htmlFor="sign-up-email-input">
             Email:
           </label>
           <input
-            classname="sign-up-email-input"
+            className="sign-up-email-input"
             id="sign-up-email-input"
             type="email"
             value={email}
@@ -97,14 +97,14 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
           <br />
 
           <label
-            classname="sign-up-password-label"
+            className="sign-up-password-label"
             htmlFor="sign-up-password-input"
           >
             Password:
           </label>
           {/* update type to password once testing complete */}
           <input
-            classname="sign-up-password-input"
+            className="sign-up-password-input"
             id="sign-up-password-input"
             type="text"
             value={password}
@@ -115,14 +115,14 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
           <br />
 
           <label
-            classname="sign-up-confirm-label"
+            className="sign-up-confirm-label"
             htmlFor="sign-up-confirm-input"
           >
             Confirm Password:
           </label>
           {/* update type to password once testing complete */}
           <input
-            classname="sign-up-confirm-input"
+            className="sign-up-confirm-input"
             id="sign-up-confirm-input"
             type="text"
             value={confirm}
@@ -133,10 +133,10 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
           <br />
 
           {matchToggle ? (
-            <div classname="password-match-div">Passwords must match</div>
+            <div className="password-match-div">Passwords must match</div>
           ) : null}
           {lengthToggle ? (
-            <div classname="password-match-div">
+            <div className="password-match-div">
               Password must be at least 8 characters
             </div>
           ) : null}

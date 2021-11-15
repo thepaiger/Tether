@@ -27,12 +27,12 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
   }
 
   return (
-    <div classname="sign-in-display-div">
-      <div classname="sign-in-div">
-        <form classname="sign-in-form" onSubmit={(ev) => handleSubmit(ev)}>
-          <label classname="sign-in-email-label" htmlFor="sign-in-email-input">Email:</label>
+    <div className="sign-in-display-div">
+      <div className="sign-in-div">
+        <form className="sign-in-form" onSubmit={(ev) => handleSubmit(ev)}>
+          <label className="sign-in-email-label" htmlFor="sign-in-email-input">Email:</label>
           <input
-            classname="sign-in-email-input"
+            className="sign-in-email-input"
             id="sign-in-email-input"
             type="email"
             value={email}
@@ -41,11 +41,11 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
             required
           />
           <br />
-          <label classname="sign-in-password-label" htmlFor="sign-in-password-input">Password:</label>
+          <label className="sign-in-password-label" htmlFor="sign-in-password-input">Password:</label>
 
           {/* update type to password once testing complete */}
           <input
-            classname="sign-in-password-input"
+            className="sign-in-password-input"
             id="sign-in-password-input"
             type="text"
             value={password}
