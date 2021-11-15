@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Route, Routes, Navigate } from 'react-router-dom'
-// import {verifyUser} from './services/users.js'
+import { Route, Switch, Redirect } from 'react-router-dom'
+import {verifyUser} from './services/users.js'
 import './App.css';
 
 import CarDetail from './screens/CarDetail.jsx'
