@@ -13,18 +13,19 @@ import UserUpdate from './screens/UserUpdate/UserUpdate.jsx'
 import {verifyUser} from './services/users.js'
 
 
-const App = () => {
-  const [user, setUser] = useState(null)
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      const user = await verifyUser()
-      user ? setUser(user) : setUser(null)
-    }
-    fetchUser()
-  }, [])
+// const App = () => {
+//   const [user, setUser] = useState(null)
 
+//   useEffect(() => {
+//     const fetchUser = async () => {
+//       const user = await verifyUser()
+//       user ? setUser(user) : setUser(null)
+//     }
+//     fetchUser()
+//   }, [])
 
+function App() {
   return (
     <div className="App">
       <Routes>

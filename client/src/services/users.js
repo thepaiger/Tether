@@ -32,23 +32,25 @@ export const signOut = async () => {
   }
 }
 
-// export const updateUser = async (credentials) => {
-//   try {
-//     const resp = await api.post('/user/:id/edit', credentials)
+// confirm if return is correct
+export const updateUser = async (credentials) => {
+  try {
+    const resp = await api.put('/user/:id/edit', credentials)
+    return resp.data
+  } catch (error) {
+    throw error
+  }
+}
 
-//   } catch (error) {
-//     throw error
-//   }
-// }
-
-// export const changePassword = async (passwords, user) => {
-//   try {
-//     const resp = await api.post('/')
-//     return resp.data
-//   } catch (error) {
-//     throw error
-//   }
-// }
+// confirm if edits are needed
+export const changePassword = async (passwords, user) => {
+  try {
+    const resp = await api.post('/')
+    return resp.data
+  } catch (error) {
+    throw error
+  }
+}
 
 export const verifyUser = async () => {
   const token = localStorage.getItem('token')
