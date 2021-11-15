@@ -49,4 +49,4 @@ const CarDetail = (props) => {
   )
 }
 
-export default CarDetail; 
+export default CarDetail;

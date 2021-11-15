@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Route, Routes, Navigate } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 // import {verifyUser} from './services/users.js'
 import './App.css';
 
@@ -11,24 +11,23 @@ import SignIn from './screens/SignIn.jsx'
 import SignUp from './screens/SignUp.jsx'
 import UserAccount from './screens/UserAccount.jsx'
 import UserUpdate from './screens/UserUpdate.jsx'
-import {verifyUser} from './services/users'
 
 
-const App = () => {
-  const [user, setUser] = useState(null)
+// const App = () => {
+//   const [user, setUser] = useState(null)
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      const user = await verifyUser()
-      user ? setUser(user) : setUser(null)
-    }
-    fetchUser()
-  }, [])
+//   useEffect(() => {
+//     const fetchUser = async () => {
+//       const user = await verifyUser()
+//       user ? setUser(user) : setUser(null)
+//     }
+//     fetchUser()
+//   }, [])
 
-
+function App() {
   return (
     <div className="App">
-      <Routes>
+      {/* <Switch>
           <Route exact path="/">
             <Home user={user} />
           </Route>
@@ -50,8 +49,9 @@ const App = () => {
           <Route exact path="/products/:id">
             <ProductDetail user={user} />
           </Route>
-      </Routes>
+      </Switch> */}
     </div>
   );
 }
+
 export default App;
