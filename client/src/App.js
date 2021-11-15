@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-// import {verifyUser} from './services/users.js'
+import {verifyUser} from './services/users.js'
 import './App.css';
 
 import CarDetail from './screens/CarDetail.jsx'
@@ -13,16 +13,16 @@ import UserAccount from './screens/UserAccount.jsx'
 import UserUpdate from './screens/UserUpdate.jsx'
 
 
-// const App = () => {
-//   const [user, setUser] = useState(null)
+const App = () => {
+  const [user, setUser] = useState(null)
 
-//   useEffect(() => {
-//     const fetchUser = async () => {
-//       const user = await verifyUser()
-//       user ? setUser(user) : setUser(null)
-//     }
-//     fetchUser()
-//   }, [])
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser()
+      user ? setUser(user) : setUser(null)
+    }
+    fetchUser()
+  }, [])
 
 function App() {
   return (
