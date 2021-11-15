@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./CarDisplay.css";
 
 const CarDisplay = (props) => {
-  
+
   const handleClick = () => {
   console.log('clicked')
   }
@@ -10,9 +10,9 @@ const CarDisplay = (props) => {
   return (
     <div className="carDisplay">
       <Link className="card" to={`/cars/${props._id}`}>
-        <div className="cardDisplay-header">
+        <div className="carDisplay-header">
           <img
-            className="cardDisplay-image"
+            className="carDisplay-image"
             src={props.image}
             alt={props.model}
           />
