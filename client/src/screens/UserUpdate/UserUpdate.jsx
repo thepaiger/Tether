@@ -7,78 +7,93 @@ import { updateUser, deleteUser } from '../../services/users.js'
 const UserUpdate = ({ user, setUser }) => {
   const [isDeleted, setDelete] = useState(false)
   const [isUpdated, setUpdated] = useState(false)
-  // let confirmPassword = props.password_digest;
-
-  const handleChange = (event) => {
-    const { name, value } = event.target
-    setUser({
-      ...user,
-      [name]: value,
-    })
-  }
-
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    const updated = await updateUser(user._id, user)
-    setUpdated(updated)
-  }
-
+  const [name, setName] = useState(user.name)
+  const [email, setEmail] = useState(user.email)
+  const [password, setPassword] = useState(user.password_digest)
+  const [confirm, setConfirm] = useState(user.password_digest)
+  const [match, setMatch] = useState(false)
+  
+  // Delete user
   const handleDelete = async (event) => {
     event.preventDefault()
     const deleted = await deleteUser(user._id, user)
     setDelete(deleted)
   }
 
-  if (isUpdated) {
-    return <Navigate to={`/user`} />
+  if (isDeleted) {
+      return <Navigate to={`/`} />
   }
 
-  if (isDeleted) {
-    return <Navigate to={`/`} />
+  //Check Password
+  const handleConfirm = (ev) => {
+    setConfirm(ev.target.value)
+    checkPassword()
+  }
+
+  const checkPassword = () => {
+    if (password === confirm) {
+      setMatch(true);
+    } else {
+      setMatch(false);
+      // return alert("Passwords entered do not match");
+    }
+  }
+  
+
+  //Update User Information
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    if (match === true) {
+      const form = {
+        name,
+        email,
+        password,
+        // "shopping_cart": []
+      }
+      const updated = await updateUser(user._id, form)
+      setUpdated(updated)
+    }
+    
+  }
+
+  if (isUpdated) {
+    return <Navigate to={`/user`} />
   }
 
   return (
     <Layout>
       <div className='userUpdate-edit'>
-        <form className='userUpdate-edit-form' onSubmit={handleSubmit}>
+        <form className='userUpdate-edit-form'>
+          <label className='userUpdate-name-label'>Update Name:</label><br />
           <input
-            className='userUpdate-name'
-            placeholder={`${user.name}`}
-            value={user.name}
-            name='Update name:'
-            required
-            autoFocus
-            onChange={handleChange}
-          />
+            className='userUpdate-name-input'
+            placeholder={`${name}`}
+            value={name}
+            onChange={(ev) => setName(ev.target.value)}
+          /><br />
+          <label className='userUpdate-email-label'>Update Email:</label><br />
           <input
-            className='userUpdate-email'
-            placeholder={`${user.email}`}
-            value={user.email}
-            name='Update email:'
-            required
-            autoFocus
-            onChange={handleChange}
-          />
+            className='userUpdate-email-input'
+            placeholder={`${email}`}
+            value={email}
+            onChange={(ev) => setEmail(ev.target.value)}
+          /><br />
+          <label className='userUpdate-password-label'>Update Password:</label><br />
           <input
-            className='userUpdate-password'
+            className='userUpdate-password-input'
             placeholder='Password'
-            value={user.password_digest}
-            name='Update password:'
-            required
-            autoFocus
-            onChange={handleChange}
-          />
-          {/* <input
-            className='userUpdate-confirm-password'
+            value={password}
+            onChange={(ev) => setPassword(ev.target.value)}
+          /><br />
+          <label className='userUpdate-confirm-password-label'>Confirm Password:</label><br />
+          <input
+            className='userUpdate-confirm-password-input'
             placeholder='Confirm Password'
-            value={confirmPassword}
-            name='Confirm password:'
-            required
-            autoFocus
-            onChange={handlePassword}
-          /> */}
+            value={confirm}
+            onChange={(ev) => handleConfirm(ev)}
+          /><br />
           <div className='userUpdate-buttons'>
-            <button type='submit' className='update-button'> Update Info </button>
+            <button onClick={handleSubmit} className='update-button'> Update Info </button>
             <button onClick={handleDelete} className='delete-button'> Delete Account </button>
           </div>
         </form>
