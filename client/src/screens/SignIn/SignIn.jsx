@@ -1,6 +1,7 @@
 import { Navigate } from "react-router-dom";
 import { useState } from "react";
 import { signIn } from "../../services/users";
+import './SignIn.css'
 
 const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
   const [email, setEmail] = useState("");
@@ -30,6 +31,8 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
     <div className="sign-in-display-div">
       <div className="sign-in-div">
         <form className="sign-in-form" onSubmit={(ev) => handleSubmit(ev)}>
+          <h2>Sign In</h2>
+
           <label className="sign-in-email-label" htmlFor="sign-in-email-input">Email:</label>
           <input
             className="sign-in-email-input"
@@ -40,7 +43,6 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
             onChange={(ev) => setEmail(ev.target.value)}
             required
           />
-          <br />
           <label className="sign-in-password-label" htmlFor="sign-in-password-input">Password:</label>
 
           {/* update type to password once testing complete */}
@@ -53,7 +55,6 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
             onChange={(ev) => setPassword(ev.target.value)}
             required
           />
-          <br />
 
           <input type="submit" value="Sign In" />
         </form>
