@@ -1,13 +1,12 @@
 import { useState} from 'react'
 import './UserUpdate.css'
-import { useParams, Redirect } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import { Layout } from '../../../components'
 import { updateUser, deleteUser } from '../../../services/users'
 
 const UserUpdate = (props) => {
   const [isDeleted, setDelete] = useState(false)
   const [isUpdated, setUpdated] = useState(false)
-  let { id } = useParams()
   // let confirmPassword = props.password_digest;
 
   const handleChange = (event) => {
@@ -31,11 +30,11 @@ const UserUpdate = (props) => {
   }
 
   if (isUpdated) {
-    return <Redirect to={`/user/${id}`} />
+    return <Navigate to={`/user`} />
   }
 
   if (isDeleted) {
-    return <Redirect to={`/`} />
+    return <Navigate to={`/`} />
   }
 
   return (

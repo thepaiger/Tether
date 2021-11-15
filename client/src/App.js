@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react'
-import { Route, Switch, Redirect } from 'react-router-dom'
-import {verifyUser} from './services/users.js'
+import { Route, Routes } from 'react-router-dom'
 import './App.css';
 
-import CarDetail from './screens/CarDetail.jsx'
-import Cars from './screens/Cars.jsx'
-import Home from './screens/Home.jsx'
-import ShoppingCart from './screens/ShoppingCart.jsx'
-import SignIn from './screens/SignIn.jsx'
-import SignUp from './screens/SignUp.jsx'
-import UserAccount from './screens/UserAccount.jsx'
-import UserUpdate from './screens/UserUpdate.jsx'
-import {verifyUser} from './services/users'
+import CarDetail from './screens/CarDetail/CarDetail.jsx'
+import Cars from './screens/Cars/Cars.jsx'
+import Home from './screens/Home/Home.jsx'
+import ShoppingCart from './screens/ShoppingCart/ShoppingCart.jsx'
+import SignIn from './screens/SignIn/SignIn.jsx'
+import SignUp from './screens/SignUp/SignUp.jsx'
+import UserAccount from './screens/UserAccount/UserAccount.jsx'
+import UserUpdate from './screens/UserUpdate/UserUpdate.jsx'
+import {verifyUser} from './services/users.js'
 
 
 const App = () => {
@@ -29,27 +28,30 @@ const App = () => {
   return (
     <div className="App">
       <Routes>
-          <Route exact path="/">
-            <Home user={user} />
-          </Route>
-          <Route path="/sign-up">
-            <SignUp setUser={setUser} />
-          </Route>
-          <Route path="/sign-in">
-            <SignIn setUser={setUser} />
-          </Route>
-          <Route exact path="/products">
-            <Products user={user} />
-          </Route>
-          <Route path="/add-product">
-            {user ? <ProductCreate user={user} /> : <Redirect to="/sign-up" />}
-          </Route>
-          <Route exact path="/products/:id/edit">
-            {user ? <ProductEdit user={user} /> : <Redirect to='/' />}
-          </Route>
-          <Route exact path="/products/:id">
-            <ProductDetail user={user} />
-          </Route>
+        <Route exact path="/">
+          <Home user={user} />
+        </Route>
+        <Route path="/signIn">
+          <SignIn setUser={setUser} />
+        </Route>
+        <Route path="/signUp">
+          <SignUp setUser={setUser} />
+        </Route>
+        <Route path="/cars">
+          <Cars user={user}/>
+        </Route>
+        <Route path="/cars/:id">
+          <CarDetail user={user}/>
+        </Route>
+        <Route path="/user">
+          <UserAccount user={user} />
+        </Route>
+        <Route path="/user/edit">
+          <UserUpdate user={user} />
+        </Route>
+        <Route path="/cart">
+          <ShoppingCart user={user} />
+        </Route>
       </Routes>
     </div>
   );
