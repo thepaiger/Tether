@@ -1,6 +1,6 @@
 
 import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import { signUp } from '../../services/users'
 
 
@@ -12,8 +12,8 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
   const [match, setMatch] = useState(false)
   const [matchToggle, setMatchToggle] = useState(false)
   const [lengthToggle, setLengthToggle] = useState(false)
-  const history = useHistory()
-  
+  const [navigateToggle, setNavigateToggle] = useState(false)
+
   const handleSubmit = async (ev) => {
     ev.preventDefault()
     if (match === true) {
@@ -27,7 +27,7 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
         const user = await signUp(form)
         setUser(user)
         setLoggedIn(true)
-        history.push('/')
+        setNavigateToggle(true)
       } catch (error) {
         console.error(error)
         setEmail('')
@@ -38,6 +38,10 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
     }
   }
 
+  if (navigateToggle) {
+    return <Navigate to="/" />
+  }
+
   const checkPassword = () => {
     if (password.length > 0 && password.length < 8) {
       setLengthToggle(true)
@@ -45,7 +49,7 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
       setMatch(true)
       setMatchToggle(false)
       setLengthToggle(false)
-    } else if ( password !== confirm && confirm.length === 0) {
+    } else if (password !== confirm && confirm.length === 0) {
       setMatch(false)
       setMatchToggle(false)
       setLengthToggle(false)

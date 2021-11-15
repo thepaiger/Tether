@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import './App.css';
-
+import React from 'react';
 import CarDetail from './screens/CarDetail/CarDetail.jsx'
 import Cars from './screens/Cars/Cars.jsx'
 import Home from './screens/Home/Home.jsx'
@@ -10,7 +10,7 @@ import SignIn from './screens/SignIn/SignIn.jsx'
 import SignUp from './screens/SignUp/SignUp.jsx'
 import UserAccount from './screens/UserAccount/UserAccount.jsx'
 import UserUpdate from './screens/UserUpdate/UserUpdate.jsx'
-import {verifyUser} from './services/users.js'
+import { verifyUser } from './services/users.js'
 
 
 
@@ -28,30 +28,13 @@ const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/">
-          <Home user={user} />
-        </Route>
-        <Route path="/signIn">
-          <SignIn setUser={setUser} />
-        </Route>
-        <Route path="/signUp">
-          <SignUp setUser={setUser} />
-        </Route>
-        <Route path="/cars">
-          <Cars user={user}/>
-        </Route>
-        <Route path="/cars/:id">
-          <CarDetail user={user}/>
-        </Route>
-        <Route path="/user">
-          <UserAccount user={user} />
-        </Route>
-        <Route path="/user/edit">
-          <UserUpdate user={user} />
-        </Route>
-        <Route path="/cart">
-          <ShoppingCart user={user} />
-        </Route>
+        <Route exact path="/" element={ <Home user={user} /> } />
+        <Route path="/signIn" element={ <SignIn setUser={setUser} /> } />
+        <Route path="/signUp" element={ <SignUp setUser={setUser} /> } />
+        <Route path="/cars" element={ <Cars user={user} /> } />
+        <Route path="/cars/:id" element={ <CarDetail user={user} /> } />
+        <Route path="/user" element={ <UserAccount user={user} /> } />
+        <Route path="/user/edit" element={ <UserUpdate user={user} setUser={setUser} /> } />
       </Routes>
     </div>
   );
