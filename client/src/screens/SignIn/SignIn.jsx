@@ -12,8 +12,9 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
     ev.preventDefault();
     try {
       const form = {
-        email,
-        password,
+
+        "email": `${email}`,
+        "password": `${password}`
       };
       const user = await signIn(form);
       setUser(user);
