@@ -10,28 +10,27 @@
 //   }
 
 //   return (
-//     <div className="">
-//       <div className="">
+//     <div className="carShopping">
+//       <div className="carShopping-remove-icon">
 //         <img
-//           className=""
 //           src={"/images/icons/bag-dash-fill.svg"}
 //           alt="remove from cart"
 //         />
 //       </div>
-//       <Link className="" to={`/cars/${props._id}`}>
+//       <Link className="carShopping-link" to={`/cars/${props._id}`}>
 //         {/* FIX IMAGE SOURCE LOCATION */}
-//         <div className="">
-//           <img className="" src={props.image} alt={props.model} />
+//         <div className="carShopping-image-div">
+//           <img className="carShopping-image" src={props.image} alt={props.model} />
 //         </div>
-//         <div className="">
-//           <h3>{props.make}</h3>
-//           <h3>{props.model}</h3>
+//         <div className="carShopping-details-div">
+//           <h3 className="carShopping-make">{props.make}</h3>
+//           <h3 className="carShopping-model">{props.model}</h3>
 //         </div>
-//         <div className="">
-//           <h4>{props.price}</h4>
+//         <div className="carShopping-price-div">
+//           <h4 className="carShopping-price">{props.price}</h4>
 //           <h6>each</h6>
 //         </div>
-//         <div className="">
+//         <div className="carShopping-quantity-div">
 //           <input
 //             type="number"
 //             name="quantity"
@@ -41,7 +40,7 @@
 //           />
 //           <h6>quantity</h6>
 //         </div>
-//         <div className="">
+//         <div className="carShopping-total-div">
 //           {/* ADD LOGIC TO MULTIPLY HERE */}
 //           <h4>{getTotal}</h4>
 //           <h6>total</h6>
