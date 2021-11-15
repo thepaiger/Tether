@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { signUp } from '../../services/users'
 
 
-const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
+const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
@@ -86,3 +86,5 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
     </div>
   )
 }
+
+export default SignUp
