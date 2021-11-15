@@ -1,6 +1,6 @@
 import './CarDetail.css'
-import { Layout } from '../../../components'
-import { getCar } from '../../../services/cars'
+import Layout from '../../components/Layout/Layout.jsx'
+import { getCar } from '../../services/cars.js'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 

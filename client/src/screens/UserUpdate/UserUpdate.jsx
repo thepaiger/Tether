@@ -1,10 +1,10 @@
-import { useState} from 'react'
+import { useState } from 'react'
 import './UserUpdate.css'
 import { Navigate } from 'react-router-dom'
-import { Layout } from '../../../components'
-import { updateUser, deleteUser } from '../../../services/users'
+import Layout from '../../components/Layout/Layout.jsx'
+import { updateUser, deleteUser } from '../../services/users.js'
 
-const UserUpdate = (props) => {
+const UserUpdate = ({ user, setUser }) => {
   const [isDeleted, setDelete] = useState(false)
   const [isUpdated, setUpdated] = useState(false)
   // let confirmPassword = props.password_digest;
@@ -19,13 +19,13 @@ const UserUpdate = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const updated = await updateUser(id, user)
+    const updated = await updateUser(user._id, user)
     setUpdated(updated)
   }
 
-  const handleDelete =  async (event) => {
+  const handleDelete = async (event) => {
     event.preventDefault()
-    const deleted = await deleteUser(id, user)
+    const deleted = await deleteUser(user._id, user)
     setDelete(deleted)
   }
 
@@ -43,7 +43,7 @@ const UserUpdate = (props) => {
         <form className='userUpdate-edit-form' onSubmit={handleSubmit}>
           <input
             className='userUpdate-name'
-            placeholder={`${props.name}`}
+            placeholder={`${user.name}`}
             value={user.name}
             name='Update name:'
             required
@@ -52,7 +52,7 @@ const UserUpdate = (props) => {
           />
           <input
             className='userUpdate-email'
-            placeholder={`${props.email}`}
+            placeholder={`${user.email}`}
             value={user.email}
             name='Update email:'
             required
