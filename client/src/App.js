@@ -14,18 +14,17 @@ import {verifyUser} from './services/users.js'
 
 
 
-// const App = () => {
-//   const [user, setUser] = useState(null)
+const App = () => {
+  const [user, setUser] = useState(null)
 
-//   useEffect(() => {
-//     const fetchUser = async () => {
-//       const user = await verifyUser()
-//       user ? setUser(user) : setUser(null)
-//     }
-//     fetchUser()
-//   }, [])
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verifyUser()
+      user ? setUser(user) : setUser(null)
+    }
+    fetchUser()
+  }, [])
 
-function App() {
   return (
     <div className="App">
       <Routes>

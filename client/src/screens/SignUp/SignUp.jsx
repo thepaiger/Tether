@@ -8,7 +8,7 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
-  const [confirm, confirm] = useState('')
+  const [confirm, setConfirm] = useState('')
   const [match, setMatch] = useState(false)
   const [matchToggle, setMatchToggle] = useState(false)
   const [lengthToggle, setLengthToggle] = useState(false)
