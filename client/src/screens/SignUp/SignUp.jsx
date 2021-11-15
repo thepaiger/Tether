@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import { signUp } from '../../services/users'
 
 
 const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
