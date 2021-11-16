@@ -31,10 +31,11 @@ const App = () => {
         <Route exact path="/" element={<Home user={user} setUser={setUser} />} />
         <Route path="/signIn" element={<SignIn setUser={setUser} />} />
         <Route path="/signUp" element={<SignUp setUser={setUser} />} />
-        <Route path="/cars" element={<Cars user={user} />} />
-        <Route path="/cars/:id" element={<CarDetail user={user} />} />
+        <Route path="/cars" element={<Cars user={user} setUser={setUser} />} />
+        <Route path="/cars/:id" element={<CarDetail user={user} setUser={setUser} />} />
         <Route path="/user" element={<UserAccount user={user} setUser={setUser} />} />
         <Route path="/user/edit" element={<UserUpdate user={user} setUser={setUser} />} />
+        <Route path="/shoppingCart" element={<ShoppingCart user={user} setUser={setUser} />} />
       </Routes>
     </div>
   );
