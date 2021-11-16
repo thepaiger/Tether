@@ -70,6 +70,7 @@
   background-color: #f2f0ea;
   border: solid 1px #625d5d;
   box-sizing: border-box;
+  border-radius: 3px;
   height: 37px;
   width: 295px;
   padding: 0 0 0 10px;
@@ -93,6 +94,7 @@
   background-color: #f2f0ea;
   box-sizing: border-box;
   border: solid 1px #625d5d;
+  border-radius: 3px;
   padding: 2px 15px;
   margin: 7px 0;
 }
