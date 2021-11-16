@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import './UserUpdate.css'
 import { Navigate } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout.jsx'
-import { updateUser, deleteUser } from '../../services/users.js'
+import { updateUser, deleteUser, verifyUser } from '../../services/users.js'
 
 const UserUpdate = ({ user, setUser}) => {
   const [isDeleted, setDelete] = useState(false)
@@ -15,6 +15,7 @@ const UserUpdate = ({ user, setUser}) => {
   const [match, setMatch] = useState(false)
   const [passwordToggle, setPasswordToggle] = useState(false)
   let form = {}
+  let newUser = '';
  
   useEffect(() => {
     setName(user ? user.name : 'loading');
@@ -78,6 +79,13 @@ const UserUpdate = ({ user, setUser}) => {
 }
 
   if (isUpdated) {
+    const fetchNewUserData = async () => {
+      newUser = await verifyUser()
+      newUser ? setUser(user) : setUser(null)
+    }
+  
+    fetchNewUserData()
+    console.log(`NEWUSER ${newUser}`)
     console.log('navigate user account')
     return <Navigate to={`/user`} />
   }
