@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './UserUpdate.css'
 import { Navigate } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout.jsx'
@@ -7,11 +7,16 @@ import { updateUser, deleteUser } from '../../services/users.js'
 const UserUpdate = ({ user, setUser }) => {
   const [isDeleted, setDelete] = useState(false)
   const [isUpdated, setUpdated] = useState(false)
-  const [name, setName] = useState(user.name)
-  const [email, setEmail] = useState(user.email)
-  const [password, setPassword] = useState(user.password_digest)
-  const [confirm, setConfirm] = useState(user.password_digest)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('********')
+  const [confirm, setConfirm] = useState('********')
   const [match, setMatch] = useState(false)
+
+  useEffect(() => {
+    setName(user ? user.name : '' )
+    setEmail(user ? user.email : '')
+  },[user])
   
   // Delete user
   const handleDelete = async (event) => {
@@ -38,6 +43,8 @@ const UserUpdate = ({ user, setUser }) => {
       // return alert("Passwords entered do not match");
     }
   }
+
+  
   
 
   //Update User Information
