@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout.jsx'
 import { updateUser, deleteUser } from '../../services/users.js'
 
-const UserUpdate = ({ user, setUser }) => {
+const UserUpdate = ({ user}) => {
   const [isDeleted, setDelete] = useState(false)
   const [isUpdated, setUpdated] = useState(false)
   const [name, setName] = useState('')
@@ -14,29 +14,24 @@ const UserUpdate = ({ user, setUser }) => {
   const [confirm, setConfirm] = useState('********')
   const [match, setMatch] = useState(false)
 
+
   useEffect(() => {
     setName(user ? user.name : '' )
     setEmail(user ? user.email : '')
   },[user])
-  
-  // Get User Data
+ 
   useEffect(() => {
-    const fetchUserData = async () => {
-      setName(`${user.name}`)
-      setEmail(`${user.email}`)
-      setPassword(`${user.password_digest}`)
-      setConfirm(`${user.password_digest}`)
-    }
-    fetchUserData();
-    console.log(`Prop passed name ${name}`);
-  }, [])
+    setName(user ? user.name : 'loading');
+    setEmail(user ? user.email : 'loading');
+    console.log(user ? user._id : 'loading');
+  }, [user])
 
   // Delete user
   const handleDelete = async (event) => {
     event.preventDefault()
-    const deleted = await deleteUser(user._id, user)
-    setDelete(deleted)
-    console.log('deleted')
+    const deleted = await deleteUser(user._id)
+    setDelete(true)
+    console.log(deleted)
   }
 
   if (isDeleted) {
