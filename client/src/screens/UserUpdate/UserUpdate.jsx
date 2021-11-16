@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 import './UserUpdate.css'
 import { Navigate } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout.jsx'
-import { updateUser, deleteUser } from '../../services/users.js'
+import { updateUser, deleteUser, verifyUser } from '../../services/users.js'
 
-const UserUpdate = ({ user}) => {
+const UserUpdate = ({ user, setUser}) => {
   const [isDeleted, setDelete] = useState(false)
   const [isUpdated, setUpdated] = useState(false)
   const [name, setName] = useState('')
@@ -13,12 +13,9 @@ const UserUpdate = ({ user}) => {
   const [password, setPassword] = useState('********')
   const [confirm, setConfirm] = useState('********')
   const [match, setMatch] = useState(false)
-
-
-  useEffect(() => {
-    setName(user ? user.name : '' )
-    setEmail(user ? user.email : '')
-  },[user])
+  const [passwordToggle, setPasswordToggle] = useState(false)
+  let form = {}
+  let newUser = '';
  
   useEffect(() => {
     setName(user ? user.name : 'loading');
@@ -30,17 +27,20 @@ const UserUpdate = ({ user}) => {
   const handleDelete = async (event) => {
     event.preventDefault()
     const deleted = await deleteUser(user._id)
-    setDelete(true)
     console.log(deleted)
+    setDelete(true)
+    setUser(null)
   }
 
   if (isDeleted) {
-      return <Navigate to={`/`} />
+    console.log('navigate home')
+    return <Navigate to={`/`} />
   }
 
   //Check Password
   const handleConfirm = (ev) => {
     setConfirm(ev.target.value)
+    setPasswordToggle(true)
     checkPassword()
   }
 
@@ -49,32 +49,44 @@ const UserUpdate = ({ user}) => {
       setMatch(true);
     } else {
       setMatch(false);
-      // return alert("Passwords entered do not match");
+      return alert("Passwords entered do not match");
     }
   }
-
-  
-  
 
   //Update User Information
   const handleSubmit = async (event) => {
     event.preventDefault()
-    if (match === true) {
-      const form = {
+
+    if (passwordToggle) {
+      if (match) {
+        form = {
+          name,
+          email,
+          password,
+        }
+      }
+    } else {
+      form = {
         name,
         email,
-        password,
-        // "shopping_cart": []
       }
-      const updated = await updateUser(user._id, form)
-      setUpdated(updated)
-      console.log('updated')
-      console.log(email);
     }
-    
-  }
+    const updated = await updateUser(user._id, form)
+    console.log(`service return of updated: ${updated}`)
+    console.log(`FORM: ${form}`)
+    setUpdated(true)
+    console.log('updated')
+}
 
   if (isUpdated) {
+    const fetchNewUserData = async () => {
+      newUser = await verifyUser()
+      newUser ? setUser(user) : setUser(null)
+    }
+  
+    fetchNewUserData()
+    console.log(`NEWUSER ${newUser}`)
+    console.log('navigate user account')
     return <Navigate to={`/user`} />
   }
 

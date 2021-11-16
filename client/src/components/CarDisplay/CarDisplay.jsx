@@ -24,7 +24,7 @@ const CarDisplay = ({car}) => {
         </div>
       </Link>
         <div className="carDisplay-icon">
-        <img onClick={handleClick} src="/images/icons/bag-plus-fill.svg" alt="bag-plus-fill" />
+        <img onClick={handleClick} src="/images/icons/bag-dash-fill.svg" alt="bag-plus-fill" />
 
         </div>
     </div>

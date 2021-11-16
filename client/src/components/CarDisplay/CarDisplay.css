@@ -3,7 +3,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
 }
 
 .card {
@@ -15,9 +14,7 @@
     text-decoration: none;
 }
 
-
 .carDisplay-image{
-
   width: 500px
 }
 
@@ -28,9 +25,16 @@
   justify-content: center;
   text-decoration: none;
   margin: 5vh 5vw;
+ 
 }
-
+.carDisplay-make{
+  margin: 0;
+}
+.carDisplay-price{
+  margin:0;
+}
 .carDisplay-info{
   max-width: 500px;
   text-align: justify;
 }
+
