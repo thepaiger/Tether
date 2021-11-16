@@ -1,25 +1,35 @@
-.sign-in-display-div {
-  /* swap for backgroun image when available */
+/* BACKGROUND IMAGE */
+.sign-in-background-img {
   background-image: url("../../backgrounds/2021-porsche-taycan.jpeg");
   background-position: center;
-  /* background: url("../../backgrounds/2021-porsche-taycan.jpeg") center; */
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* SIGNIN PAGE */
+.sign-in-display-div {
+  backdrop-filter: blur(4px);
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* SET SIGNIN DIV SIZE/COLOR/DISPLAY */
 .sign-in-div {
-  width: 447px;
-  height: 364px;
+  width: 450px;
+  height: 370px;
+  box-sizing: border-box;
   border: solid 1px #625d5d;
-  background-color: rgb(32, 33, 35, 0.9);
+  background-color: rgb(32, 33, 35, 0.85);
+  box-shadow: 0 0 10px #4a4848;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* SET FORM DISPLAY */
 .sign-in-form {
   display: flex;
   justify-content: center;
@@ -27,6 +37,7 @@
   flex-direction: column;
 }
 
+/* LEFT-ALIGN LABELS/INPUTS */
 .sign-in-fields {
   display: flex;
   justify-content: center;
@@ -34,18 +45,22 @@
   flex-direction: column;
 }
 
-/* TEXT/INPUT STYLING */
+/* ==========TEXT/INPUT STYLING========== */
 
+/* SIGNIN HEADER */
 .sign-in-form h2 {
   font-size: 30px;
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 
+/* INPUT LABELS */
 .sign-in-email-label,
 .sign-in-password-label {
   font-size: 14px;
+  padding: 7px 0;
 }
 
+/* INPUTS */
 .sign-in-email-input,
 .sign-in-password-input {
   font-size: 14px;
@@ -54,12 +69,14 @@
   color: #202123;
   background-color: #f2f0ea;
   border: solid 1px #625d5d;
+  box-sizing: border-box;
   height: 37px;
   width: 295px;
   padding: 0 0 0 10px;
-  box-sizing: border-box;
+  margin: 0 0 20px 0;
 }
 
+/* INPUT PLACEHOLDERS */
 .sign-in-email-input::placeholder,
 .sign-in-password-input::placeholder {
   font-size: 14px;
@@ -68,10 +85,30 @@
   color: #615e5e;
 }
 
-/* .sign-in-email-input::placeholder,
-.sign-in-password-input::placeholder {
-  font-size: 14px;
+/* SUBMIT BUTTON */
+.sign-in-submit {
   font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  color: red;
-} */
+  font-size: 18px;
+  color: #4a4848;
+  background-color: #f2f0ea;
+  box-sizing: border-box;
+  border: solid 1px #625d5d;
+  padding: 2px 15px;
+  margin: 7px 0;
+}
+
+.sign-in-submit:hover {
+}
+
+/* NO ACCOUNT? */
+.no-account p {
+  font-size: 12px;
+  margin: 20px 0 0 0;
+}
+
+.no-account a {
+  color: #e9e3d5;
+}
+
+.no-account a:hover {
+}
