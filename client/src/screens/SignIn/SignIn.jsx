@@ -1,4 +1,4 @@
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { signIn } from "../../services/users";
 import './SignIn.css'
@@ -59,6 +59,10 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
 
           <input type="submit" value="Sign In" />
         </form>
+      </div>
+      <div>
+        <div>If you do not have an account, create one here.</div>
+        <Link to='/signUp'>Create Account</Link>
       </div>
     </div>
   );

@@ -4,20 +4,25 @@ import { NavLink } from 'react-router-dom'
 
 const authenticatedOptions = (
   <>
-    <NavLink className="link" to="/account-info">ACCOUNT INFO</NavLink>
+    <NavLink className="link" to="/user">ACCOUNT INFO</NavLink>
   </>
 )
 const unauthenticadedOptions = (
   <>
-    <NavLink className="link" to="/sign-in">SIGN IN</NavLink>
+    <NavLink className="link" to="/signIn">SIGN IN</NavLink>
   </>
 )
 const alwaysOptions = (
   <>
-    <NavLink className="link" to="/models">MODELS</NavLink>
+    <NavLink className="link" to="/cars">MODELS</NavLink>
   </>
 )
-const Nav = ({ user }) => {
+
+const Nav = ({ user, setUser }) => {
+  const signOut = () => {
+    localStorage.setItem('token', "")
+    setUser('')
+  }
   return (
     <nav>
       <div className="nav">
@@ -27,6 +32,7 @@ const Nav = ({ user }) => {
           {user && <div className="link-welcome">Welcome, {user.username}</div>}
           {alwaysOptions}
           {user ? authenticatedOptions : unauthenticadedOptions}
+          {user ? <div onClick={signOut}>Sign Out</div> : null}
         </div>
       </div>
     </nav>

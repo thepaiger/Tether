@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { signUp } from "../../services/users";
 
 const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
@@ -15,16 +15,17 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     if (match === true) {
+      console.log('hello')
       try {
         const form = {
-          name,
-          email,
-          password,
-          shopping_cart: [],
+          "name": `${name}`,
+          "email": `${email}`,
+          "password": `${password}`,
+          "shopping_cart": []
         };
         const user = await signUp(form);
         setUser(user);
-        setLoggedIn(true);
+        // setLoggedIn(true);
         setNavigateToggle(true);
       } catch (error) {
         console.error(error);
@@ -40,27 +41,43 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
     return <Navigate to="/" />;
   }
 
-  const checkPassword = () => {
+  const lengthTrue = () => {
+    setLengthToggle(true)
+  }
+
+  const elseIfOne = () => {
+    setMatch(true);
+    setMatchToggle(false);
+    setLengthToggle(false);
+  }
+
+  const elseIfTwo = () => {
+    setMatch(false);
+    setMatchToggle(false);
+    setLengthToggle(false);
+  }
+
+  const elseIfThree = () => {
+    setMatch(false);
+    setMatchToggle(true);
+    setLengthToggle(false);
+  }
+
+  const checkPassword = (v) => {
     if (password.length > 0 && password.length < 8) {
-      setLengthToggle(true);
-    } else if (password === confirm && confirm.length > 7) {
-      setMatch(true);
-      setMatchToggle(false);
-      setLengthToggle(false);
-    } else if (password !== confirm && confirm.length === 0) {
-      setMatch(false);
-      setMatchToggle(false);
-      setLengthToggle(false);
-    } else if (password !== confirm && confirm.length > 7) {
-      setMatch(false);
-      setMatchToggle(true);
-      setLengthToggle(false);
+      lengthTrue()
+    } else if (password === v && v.length > 7) {
+      elseIfOne()
+    } else if (password !== v && v.length === 0) {
+      elseIfTwo()
+    } else if (password !== v && v.length > 7) {
+      elseIfThree()
     }
   };
 
   const handleChange = (ev) => {
     setConfirm(ev.target.value);
-    checkPassword();
+    checkPassword(ev.target.value);
   };
 
   return (
@@ -144,6 +161,9 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
 
           <input type="submit" value="Sign Up" />
         </form>
+      </div>
+      <div>
+        <Link to='/signIn'>Back to Sign In</Link>
       </div>
     </div>
   );

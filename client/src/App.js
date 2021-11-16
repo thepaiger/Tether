@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={ <Home user={user} /> } />
+        <Route exact path="/" element={ <Home user={user} setUser={setUser} /> } />
         <Route path="/signIn" element={ <SignIn setUser={setUser} /> } />
         <Route path="/signUp" element={ <SignUp setUser={setUser} /> } />
         <Route path="/cars" element={ <Cars user={user} /> } />
