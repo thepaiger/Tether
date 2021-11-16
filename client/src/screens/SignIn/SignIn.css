@@ -1,0 +1,30 @@
+.sign-in-display-div {
+  /* swap for backgroun image when available */
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-in-div {
+  width: 300px;
+  /* height: fit-contents; */
+  height: 500px;
+  border: solid 1px #625d5d;
+  background-color: rgb(32, 33, 35, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.sign-in-form h2 {
+  margin: 0 auto;
+}
