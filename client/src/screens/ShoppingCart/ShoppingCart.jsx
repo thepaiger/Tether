@@ -11,7 +11,7 @@ const ShoppingCart = ({user, setUser}) => {
         {user ? 
           user.shopping_cart.map((item) => (
             <div>
-              <CarShopping car={item.car} car_id={item.car_id} price={item.price} item_id={item._id} />
+              <CarShopping car={item.car} car_id={item.car_id} price={item.price} item_id={item._id} quantity={item.quantity} image={item.image} />
             </div>
         ))
         : null}

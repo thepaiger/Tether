@@ -2,11 +2,11 @@ import "./CarShopping.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const CarShopping = (props) => {
-  const [quantity, setQuantity] = useState(1);
+const CarShopping = ({car, car_id, price, item_id, quantity, image}) => {
+  
 
   const getTotal = () => {
-    let total = props.price * quantity;
+    let total = price * quantity;
     return total;
   }
 
@@ -18,24 +18,23 @@ const CarShopping = (props) => {
           alt="remove from cart"
         />
       </div>
-      <Link className="carShopping-link" to={`/cars/${props._id}`}>
+      <Link className="carShopping-link" to={`/cars/${car_id}`}>
         {/* FIX IMAGE SOURCE LOCATION */}
         <div className="carShopping-image-div">
-          <img className="carShopping-image" src={props.image} alt={props.model} />
+          <img className="carShopping-image" src={image} alt={car} />
         </div>
         <div className="carShopping-details-div">
-          <h3 className="carShopping-make">{props.make}</h3>
-          <h3 className="carShopping-model">{props.model}</h3>
+          <h3 className="carShopping-name">{car}</h3>
         </div>
         <div className="carShopping-price-div">
-          <h4 className="carShopping-price">{props.price}</h4>
+          <h4 className="carShopping-price">{price}</h4>
           <h6>each</h6>
         </div>
         <div className="carShopping-quantity-div">
           <input
             type="number"
             name="quantity"
-            value="1"
+            value={quantity}
             onChange={(ev) => setQuantity(ev.target.value)}
             required
           />
@@ -43,7 +42,7 @@ const CarShopping = (props) => {
         </div>
         <div className="carShopping-total-div">
           {/* ADD LOGIC TO MULTIPLY HERE */}
-          <h4>{getTotal}</h4>
+          <h4>${getTotal}</h4>
           <h6>total</h6>
         </div>
       </Link>
