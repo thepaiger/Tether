@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 const Home = (props) => {
   return (
-    <Layout user={props.user}>
+    <Layout user={props.user} setUser={props.setUser}>
 
       {/* <Carousel /> */}
 
