@@ -1,14 +1,10 @@
 import './Home.css'
 import { Layout, ProductCards } from '../../components'
 import { NavLink } from 'react-router-dom'
-// import Carousel from '../../components/Carousel/Carousel'
 
 const Home = (props) => {
   return (
     <Layout user={props.user} setUser={props.setUser}>
-
-      {/* <Carousel /> */}
-
       <div className='welcome-browse'>
         <h1>WELCOME TO THE FUTURE</h1>
         <NavLink to="/inventory">Browse Inventory</NavLink>
