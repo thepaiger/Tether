@@ -44,7 +44,7 @@ export const updateUser = async (credentials) => {
 
 export const deleteUser = async (credentials) => {
   try {
-    const resp = await api.delete('/users/:id', credentials)
+    const resp = await api.delete(`/users/${credentials}`, credentials)
     return resp.data
   } catch (error) {
     throw error

@@ -3,7 +3,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
 }
 
 .card {
@@ -15,9 +14,7 @@
     text-decoration: none;
 }
 
-
 .carDisplay-image{
-
   width: 500px
 }
 
