@@ -33,9 +33,9 @@ export const signOut = async () => {
 }
 
 // confirm if return is correct
-export const updateUser = async (credentials) => {
+export const updateUser = async (credentials, data) => {
   try {
-    const resp = await api.put('/update/:id', credentials)
+    const resp = await api.put(`/update/${credentials}`, data)
     return resp.data
   } catch (error) {
     throw error
@@ -44,7 +44,7 @@ export const updateUser = async (credentials) => {
 
 export const deleteUser = async (credentials) => {
   try {
-    const resp = await api.delete('/users/:id', credentials)
+    const resp = await api.delete(`/users/${credentials}`, credentials)
     return resp.data
   } catch (error) {
     throw error

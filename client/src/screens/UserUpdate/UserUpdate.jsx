@@ -1,32 +1,46 @@
-import { useState } from 'react'
+
+import { useState, useEffect } from 'react'
 import './UserUpdate.css'
 import { Navigate } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout.jsx'
-import { updateUser, deleteUser } from '../../services/users.js'
+import { updateUser, deleteUser, verifyUser } from '../../services/users.js'
 
-const UserUpdate = ({ user, setUser }) => {
+const UserUpdate = ({ user, setUser}) => {
   const [isDeleted, setDelete] = useState(false)
   const [isUpdated, setUpdated] = useState(false)
-  const [name, setName] = useState(user.name)
-  const [email, setEmail] = useState(user.email)
-  const [password, setPassword] = useState(user.password_digest)
-  const [confirm, setConfirm] = useState(user.password_digest)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('********')
+  const [confirm, setConfirm] = useState('********')
   const [match, setMatch] = useState(false)
-  
+  const [passwordToggle, setPasswordToggle] = useState(false)
+  let form = {}
+  let newUser = '';
+ 
+  useEffect(() => {
+    setName(user ? user.name : 'loading');
+    setEmail(user ? user.email : 'loading');
+    console.log(user ? user._id : 'loading');
+  }, [user])
+
   // Delete user
   const handleDelete = async (event) => {
     event.preventDefault()
-    const deleted = await deleteUser(user._id, user)
-    setDelete(deleted)
+    const deleted = await deleteUser(user._id)
+    console.log(deleted)
+    setDelete(true)
+    setUser(null)
   }
 
   if (isDeleted) {
-      return <Navigate to={`/`} />
+    console.log('navigate home')
+    return <Navigate to={`/`} />
   }
 
   //Check Password
   const handleConfirm = (ev) => {
     setConfirm(ev.target.value)
+    setPasswordToggle(true)
     checkPassword()
   }
 
@@ -35,28 +49,44 @@ const UserUpdate = ({ user, setUser }) => {
       setMatch(true);
     } else {
       setMatch(false);
-      // return alert("Passwords entered do not match");
+      return alert("Passwords entered do not match");
     }
   }
-  
 
   //Update User Information
   const handleSubmit = async (event) => {
     event.preventDefault()
-    if (match === true) {
-      const form = {
+
+    if (passwordToggle) {
+      if (match) {
+        form = {
+          name,
+          email,
+          password,
+        }
+      }
+    } else {
+      form = {
         name,
         email,
-        password,
-        // "shopping_cart": []
       }
-      const updated = await updateUser(user._id, form)
-      setUpdated(updated)
     }
-    
-  }
+    const updated = await updateUser(user._id, form)
+    console.log(`service return of updated: ${updated}`)
+    console.log(`FORM: ${form}`)
+    setUpdated(true)
+    console.log('updated')
+}
 
   if (isUpdated) {
+    const fetchNewUserData = async () => {
+      newUser = await verifyUser()
+      newUser ? setUser(user) : setUser(null)
+    }
+  
+    fetchNewUserData()
+    console.log(`NEWUSER ${newUser}`)
+    console.log('navigate user account')
     return <Navigate to={`/user`} />
   }
 

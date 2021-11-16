@@ -9,8 +9,10 @@ const User = new Schema(
       {
         car: { type: String },
         car_id: { type: String },
-        quantity: { type: String },
-        price: { type: String }
+        quantity: { type: Number },
+        price: { type: String },
+        priceNum: { type: Number },
+        image: {type: String }
       },
     ],
   },
