@@ -15,8 +15,10 @@ const insertData = async () => {
       {
         car: "Aspark Owl",
         car_id: "",
-        quantity: "1",
-        price: "3196400"
+        quantity: 1,
+        price: "$3,196,400",
+        priceNum: 3196400,
+        image: "/images/cars/aspark-owl.png"
       },
     ]
   })
@@ -39,12 +41,39 @@ const insertData = async () => {
       {
         car: "Rimac Nevera",
         car_id: "",
-        quantity: "2",
-        price: "2400000"
+        quantity: 2,
+        price: "$2,400,000",
+        priceNum: 2400000,
+        image: "/images/cars/rimac-nevera.png"
       },
     ]
   })
   await user3.save()
+
+  const user4 = new User({
+    name: 'Jeff Besos',
+    email: 'mrmoney@amazon.com',
+    password_digest: await bcrypt.hash('89j38fS$$dh34Q', 11),
+    shopping_cart: [
+      {
+        car: "Rimac Nevera",
+        car_id: "",
+        quantity: 2,
+        price: "$2,400,000",
+        priceNum: 2400000,
+        image: "/images/cars/rimac-nevera.png"
+      },
+      {
+        car: "Lotus Evija",
+        car_id: "",
+        quantity: 1,
+        price: "$2,100,000",
+        priceNum: 2100000,
+        image: "/images/cars/lotus-evija.png"
+      }
+    ]
+  })
+  await user4.save()
 
   const cars = [
     {
@@ -127,7 +156,7 @@ const insertData = async () => {
       hp: "1,973",
       topSpeed: "217 mph" ,
       info: "The Lotus Evija (pronounced eh-VIE'-ya) aims to push the boundaries of modern hypercar technology. While many rivals offer hybrid powertrains, this model commits to being fully electric, and it comes with an ultrafast charging setup. Only 130 models of this leading-edge hypercar will be built, each priced at more than $2 million. Evija's muscle-bound electric powertrain is provided by a team of four electric motors, and Lotus claims they generate a total output of 1972 horsepower and 1254 lb-ft of torque. A single-speed automatic transmission governs it all, sending power to all four wheels. The car's light curb weight is designed to optimize handling. The company claims the Evija weighs just over 3700 pounds, making it supposedly the lightest EV hypercar ever to enter production. The Evija can reach a top speed of more than 200 mph, and Lotus expects it to sprint to 62 mph in under three seconds. The car takes just 12 minutes for an 80 percent charge, and a full charge takes a mere 18 minutes. This Lotus hypercar is able to travel up to 250 miles between charges.",
-      image: "/images/cars/lotus-evija.png ",
+      image: "/images/cars/lotus-evija.png",
       range: "402 km (250 mi)",
       connector: "Type 2 EV Charging Cable",
     },
@@ -215,18 +244,7 @@ const insertData = async () => {
       range: "620 km (385 mi)",
       connector: "NEMA 14-50 plug ",
     },
-
-
   ]
-
-
-
-
-
-
-
-
-
 
   // insert products into database
   await Car.insertMany(cars);
