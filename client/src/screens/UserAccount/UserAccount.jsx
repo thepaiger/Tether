@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { Layout } from "../../components";
 import { Navigate } from "react-router";
+
+import './UserAccount.css'
+
 const UserAccount = ({ user, setUser }) => {
   const signOut = () => {
     localStorage.clear()
@@ -12,22 +15,26 @@ const UserAccount = ({ user, setUser }) => {
   }
   return (
     <Layout>
-      <div className="account-info">
-        {user && <div className="account-details">
-          <p className="account-form">Name:</p>
-          <p className="account-name">{user.name}</p></div>}
+      <div className="account-background-img">
+        <div className="account-display-div">
+          <div className="account-info-div">
+            {user && <div className="account-details">
+              <p className="account-form">Name: </p>
+              <p className="account-name">{user.name}</p></div>}
 
-        {user && <div className="account-details">
-          <p className="account-form">Email:</p>
-          <p className="account-email">{user.email}</p></div>}
+            {user && <div className="account-details">
+              <p className="account-form">Email: </p>
+              <p className="account-email">{user.email}</p></div>}
 
-        <div className="account-details">
-          <p className="account-form">Password:</p>
-          <p className="account-password">********</p>
-        </div>
-        <div>
-          <NavLink to="/user/edit">Edit Info</NavLink>
-          {user ? <div onClick={signOut}>Sign Out</div> : null}
+            <div className="account-details">
+              <p className="account-form">Password: </p>
+              <p className="account-password">********</p>
+            </div>
+            <div>
+              <NavLink to="/user/edit">Edit Info</NavLink>
+              {user ? <div onClick={signOut}>Sign Out</div> : null}
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
