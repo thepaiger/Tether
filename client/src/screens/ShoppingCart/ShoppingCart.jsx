@@ -1,5 +1,6 @@
 import Layout from "../../components/Layout/Layout"
-import {useState} from 'react'
+import { useState } from 'react'
+import CarShopping from "../../components/CarShopping/CarShopping"
 
 
 const ShoppingCart = ({user, setUser}) => {
@@ -7,7 +8,13 @@ const ShoppingCart = ({user, setUser}) => {
   return (
     <Layout>
       <div>
-        
+        {user ? 
+          user.shopping_cart.map((item) => (
+            <div>
+              <CarShopping car={item.car} car_id={item.car_id} price={item.price} item_id={item._id} />
+            </div>
+        ))
+        : null}
       </div>
       <div> Total: ${total}</div>
     </Layout>
