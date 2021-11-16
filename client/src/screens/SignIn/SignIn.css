@@ -1,6 +1,9 @@
 .sign-in-display-div {
   /* swap for backgroun image when available */
-  background-color: red;
+  background-image: url("../../backgrounds/2021-porsche-taycan.jpeg");
+  background-position: center;
+  /* background: url("../../backgrounds/2021-porsche-taycan.jpeg") center; */
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -8,9 +11,8 @@
   align-items: center;
 }
 .sign-in-div {
-  width: 300px;
-  /* height: fit-contents; */
-  height: 500px;
+  width: 447px;
+  height: 364px;
   border: solid 1px #625d5d;
   background-color: rgb(32, 33, 35, 0.9);
   display: flex;
@@ -32,6 +34,44 @@
   flex-direction: column;
 }
 
-/* .sign-in-form h2 {
-  margin: 0 auto;
+/* TEXT/INPUT STYLING */
+
+.sign-in-form h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.sign-in-email-label,
+.sign-in-password-label {
+  font-size: 14px;
+}
+
+.sign-in-email-input,
+.sign-in-password-input {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #202123;
+  background-color: #f2f0ea;
+  border: solid 1px #625d5d;
+  height: 37px;
+  width: 295px;
+  padding: 0 0 0 10px;
+  box-sizing: border-box;
+}
+
+.sign-in-email-input::placeholder,
+.sign-in-password-input::placeholder {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  color: #615e5e;
+}
+
+/* .sign-in-email-input::placeholder,
+.sign-in-password-input::placeholder {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  color: red;
 } */
