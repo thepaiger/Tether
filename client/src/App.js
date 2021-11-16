@@ -28,13 +28,13 @@ const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={ <Home user={user} setUser={setUser} /> } />
-        <Route path="/signIn" element={ <SignIn setUser={setUser} /> } />
-        <Route path="/signUp" element={ <SignUp setUser={setUser} /> } />
-        <Route path="/cars" element={ <Cars user={user} /> } />
-        <Route path="/cars/:id" element={ <CarDetail user={user} /> } />
-        <Route path="/user" element={ <UserAccount user={user} /> } />
-        <Route path="/user/edit" element={ <UserUpdate user={user} setUser={setUser} /> } />
+        <Route exact path="/" element={<Home user={user} setUser={setUser} />} />
+        <Route path="/signIn" element={<SignIn setUser={setUser} />} />
+        <Route path="/signUp" element={<SignUp setUser={setUser} />} />
+        <Route path="/cars" element={<Cars user={user} />} />
+        <Route path="/cars/:id" element={<CarDetail user={user} />} />
+        <Route path="/user" element={<UserAccount user={user} setUser={setUser} />} />
+        <Route path="/user/edit" element={<UserUpdate user={user} setUser={setUser} />} />
       </Routes>
     </div>
   );

@@ -1,6 +1,15 @@
+import { NavLink } from "react-router-dom";
 import { Layout } from "../../components";
+import { Navigate } from "react-router";
+const UserAccount = ({ user, setUser }) => {
+  const signOut = () => {
+    localStorage.clear()
+    setUser('');
+  }
 
-const UserAccount = ({ user }) => {
+  if (user === '') {
+    return <Navigate to='/' />
+  }
   return (
     <Layout>
       <div className="account-info">
@@ -15,6 +24,10 @@ const UserAccount = ({ user }) => {
         <div className="account-details">
           <p className="account-form">Password:</p>
           <p className="account-password">********</p>
+        </div>
+        <div>
+          <NavLink to="/user/edit">Edit Info</NavLink>
+          {user ? <div onClick={signOut}>Sign Out</div> : null}
         </div>
       </div>
     </Layout>
