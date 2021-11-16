@@ -20,12 +20,7 @@ const Cars = () => {
         {cars.map((car, index) => {
           return (
             <CarDisplay
-              _id={car._id}
-              image={car.image}
-              make={car.make}
-              model={car.model}
-              price={car.price}
-              info={car.info}
+              car={car}
               key={index}
             />
           );
