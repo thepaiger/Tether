@@ -2,6 +2,7 @@ import "./CarShopping.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { verifyUser, updateUser } from "../../services/users";
+import axios from "axios";
 
 const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser}) => {
   const [input, setInput] = useState('')
@@ -27,29 +28,39 @@ const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, us
     const tempCart = user.shopping_cart
     tempCart.splice(idx, 1)
     const newCart = {
-      shopping_cart: tempCart
+      "shopping_cart": tempCart
     }
-    updateUser(user._id, newCart)
+    await updateUser(`${user._id}`, newCart)
     const updatedUser = await verifyUser()
     setUser(updatedUser)
   }
 
-  const editCart = (ev) => {
+  // const changeUser = (ev) => {
+  //   user.shopping_cart[idx].quantity = ev
+  // }
+
+  // const newFunc = async () => {
+  //   const form = {
+  //     shopping_cart
+  //   }
+  // }
+
+  const editCart = async (ev) => {
     const tempCart = user.shopping_cart
     tempCart[idx].quantity = ev
+    // changeUser(ev)
     const newCart = {
-      shopping_cart: tempCart
+      "shopping_cart": tempCart
     }
-    updateUser(user._id, newCart)
+    
+    await updateUser(user._id, newCart)
     const updatedUser = await verifyUser()
     setUser(updatedUser)
   }
 
   const handleChange = (ev) => {
     getInput(ev)
-    if (ev < 0 || ev.includes('e') || ev.includes('.')) {
-      resetInput()
-    } else if (ev === 0) {
+    if (ev === 0) {
       remove()
     } else {
       editCart(ev)
@@ -65,10 +76,10 @@ const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, us
         />
       </div>
       <Link className="carShopping-link" to={`/cars/${car_id}`}>
-        {/* FIX IMAGE SOURCE LOCATION */}
         <div className="carShopping-image-div">
           <img className="carShopping-image" src={image} alt={car} />
         </div>
+      </Link>
         <div className="carShopping-details-div">
           <h3 className="carShopping-name">{car}</h3>
         </div>
@@ -90,7 +101,7 @@ const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, us
           <h4>${getTotal}</h4>
           <h6>total</h6>
         </div>
-      </Link>
+      
     </div>
   );
 };
