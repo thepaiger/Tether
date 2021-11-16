@@ -28,9 +28,16 @@
   justify-content: center;
   text-decoration: none;
   margin: 5vh 5vw;
+ 
 }
-
+.carDisplay-make{
+  margin: 0;
+}
+.carDisplay-price{
+  margin:0;
+}
 .carDisplay-info{
   max-width: 500px;
   text-align: justify;
 }
+
