@@ -19,7 +19,7 @@
 /* SET SIGNIN DIV SIZE/COLOR/DISPLAY */
 .sign-in-div {
   width: 450px;
-  height: 370px;
+  height: fit-content;
   box-sizing: border-box;
   border: solid 1px #625d5d;
   background-color: rgb(32, 33, 35, 0.85);
@@ -50,7 +50,7 @@
 /* SIGNIN HEADER */
 .sign-in-form h2 {
   font-size: 30px;
-  margin: 0 0 5px 0;
+  margin: 30px 0 5px 0;
 }
 
 /* INPUT LABELS */
@@ -105,7 +105,7 @@
 /* NO ACCOUNT? */
 .no-account p {
   font-size: 12px;
-  margin: 20px 0 0 0;
+  margin: 20px 0 40px 0;
 }
 
 .no-account a {
