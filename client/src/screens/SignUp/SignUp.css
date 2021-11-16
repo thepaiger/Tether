@@ -1,0 +1,122 @@
+/* BACKGROUND IMAGE */
+.sign-up-background-img {
+  background-image: url("../../backgrounds/2021-porsche-taycan.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* SIGNUP PAGE */
+.sign-up-display-div {
+  backdrop-filter: blur(4px);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SET SIGNUP DIV SIZE/COLOR/DISPLAY */
+.sign-up-div {
+  width: 450px;
+  height: fit-content;
+  box-sizing: border-box;
+  border: solid 1px #625d5d;
+  background-color: rgb(32, 33, 35, 0.85);
+  box-shadow: 0 0 10px #4a4848;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SET FORM DISPLAY */
+.sign-up-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* LEFT-ALIGN LABELS/INPUTS */
+.sign-up-fields {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* ==========TEXT/INPUT STYLING========== */
+
+/* SIGNUP HEADER */
+.sign-up-form h2 {
+  font-size: 30px;
+  margin: 30px 0 5px 0;
+}
+
+/* INPUT LABELS */
+.sign-up-name-label,
+.sign-up-email-label,
+.sign-up-password-label,
+.sign-up-confirm-label {
+  font-size: 14px;
+  padding: 7px 0;
+}
+
+/* INPUTS */
+.sign-up-name-input,
+.sign-up-email-input,
+.sign-up-password-input,
+.sign-up-confirm-input {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #202123;
+  background-color: #f2f0ea;
+  border: solid 1px #625d5d;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 37px;
+  width: 295px;
+  padding: 0 0 0 10px;
+  margin: 0 0 20px 0;
+}
+
+/* INPUT PLACEHOLDERS */
+.sign-up-name-input::placeholder,
+.sign-up-email-input::placeholder,
+.sign-up-password-input::placeholder,
+.sign-up-confirm-input::placeholder {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  color: #615e5e;
+}
+
+/* SIGNUP BUTTON */
+.sign-up-submit {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #4a4848;
+  background-color: #f2f0ea;
+  box-sizing: border-box;
+  border: solid 1px #625d5d;
+  border-radius: 3px;
+  padding: 2px 15px;
+  margin: 7px 0;
+}
+
+.sign-up-submit:hover {
+}
+
+/* RETURN TO SIGNIN */
+.return-sign-in {
+  margin: 20px 0 40px 0;
+}
+
+.return-sign-in a {
+  font-size: 12px;
+  color: #e9e3d5;
+}
+
+.return-sign-in a:hover {
+}
