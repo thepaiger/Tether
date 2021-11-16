@@ -18,14 +18,9 @@ const CarDisplay = ({car}) => {
           />
         </div>
         <div className="carDisplay-column">
-          <h3 className="carDisplay-make">Make: {car.make}</h3>
-          <h3 className="carDisplay-model">Model: {car.model}</h3>
-          <h3 className="carDisplay-price">Price: {car.price}</h3>
-          <h3 className="carDisplay-price">HP: {car.hp}</h3>
-          <h3 className="carDisplay-price">Top Speed: {car.topSpeed}</h3>
-          <h3 className="carDisplay-price">Range: {car.range}</h3>
-          <h3 className="carDisplay-price">Connector: {car.connector}</h3>
-          <p className="carDisplay-info">Info: {car.info}</p>
+          <h3 className="carDisplay-make">{car.make} {car.model}</h3>
+          <h3 className="carDisplay-price">{car.price}</h3>
+          <p className="carDisplay-info">{car.info.substring(0,200)}...</p>
         </div>
       </Link>
         <div className="carDisplay-icon">

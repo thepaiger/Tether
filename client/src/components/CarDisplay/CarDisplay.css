@@ -1,0 +1,36 @@
+.carDisplay {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: antiquewhite;
+    text-decoration: none;
+}
+
+
+.carDisplay-image{
+
+  width: 500px
+}
+
+.carDisplay-column{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-decoration: none;
+  margin: 5vh 5vw;
+}
+
+.carDisplay-info{
+  max-width: 500px;
+  text-align: justify;
+}
