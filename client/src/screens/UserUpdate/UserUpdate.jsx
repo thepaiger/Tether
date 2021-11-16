@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+
+import { useState, useEffect } from 'react'
 import './UserUpdate.css'
 import { Navigate } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout.jsx'
@@ -18,11 +19,24 @@ const UserUpdate = ({ user, setUser }) => {
     setEmail(user ? user.email : '')
   },[user])
   
+  // Get User Data
+  useEffect(() => {
+    const fetchUserData = async () => {
+      setName(`${user.name}`)
+      setEmail(`${user.email}`)
+      setPassword(`${user.password_digest}`)
+      setConfirm(`${user.password_digest}`)
+    }
+    fetchUserData();
+    console.log(`Prop passed name ${name}`);
+  }, [])
+
   // Delete user
   const handleDelete = async (event) => {
     event.preventDefault()
     const deleted = await deleteUser(user._id, user)
     setDelete(deleted)
+    console.log('deleted')
   }
 
   if (isDeleted) {
@@ -59,6 +73,8 @@ const UserUpdate = ({ user, setUser }) => {
       }
       const updated = await updateUser(user._id, form)
       setUpdated(updated)
+      console.log('updated')
+      console.log(email);
     }
     
   }
