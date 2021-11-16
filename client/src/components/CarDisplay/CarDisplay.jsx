@@ -30,6 +30,7 @@ const CarDisplay = ({car}) => {
       </Link>
         <div className="carDisplay-icon">
         <img onClick={handleClick} src="/images/icons/bag-plus-fill.svg" alt="bag-plus-fill" />
+
         </div>
     </div>
   );
