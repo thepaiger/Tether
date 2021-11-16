@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 import './UserUpdate.css'
 import { Navigate } from 'react-router-dom'
@@ -13,7 +14,12 @@ const UserUpdate = ({ user}) => {
   const [confirm, setConfirm] = useState('********')
   const [match, setMatch] = useState(false)
 
-  // // Get User Data
+
+  useEffect(() => {
+    setName(user ? user.name : '' )
+    setEmail(user ? user.email : '')
+  },[user])
+ 
   useEffect(() => {
     setName(user ? user.name : 'loading');
     setEmail(user ? user.email : 'loading');
@@ -46,6 +52,8 @@ const UserUpdate = ({ user}) => {
       // return alert("Passwords entered do not match");
     }
   }
+
+  
   
 
   //Update User Information
