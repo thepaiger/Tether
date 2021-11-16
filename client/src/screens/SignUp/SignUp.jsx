@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { signUp } from "../../services/users";
+import Layout from "../../components/Layout/Layout.jsx";
+
 
 const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
   const [email, setEmail] = useState("");
@@ -81,92 +83,95 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
   };
 
   return (
-    <div className="sign-up-display-div">
-      <div className="sign-up-div">
-        <form className="sign-up-form" onSubmit={(ev) => handleSubmit(ev)}>
-          <label className="sign-up-name-label" htmlFor="sign-up-name-input">
-            Name:
-          </label>
-          <input
-            className="sign-up-name-input"
-            id="sign-up-name-input"
-            type="text"
-            value={name}
-            placeholder="name"
-            onChange={(ev) => setName(ev.target.value)}
-            required
-          />
-          <br />
+    <Layout>
+      <div className="sign-up-display-div">
+        <div className="sign-up-div">
+          <form className="sign-up-form" onSubmit={(ev) => handleSubmit(ev)}>
+            <label className="sign-up-name-label" htmlFor="sign-up-name-input">
+              Name:
+            </label>
+            <input
+              className="sign-up-name-input"
+              id="sign-up-name-input"
+              type="text"
+              value={name}
+              placeholder="name"
+              onChange={(ev) => setName(ev.target.value)}
+              required
+            />
+            <br />
 
-          <label className="sign-up-email-label"
-            htmlFor="sign-up-email-input">
-            Email:
-          </label>
-          <input
-            className="sign-up-email-input"
-            id="sign-up-email-input"
-            type="email"
-            value={email}
-            placeholder="email"
-            onChange={(ev) => setEmail(ev.target.value)}
-            required
-          />
-          <br />
+            <label className="sign-up-email-label"
+              htmlFor="sign-up-email-input">
+              Email:
+            </label>
+            <input
+              className="sign-up-email-input"
+              id="sign-up-email-input"
+              type="email"
+              value={email}
+              placeholder="email"
+              onChange={(ev) => setEmail(ev.target.value)}
+              required
+            />
+            <br />
 
-          <label
-            className="sign-up-password-label"
-            htmlFor="sign-up-password-input"
-          >
-            Password:
-          </label>
-          {/* update type to password once testing complete */}
-          <input
-            className="sign-up-password-input"
-            id="sign-up-password-input"
-            type="text"
-            value={password}
-            placeholder="********"
-            onChange={(ev) => setPassword(ev.target.value)}
-            required
-          />
-          <br />
+            <label
+              className="sign-up-password-label"
+              htmlFor="sign-up-password-input"
+            >
+              Password:
+            </label>
+            {/* update type to password once testing complete */}
+            <input
+              className="sign-up-password-input"
+              id="sign-up-password-input"
+              type="text"
+              value={password}
+              placeholder="********"
+              onChange={(ev) => setPassword(ev.target.value)}
+              required
+            />
+            <br />
 
-          <label
-            className="sign-up-confirm-label"
-            htmlFor="sign-up-confirm-input"
-          >
-            Confirm Password:
-          </label>
-          {/* update type to password once testing complete */}
-          <input
-            className="sign-up-confirm-input"
-            id="sign-up-confirm-input"
-            type="text"
-            value={confirm}
-            placeholder="********"
-            onChange={(ev) => handleChange(ev)}
-            required
-          />
-          <br />
+            <label
+              className="sign-up-confirm-label"
+              htmlFor="sign-up-confirm-input"
+            >
+              Confirm Password:
+            </label>
+            {/* update type to password once testing complete */}
+            <input
+              className="sign-up-confirm-input"
+              id="sign-up-confirm-input"
+              type="text"
+              value={confirm}
+              placeholder="********"
+              onChange={(ev) => handleChange(ev)}
+              required
+            />
+            <br />
 
-          {matchToggle ? (
-            <div className="password-match-div">Passwords must match</div>
-          ) : null}
-          {lengthToggle ? (
-            <div className="password-match-div">
-              Password must be at least 8 characters
-            </div>
-          ) : null}
-          <br />
+            {matchToggle ? (
+              <div className="password-match-div">Passwords must match</div>
+            ) : null}
+            {lengthToggle ? (
+              <div className="password-match-div">
+                Password must be at least 8 characters
+              </div>
+            ) : null}
+            <br />
 
-          <input type="submit" value="Sign Up" />
-        </form>
+            <input type="submit" value="Sign Up" />
+          </form>
+        </div>
+        <div>
+          <Link to='/signIn'>Back to Sign In</Link>
+        </div>
       </div>
-      <div>
-        <Link to='/signIn'>Back to Sign In</Link>
-      </div>
-    </div>
+    </Layout>
   );
+
 };
 
 export default SignUp;

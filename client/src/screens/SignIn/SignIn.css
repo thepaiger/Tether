@@ -21,10 +21,17 @@
 .sign-in-form {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sign-in-fields {
+  display: flex;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
 }
 
-.sign-in-form h2 {
+/* .sign-in-form h2 {
   margin: 0 auto;
-}
+} */

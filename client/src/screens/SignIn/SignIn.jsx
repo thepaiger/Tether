@@ -1,6 +1,8 @@
 import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { signIn } from "../../services/users";
+import Layout from "../../components/Layout/Layout.jsx";
+
 import './SignIn.css'
 
 const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
@@ -29,42 +31,47 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
   }
 
   return (
-    <div className="sign-in-display-div">
-      <div className="sign-in-div">
-        <form className="sign-in-form" onSubmit={(ev) => handleSubmit(ev)}>
-          <h2>Sign In</h2>
+    <Layout>
+      <div className="sign-in-display-div">
+        <div className="sign-in-div">
+          <form className="sign-in-form" onSubmit={(ev) => handleSubmit(ev)}>
+            <h2>Sign In</h2>
 
-          <label className="sign-in-email-label" htmlFor="sign-in-email-input">Email:</label>
-          <input
-            className="sign-in-email-input"
-            id="sign-in-email-input"
-            type="email"
-            value={email}
-            placeholder="email"
-            onChange={(ev) => setEmail(ev.target.value)}
-            required
-          />
-          <label className="sign-in-password-label" htmlFor="sign-in-password-input">Password:</label>
+            <div className="sign-in-fields">
+              <label className="sign-in-email-label" htmlFor="sign-in-email-input">Email:</label>
+              <input
+                className="sign-in-email-input"
+                id="sign-in-email-input"
+                type="email"
+                value={email}
+                placeholder="email"
+                onChange={(ev) => setEmail(ev.target.value)}
+                required
+              />
+              <label className="sign-in-password-label" htmlFor="sign-in-password-input">Password:</label>
 
-          {/* update type to password once testing complete */}
-          <input
-            className="sign-in-password-input"
-            id="sign-in-password-input"
-            type="text"
-            value={password}
-            placeholder="********"
-            onChange={(ev) => setPassword(ev.target.value)}
-            required
-          />
+              {/* update type to password once testing complete */}
+              <input
+                className="sign-in-password-input"
+                id="sign-in-password-input"
+                type="text"
+                value={password}
+                placeholder="********"
+                onChange={(ev) => setPassword(ev.target.value)}
+                required
+              />
+            </div>
 
-          <input type="submit" value="Sign In" />
-        </form>
+            <input type="submit" value="Sign In" />
+
+            <div>
+              <div>Don't have an account? <Link to='/signUp'>Sign Up</Link></div>
+            </div>
+          </form>
+        </div>
+
       </div>
-      <div>
-        <div>If you do not have an account, create one here.</div>
-        <Link to='/signUp'>Create Account</Link>
-      </div>
-    </div>
+    </Layout>
   );
 };
 
