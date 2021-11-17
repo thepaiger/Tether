@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from "react"
-import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap/dist/css/bootstrap.css'
 import Carousel from 'react-bootstrap/Carousel';
 import { NavLink } from "react-router-dom";
 import './Carousel.css'
