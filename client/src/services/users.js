@@ -32,7 +32,6 @@ export const signOut = async () => {
   }
 }
 
-// confirm if return is correct
 export const updateUser = async (credentials, data) => {
   try {
     const resp = await api.put(`/update/${credentials}`, data)
@@ -51,7 +50,6 @@ export const deleteUser = async (credentials) => {
   }
 }
 
-// confirm if edits are needed
 export const changePassword = async (passwords, user) => {
   try {
     const resp = await api.post('/')
