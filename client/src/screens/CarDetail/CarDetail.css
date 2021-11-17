@@ -1,0 +1,81 @@
+.car-detail-background-img {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #e9e3d5;
+  background-image: url(../../backgrounds/Black-Grid.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  height: fit-content;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.car-detail-background{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(32, 33, 35, .85);
+width:100vw;
+  box-shadow: 0 0 10px #4A4848;
+}
+.car-detail-image {
+  width: 60vw;
+}
+
+.car-detail-textblock-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-decoration: none;
+  margin: 2vh 2vw;
+  width: 30vw;
+}
+.car-detail-makeAndModel {
+  font-size: 40px;
+  font-weight: 700;
+  font-style: italic;
+}
+.car-detail-price {
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.car-detail-info {
+  line-height: 1.25;
+  font-size: 16px;
+  text-align: justify;
+  font-style: italic;
+  font-weight: 500;
+}
+.car-detail-additional-info {
+  padding: 3px;
+  margin-bottom: 3px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgb(230, 200, 53);
+}
+
+.carDetail-icon {
+  display: inline;
+}
+.image-detail {
+  padding-left: 3px;
+  padding-right: 12px;
+}
+.button {
+  font-family: “Roboto”, sans-serif;
+  background-color: #f2f0ea;
+  color: #403d3d;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
