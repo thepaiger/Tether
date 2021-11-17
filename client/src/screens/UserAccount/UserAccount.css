@@ -6,9 +6,8 @@
   background-repeat: no-repeat;
 }
 
-/* SIGNIN PAGE */
+/* ACCOUNT INFO PAGE */
 .account-display-div {
-  /* backdrop-filter: blur(4px); */
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -24,13 +23,13 @@
   border: solid 1px #625d5d;
   background-color: rgb(32, 33, 35, 0.85);
   box-shadow: 0 0 10px #4a4848;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 }
 
 /* SET FORM DISPLAY */
-.sign-in-form {
+.account-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +37,9 @@
 }
 
 /* LEFT-ALIGN LABELS/INPUTS */
-.sign-in-fields {
+.account-fields {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -47,27 +48,31 @@
 
 /* ==========TEXT/INPUT STYLING========== */
 
-/* SIGNIN HEADER */
-.sign-in-form h2 {
+/* ACCOUNT HEADER */
+.account-form h2 {
   font-size: 30px;
   margin: 30px 0 5px 0;
 }
 
-/* INPUT LABELS */
-.sign-in-email-label,
-.sign-in-password-label {
+/* LABELS */
+.account-name-label,
+.account-email-label,
+.account-password-label {
   font-size: 14px;
   padding: 7px 0;
+  margin: 0;
 }
 
-/* INPUTS */
-.sign-in-email-input,
-.sign-in-password-input {
+/* NON-FUNCTIONAL INPUTS */
+.account-name-input,
+.account-email-input,
+.account-password-input {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #202123;
-  background-color: #f2f0ea;
+  color: #e9e3d5;
   border: solid 1px #625d5d;
   box-sizing: border-box;
   border-radius: 3px;
@@ -77,17 +82,17 @@
   margin: 0 0 20px 0;
 }
 
-/* INPUT PLACEHOLDERS */
-.sign-in-email-input::placeholder,
-.sign-in-password-input::placeholder {
-  font-size: 14px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 200;
-  color: #615e5e;
+/* BUTTONS DIV */
+.account-btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 0 40px 0;
 }
 
-/* SUBMIT BUTTON */
-.sign-in-submit {
+/* EDIT & SIGN OUT BUTTONS */
+.account-edit-btn,
+.account-sign-out-btn {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   color: #4a4848;
@@ -97,20 +102,9 @@
   border-radius: 3px;
   padding: 2px 15px;
   margin: 7px 0;
+  text-decoration: none;
 }
 
-.sign-in-submit:hover {
-}
-
-/* NO ACCOUNT? */
-.no-account p {
-  font-size: 12px;
-  margin: 20px 0 40px 0;
-}
-
-.no-account a {
-  color: #e9e3d5;
-}
-
-.no-account a:hover {
+.account-edit-btn:hover,
+.account-sign-out-btn:hover {
 }

@@ -50,7 +50,6 @@ export const deleteUser = async (credentials) => {
   }
 }
 
-// confirm if edits are needed
 export const changePassword = async (passwords, user) => {
   try {
     const resp = await api.post('/')

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Layout } from "../../components";
 import { Navigate } from "react-router";
 
@@ -18,21 +18,29 @@ const UserAccount = ({ user, setUser }) => {
       <div className="account-background-img">
         <div className="account-display-div">
           <div className="account-info-div">
-            {user && <div className="account-details">
-              <p className="account-form">Name: </p>
-              <p className="account-name">{user.name}</p></div>}
+            <div className="account-form">
+              <h2>Account Info</h2>
 
-            {user && <div className="account-details">
-              <p className="account-form">Email: </p>
-              <p className="account-email">{user.email}</p></div>}
+              <div className="account-fields">
+                {user && <div className="account-details-name">
+                  <p className="account-name-label">Name:</p>
+                  <p className="account-name-input">{user.name}</p></div>}
 
-            <div className="account-details">
-              <p className="account-form">Password: </p>
-              <p className="account-password">********</p>
-            </div>
-            <div>
-              <NavLink to="/user/edit">Edit Info</NavLink>
-              {user ? <div onClick={signOut}>Sign Out</div> : null}
+                {user && <div className="account-details-email">
+                  <p className="account-email-label">Email:</p>
+                  <p className="account-email-input">{user.email}</p></div>}
+
+                <div className="account-details-password">
+                  <p className="account-password-label">Password:</p>
+                  <p className="account-password-input">********</p>
+                </div>
+              </div>
+              <div className="account-btns">
+                <Link className="account-edit-btn" to="/user/edit">Edit Info</Link>
+                {user ?
+                  <div className="account-sign-out-btn" onClick={signOut}>Sign Out</div>
+                  : null}
+              </div>
             </div>
           </div>
         </div>
