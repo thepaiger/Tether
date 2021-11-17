@@ -4,7 +4,7 @@ import Layout from "../../components/Layout/Layout.jsx";
 import CarDisplay from "../../components/CarDisplay/CarDisplay.jsx";
 import { getCars } from "../../services/cars.js";
 
-const Cars = () => {
+const Cars = (props) => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Cars = () => {
     fetchCars();
   }, []);
   return (
-    <Layout>
+    <Layout user={props.user} setUser={props.setUser}>
       <div className="cars-background-img">
         <div className="cars">
           {cars.map((car, index) => {

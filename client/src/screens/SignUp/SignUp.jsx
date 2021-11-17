@@ -85,7 +85,7 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
   };
 
   return (
-    <Layout>
+    <Layout user={user} setUser={setUser}>
       <div className="sign-up-background-img">
         <div className="sign-up-display-div">
           <div className="sign-up-div">
