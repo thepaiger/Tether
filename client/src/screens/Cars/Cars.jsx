@@ -16,16 +16,13 @@ const Cars = () => {
   }, []);
   return (
     <Layout>
-      <div className="cars">
-        {cars.map((car, index) => {
-          return (
-            <CarDisplay
-              car={car}
-              key={index}
-            />
-          );
-        })}
-      </div>
+      <div className="cars-background-img">
+        <div className="cars">
+          {cars.map((car, index) => {
+            return <CarDisplay car={car} key={index} />;
+          })}
+        </div>
+        </div>
     </Layout>
   );
 };

@@ -10,5 +10,6 @@ router.post('/change-password', controllers.changePassword)
 router.delete('/users/:id', controllers.deleteUser)
 router.get('/users', controllers.getUsers)
 router.put('/update/:id', controllers.updateUser)
+router.get('/users/:id', controllers.getUser)
 
 export default router

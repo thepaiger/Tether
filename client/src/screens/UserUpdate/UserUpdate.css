@@ -1,0 +1,124 @@
+/* BACKGROUND IMAGE */
+.userUpdate-background-img {
+  background-image: url("../../backgrounds/lamborghini-terzo-millennio.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* UPDATE ACCOUNT INFO PAGE */
+.userUpdate-display-div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SET USERUPDATE INFO DIV SIZE/COLOR/DISPLAY */
+.userUpdate-info-div {
+  width: 450px;
+  height: fit-content;
+  box-sizing: border-box;
+  border: solid 1px #625d5d;
+  background-color: rgb(32, 33, 35, 0.85);
+  box-shadow: 0 0 10px #4a4848;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SET FORM DISPLAY */
+.userUpdate-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* LEFT-ALIGN LABELS/INPUTS */
+.userUpdate-fields {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* ==========TEXT/INPUT STYLING========== */
+
+/* ACCOUNT HEADER */
+.userUpdate-form h2 {
+  font-size: 30px;
+  margin: 30px 0 5px 0;
+}
+
+/* LABELS */
+.userUpdate-name-label,
+.userUpdate-email-label,
+.userUpdate-password-label,
+.userUpdate-confirm-label {
+  font-size: 14px;
+  padding: 7px 0;
+  margin: 0;
+}
+
+/* INPUTS */
+.userUpdate-name-input,
+.userUpdate-email-input,
+.userUpdate-password-input,
+.userUpdate-confirm-input {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #202123;
+  background-color: #f2f0ea;
+  border: solid 1px #625d5d;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 37px;
+  width: 295px;
+  padding: 0 0 0 10px;
+  margin: 0 0 20px 0;
+}
+
+/* INPUT PLACEHOLDERS */
+.userUpdate-name-input::placeholder,
+.userUpdate-email-input::placeholder,
+.userUpdate-password-input::placeholder,
+.userUpdate-confirm-input::placeholder {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  color: #615e5e;
+}
+
+/* BUTTONS DIV */
+.userUpdate-btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 0 40px 0;
+}
+
+/* EDIT & SIGN OUT BUTTONS */
+.userUpdate-update-btn,
+.userUpdate-delete-btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #4a4848;
+  background-color: #f2f0ea;
+  box-sizing: border-box;
+  border: solid 1px #625d5d;
+  border-radius: 3px;
+  padding: 2px 15px;
+  margin: 7px 0;
+  text-decoration: none;
+}
+
+.userUpdate-update-btn:hover,
+.userUpdate-delete-btn:hover {
+}

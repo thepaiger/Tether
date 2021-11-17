@@ -1,8 +1,10 @@
+/*CAR DISPLAY FLEX*/
 .carDisplay {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
 }
 
 .card {
@@ -10,31 +12,54 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color: antiquewhite;
-    text-decoration: none;
+  color: #e9e3d5;
+  text-decoration: none;
+  flex-wrap: wrap;
+  font-family: “Roboto”, sans-serif;
 }
 
-.carDisplay-image{
-  width: 500px
+.carDisplay-header {
+  width: 40vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
-
-.carDisplay-column{
+/*CAR DISPLAY IMAGE*/
+.carDisplay-image {
+  /* width: 500px; */
+  width: 37vw;
+}
+/*CAR DISPLAY COLUMN*/
+.carDisplay-column {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   text-decoration: none;
   margin: 5vh 5vw;
- 
+  width: 40vw;
 }
-.carDisplay-make{
-  margin: 0;
-}
-.carDisplay-price{
-  margin:0;
-}
-.carDisplay-info{
-  max-width: 500px;
-  text-align: justify;
+.carDisplay-make-icon {
+  width: 100%;
 }
 
+.carDisplay-make {
+  margin: 0;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.carDisplay-price {
+  margin: 0;
+  font-weight: 300;
+}
+.carDisplay-info {
+  /* max-width: 500px; */
+  text-align: justify;
+}
+.carDisplay-icon {
+  display: inline;
+}
