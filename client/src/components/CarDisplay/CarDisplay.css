@@ -4,9 +4,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
 }
-
+/*CARD DISPLAY FLEX*/
 .card {
   display: flex;
   flex-direction: row;
@@ -39,6 +38,7 @@
   margin: 5vh 5vw;
   width: 40vw;
 }
+
 .carDisplay-make-icon {
   width: 100%;
 }
@@ -57,9 +57,30 @@
   font-weight: 300;
 }
 .carDisplay-info {
-  /* max-width: 500px; */
   text-align: justify;
 }
+
 .carDisplay-icon {
   display: inline;
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .card {
+    border-bottom: 2px solid rgb(58, 57, 56);
+  }
+
+  .carDisplay-info {
+    text-align: center;
+  }
+
+  .carDisplay-column {
+    align-items: center;
+    width: 60vw;
+    margin: 20px;
+  }
+
+  .carDisplay-image {
+    margin-top: 15px;
+    width: 50vw;
+  }
 }
