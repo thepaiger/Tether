@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <div className="footer">
         <p className="copyright">Copyright © 2021</p>
-        <a href="https://github.com/DarrylFalls/Tether" className="github-footer"><img src={'/images/icons/github.svg'}></img></a>
+        <NavLink to="https://github.com/DarrylFalls/Tether" className="github-footer"><img src={'/images/icons/github.svg'} alt='github link'></img></NavLink>
       </div>
     </footer>
   )
