@@ -72,7 +72,9 @@ export const verifyUser = async () => {
 export const getUser = async id => {
   try {
     const response = await api.get(`/users/${id}`)
-    return response.data
+    localStorage.setItem('token', resp.data.token)
+    const user = jwtDecode(resp.data.token)
+    return user
   } catch (error) {
     throw error
   }
