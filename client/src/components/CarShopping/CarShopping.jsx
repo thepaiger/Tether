@@ -2,8 +2,8 @@ import "./CarShopping.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const CarShopping = ({car, car_id, price, item_id, quantity, image}) => {
-  
+const CarShopping = ({ car, car_id, price, item_id, quantity, image }) => {
+
 
   const getTotal = () => {
     let total = price * quantity;
@@ -35,7 +35,7 @@ const CarShopping = ({car, car_id, price, item_id, quantity, image}) => {
             type="number"
             name="quantity"
             value={quantity}
-            onChange={(ev) => setQuantity(ev.target.value)}
+            // onChange={(ev) => setQuantity(ev.target.value)}
             required
           />
           <h6>quantity</h6>

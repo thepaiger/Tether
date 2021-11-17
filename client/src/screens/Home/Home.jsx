@@ -1,10 +1,13 @@
 import './Home.css'
-import { Layout, ProductCards } from '../../components'
+import { Layout } from '../../components'
 import { NavLink } from 'react-router-dom'
+import ControlledCarousel from '../../components/Carousel/Carousel'
 
 const Home = (props) => {
   return (
     <Layout user={props.user} setUser={props.setUser}>
+
+      <ControlledCarousel />
       <div className='welcome-browse'>
         <h1>WELCOME TO THE FUTURE</h1>
         <NavLink to="/inventory">Browse Inventory</NavLink>
