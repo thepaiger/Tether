@@ -19,7 +19,8 @@ export const signIn = async (credentials) => {
     const user = jwtDecode(resp.data.token)
     return user
   } catch (error) {
-    throw error
+    // throw error
+    return error
   }
 }
 
