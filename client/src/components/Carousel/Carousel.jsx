@@ -3,6 +3,7 @@ import { useState } from "react"
 import 'bootstrap/dist/css/bootstrap.css'
 import Carousel from 'react-bootstrap/Carousel';
 import { NavLink } from "react-router-dom";
+import './Carousel.css'
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
@@ -40,10 +41,13 @@ function ControlledCarousel() {
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div className='welcome-browse'>
+            <h1>WELCOME TO THE FUTURE</h1>
+            <NavLink to="/inventory">Browse Inventory</NavLink>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item interval={4500}>
         <img
           className="d-block w-100"
@@ -52,10 +56,10 @@ function ControlledCarousel() {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <div className='welcome-browse'>
+            <h1>WELCOME TO THE FUTURE</h1>
+            <NavLink to="/inventory">Browse Inventory</NavLink>
+          </div>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
