@@ -7,11 +7,7 @@ import { Carousel } from 'bootstrap'
 const Home = (props) => {
   return (
     <Layout user={props.user} setUser={props.setUser}>
-
-      <ControlledCarousel>
-
-      </ControlledCarousel>
-
+      <ControlledCarousel />
     </Layout>
   )
 }
