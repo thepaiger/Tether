@@ -14,14 +14,14 @@
   padding: 50px;
   box-sizing: border-box;
 }
-.car-detail-background{
+.car-detail-background {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: rgb(32, 33, 35, .85);
-width:100vw;
-  box-shadow: 0 0 10px #4A4848;
+  background-color: rgb(32, 33, 35, 0.85);
+  width: 100vw;
+  box-shadow: 0 0 10px #4a4848;
 }
 .car-detail-image {
   width: 60vw;
@@ -35,10 +35,13 @@ width:100vw;
   text-decoration: none;
   margin: 2vh 2vw;
   width: 30vw;
-  height: 125%;
 }
 .car-detail-makeAndModel {
-  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* font-size:40px; */
+  font-size: 3.5vmax;
   font-weight: 700;
   font-style: italic;
 }
@@ -48,8 +51,12 @@ width:100vw;
   margin-bottom: 20px;
 }
 .car-detail-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   line-height: 1.25;
-  font-size: 16px;
+  font-size: 1.1vmax;
+  /* font-size: 16px; */
   text-align: justify;
   font-style: italic;
   font-weight: 500;
@@ -57,7 +64,8 @@ width:100vw;
 .car-detail-additional-info {
   padding: 3px;
   margin-bottom: 3px;
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 1.35vmax;
   line-height: 1.5;
   color: rgb(230, 200, 53);
 }
@@ -70,6 +78,7 @@ width:100vw;
   padding-right: 12px;
 }
 .button {
+  display: flex;
   font-family: “Roboto”, sans-serif;
   background-color: #f2f0ea;
   color: #403d3d;
@@ -79,4 +88,23 @@ width:100vw;
   padding-bottom: 10px;
   padding-right: 10px;
   border-radius: 5px;
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .car-detail-background {
+    padding-top: 15px;
+    flex-direction: column;
+  }
+
+  .car-detail-textblock-main {
+    width: 60vw;
+  }
+  .car-detail-price {
+    font-size: 2.75vmax;
+    margin-bottom: 5px;
+  }
+  .car-detail-info {
+    margin-bottom: 3px;
+  }
+
 }
