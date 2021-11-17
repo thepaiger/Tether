@@ -19,19 +19,24 @@ function ControlledCarousel() {
           className="d-block w-100"
           src="images/cars/rimac-home-page.jpeg"
         />
-        <Carousel.Caption>
-          <div className='welcome-browse'>
-            <h1>WELCOME TO THE FUTURE</h1>
-            <NavLink to="/inventory">Browse Inventory</NavLink>
-          </div>
-        </Carousel.Caption>
+
 
         <Carousel.Caption>
           <div className="home-logo">
             <img src={'/images/logo.png'} alt="Logo" className="home-logo" />
             <p>Your one-stop shop for Electric Supercars</p>
+
           </div>
         </Carousel.Caption>
+
+        <Carousel.Caption>
+          <div className='welcome-browse'>
+            <h1>WELCOME TO THE FUTURE</h1>
+            <NavLink to="/cars">Browse Inventory</NavLink>
+
+          </div>
+        </Carousel.Caption>
+
       </Carousel.Item >
       <Carousel.Item interval={4500}>
         <img
@@ -43,7 +48,7 @@ function ControlledCarousel() {
         <Carousel.Caption>
           <div className='welcome-browse'>
             <h1>WELCOME TO THE FUTURE</h1>
-            <NavLink to="/inventory">Browse Inventory</NavLink>
+            <NavLink to="/cars">Browse Inventory</NavLink>
           </div>
         </Carousel.Caption>
       </Carousel.Item>
@@ -58,7 +63,7 @@ function ControlledCarousel() {
         <Carousel.Caption>
           <div className='welcome-browse'>
             <h1>WELCOME TO THE FUTURE</h1>
-            <NavLink to="/inventory">Browse Inventory</NavLink>
+            <NavLink to="/cars">Browse Inventory</NavLink>
           </div>
         </Carousel.Caption>
       </Carousel.Item>
