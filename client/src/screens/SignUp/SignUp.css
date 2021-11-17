@@ -92,6 +92,12 @@
   color: #615e5e;
 }
 
+/* PASSWORD CHECK NOTIFICATION */
+.password-match-div {
+  font-size: 14px;
+  margin: 0 0 13px 0;
+}
+
 /* SIGNUP BUTTON */
 .sign-up-submit {
   font-family: "Roboto", sans-serif;

@@ -68,7 +68,7 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
   }
 
   const checkPassword = (v) => {
-    if (password.length > 0 && password.length < 8) {
+    if (password.length > 0 && password.length < 8 && v.length < 8) {
       lengthTrue()
     } else if (password === v && v.length > 7) {
       elseIfOne()
