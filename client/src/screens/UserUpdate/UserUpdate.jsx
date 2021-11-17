@@ -12,10 +12,10 @@ const UserUpdate = ({ user, setUser }) => {
   const [idNumber, setIdNumber] = useState("");
 
   // ==========COMMENT THIS IN/OUT FOR PASSWORD==========
-  const [password, setPassword] = useState("********");
-  const [confirm, setConfirm] = useState("********");
-  const [match, setMatch] = useState(false);
-  const [passwordToggle, setPasswordToggle] = useState(false);
+  // const [password, setPassword] = useState("********");
+  // const [confirm, setConfirm] = useState("********");
+  // const [match, setMatch] = useState(false);
+  // const [passwordToggle, setPasswordToggle] = useState(false);
 
   let form = {};
   let newUser = "";
@@ -43,46 +43,46 @@ const UserUpdate = ({ user, setUser }) => {
 
   // ==========COMMENT THIS IN/OUT FOR PASSWORD==========
   // Check Password
-  const handleConfirm = (ev) => {
-    setConfirm(ev.target.value);
-    setPasswordToggle(true);
-    checkPassword();
-  };
+  // const handleConfirm = (ev) => {
+  //   setConfirm(ev.target.value);
+  //   setPasswordToggle(true);
+  //   checkPassword();
+  // };
 
-  const checkPassword = () => {
-    if (password === confirm) {
-      setMatch(true);
-    } else {
-      setMatch(false);
-      return alert("Passwords entered do not match");
-    }
-  };
+  // const checkPassword = () => {
+  //   if (password === confirm) {
+  //     setMatch(true);
+  //   } else {
+  //     setMatch(false);
+  //     return alert("Passwords entered do not match");
+  //   }
+  // };
 
   //Update User Information
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     // ==========COMMENT THIS IN/OUT FOR PASSWORD==========
-    if (passwordToggle) {
-      if (match) {
-        form = {
-          name,
-          email,
-          password,
-        };
-      }
-    } else {
-      form = {
-        name,
-        email,
-      };
-    }
+    // if (passwordToggle) {
+    //   if (match) {
+    //     form = {
+    //       name,
+    //       email,
+    //       password,
+    //     };
+    //   }
+    // } else {
+    //   form = {
+    //     name,
+    //     email,
+    //   };
+    // }
 
     // ==========COMMENT THIS OUT IF ABOVE IS COMMENTED IN==========
-    // form = {
-    //   name,
-    //   email,
-    // }
+    form = {
+      name,
+      email,
+    }
 
     const updated = await updateUser(user._id, form);
     console.log(`service return of updated: ${updated}`);
@@ -126,7 +126,7 @@ const UserUpdate = ({ user, setUser }) => {
                   onChange={(ev) => setEmail(ev.target.value)}
                 />
                 {/* ==========COMMENT THIS IN/OUT FOR PASSWORD (through confirm password)========== */}
-                <label className="userUpdate-password-label">
+                {/* <label className="userUpdate-password-label">
                   Update Password:
                 </label>
                 <input
@@ -142,7 +142,7 @@ const UserUpdate = ({ user, setUser }) => {
                   className="userUpdate-confirm-input"
                   placeholder="********"
                   onChange={(ev) => handleConfirm(ev)}
-                />
+                /> */}
               </div>
 
               <div className="userUpdate-btns">
