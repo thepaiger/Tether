@@ -10,6 +10,7 @@ const UserUpdate = ({ user, setUser }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [idNumber, setIdNumber] = useState("");
+  const [navToggle, setNavToggle] = useState(false);
 
   // ==========COMMENT THIS IN/OUT FOR PASSWORD==========
   // const [password, setPassword] = useState("********");
@@ -93,12 +94,18 @@ const UserUpdate = ({ user, setUser }) => {
     const fetchNewUserData = async () => {
       newUser = await getUser(idNumber);
       if (newUser) {
-        setUser(newUser);
-        console.log("navigate user account");
-        return <Navigate to={`/user`} />;
+        
+          setUser(newUser);
+          console.log("navigate user account");
+          setNavToggle(true);
+        
       }
     };
     fetchNewUserData();
+  }
+
+  if (navToggle) {
+    return <Navigate to={`/user`} />;
   }
 
   return (

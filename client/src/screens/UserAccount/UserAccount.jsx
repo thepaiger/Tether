@@ -30,10 +30,10 @@ const UserAccount = ({ user, setUser }) => {
                   <p className="account-email-label">Email:</p>
                   <p className="account-email-input">{user.email}</p></div>}
 
-                <div className="account-details-password">
+                {/* <div className="account-details-password">
                   <p className="account-password-label">Password:</p>
                   <p className="account-password-input">********</p>
-                </div>
+                </div> */}
               </div>
               <div className="account-btns">
                 <Link className="account-edit-btn" to="/user/edit">Edit Info</Link>
