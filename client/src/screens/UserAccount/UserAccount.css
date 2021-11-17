@@ -1,0 +1,110 @@
+/* BACKGROUND IMAGE */
+.account-background-img {
+  background-image: url("../../backgrounds/lamborghini-terzo-millennio.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ACCOUNT INFO PAGE */
+.account-display-div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SET ACCOUNT INFO DIV SIZE/COLOR/DISPLAY */
+.account-info-div {
+  width: 450px;
+  height: fit-content;
+  box-sizing: border-box;
+  border: solid 1px #625d5d;
+  background-color: rgb(32, 33, 35, 0.85);
+  box-shadow: 0 0 10px #4a4848;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SET FORM DISPLAY */
+.account-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* LEFT-ALIGN LABELS/INPUTS */
+.account-fields {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* ==========TEXT/INPUT STYLING========== */
+
+/* ACCOUNT HEADER */
+.account-form h2 {
+  font-size: 30px;
+  margin: 30px 0 5px 0;
+}
+
+/* LABELS */
+.account-name-label,
+.account-email-label,
+.account-password-label {
+  font-size: 14px;
+  padding: 7px 0;
+  margin: 0;
+}
+
+/* NON-FUNCTIONAL INPUTS */
+.account-name-input,
+.account-email-input,
+.account-password-input {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #e9e3d5;
+  border: solid 1px #625d5d;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 37px;
+  width: 295px;
+  padding: 0 0 0 10px;
+  margin: 0 0 20px 0;
+}
+
+/* BUTTONS DIV */
+.account-btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 0 40px 0;
+}
+
+/* EDIT & SIGN OUT BUTTONS */
+.account-edit-btn,
+.account-sign-out-btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #4a4848;
+  background-color: #f2f0ea;
+  box-sizing: border-box;
+  border: solid 1px #625d5d;
+  border-radius: 3px;
+  padding: 2px 15px;
+  margin: 7px 0;
+  text-decoration: none;
+}
+
+.account-edit-btn:hover,
+.account-sign-out-btn:hover {
+}

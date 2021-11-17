@@ -9,6 +9,8 @@ const CarDetail = (props) => {
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
 
+  console.log(props);
+
   useEffect(() => {
     const fetchCar = async () => {
       const car = await getCar(id);
@@ -24,7 +26,8 @@ const CarDetail = (props) => {
 
   return (
     <Layout>
-      <div className='car-detail'>
+      <div className='car-detail-background-img'>
+        <div className="car-detail-background">
         <img
           className='car-detail-image'
           src={car.image}
@@ -43,6 +46,16 @@ const CarDetail = (props) => {
             </div>
           </div>
           {/* <button onClick={handleButton}>{`${addToCartButton}`}</button> */}
+          <button className="button">
+          <div className="carDetail-icon">
+              <img className="image-detail"
+                src="/images/icons/bag-plus-fill-detail.svg"
+                alt="bag-plus-fill"
+              />
+            </div>
+            Add to Cart
+          </button>
+        </div>
         </div>
       </div>
     </Layout>

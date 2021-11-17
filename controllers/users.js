@@ -28,8 +28,6 @@ export const getUsers = async (req, res) => {
   }
 }
 
-
-
 export const signUp = async (req, res) => {
   try {
     const { name, email, password, shopping_cart } = req.body
@@ -119,3 +117,28 @@ export const updateUser = async (req, res) => {
   const user = await User.findByIdAndUpdate(id, req.body, { new: true })
   res.status(200).json(user)
 }
+
+export const getUser = async (req, res) => {
+  try {
+    const { id } = req.params
+    const user = await User.findById(id)
+    if (user) {
+      const payload = {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        shopping_cart: user.shopping_cart,
+        exp: parseInt(exp.getTime() / 1000),
+      }
+      
+      const token = jwt.sign(payload, TOKEN_KEY)
+      res.status(201).json({ token })
+    }
+    res.status(404).json({ message: 'User not found!' })
+  } catch (error) {
+    console.log(error.message)
+    res.status(500).json({ error: error.message })
+  }
+}
+
+
