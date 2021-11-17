@@ -2,19 +2,21 @@ import "./CarShopping.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { verifyUser, updateUser } from "../../services/users";
-import axios from "axios";
 
-const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser}) => {
+
+const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser, shoppingCart}) => {
   const [input, setInput] = useState('')
+  // const [shoppingCart, setShoppingCart] = useState([])
 
   useEffect(() => {
-    setInput(quantity)
-  }, [quantity])
+    // setShoppingCart(user.shopping_cart)
+    resetInput()
+  }, [])
 
-  const getTotal = () => {
-    let total = priceNum * quantity;
-    return total;
-  }
+  // const getTotal = () => {
+  //   let total = priceNum * quantity;
+  //   return `${total}`;
+  // }
 
   const resetInput = () => {
     setInput(quantity)
@@ -25,7 +27,7 @@ const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, us
   }
 
   const remove = async () => {
-    const tempCart = user.shopping_cart
+    const tempCart = shoppingCart
     tempCart.splice(idx, 1)
     const newCart = {
       "shopping_cart": tempCart
@@ -36,24 +38,25 @@ const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, us
   }
 
   // const changeUser = (ev) => {
-  //   user.shopping_cart[idx].quantity = ev
+  //   shoppingCart[idx-1].quantity = ev
   // }
 
   // const newFunc = async () => {
   //   const form = {
-  //     shopping_cart
+  //     "shopping_cart": []
   //   }
+  //   await updateUser(user._id, form)
   // }
 
   const editCart = async (ev) => {
-    const tempCart = user.shopping_cart
-    tempCart[idx].quantity = ev
+    // const tempCart = shoppingCart
+    // tempCart[idx].quantity = ev
     // changeUser(ev)
-    const newCart = {
-      "shopping_cart": tempCart
+    const newQuantity = {
+      "quantity": `${ev}`
     }
-    
-    await updateUser(user._id, newCart)
+    await updateUser(user._id, newQuantity)
+    // newFunc()
     const updatedUser = await verifyUser()
     setUser(updatedUser)
   }
@@ -98,7 +101,7 @@ const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, us
           <h6>quantity</h6>
         </div>
         <div className="carShopping-total-div">
-          <h4>${getTotal}</h4>
+          <h4>${priceNum*input}</h4>
           <h6>total</h6>
         </div>
       
