@@ -123,7 +123,16 @@ export const getUser = async (req, res) => {
     const { id } = req.params
     const user = await User.findById(id)
     if (user) {
-      return res.json(user)
+      const payload = {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        shopping_cart: user.shopping_cart,
+        exp: parseInt(exp.getTime() / 1000),
+      }
+      
+      const token = jwt.sign(payload, TOKEN_KEY)
+      res.status(201).json({ token })
     }
     res.status(404).json({ message: 'User not found!' })
   } catch (error) {
@@ -131,3 +140,5 @@ export const getUser = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 }
+
+
