@@ -35,6 +35,7 @@ width:100vw;
   text-decoration: none;
   margin: 2vh 2vw;
   width: 30vw;
+  height: 125%;
 }
 .car-detail-makeAndModel {
   font-size: 40px;
