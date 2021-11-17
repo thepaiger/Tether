@@ -19,10 +19,6 @@ const alwaysOptions = (
 )
 
 const Nav = ({ user, setUser }) => {
-  const signOut = () => {
-    localStorage.setItem('token', "")
-    setUser('')
-  }
   return (
     <nav>
       <div className="nav">
@@ -32,7 +28,6 @@ const Nav = ({ user, setUser }) => {
           {user && <div className="link-welcome">Welcome, {user.name}</div>}
           {alwaysOptions}
           {user ? authenticatedOptions : unauthenticadedOptions}
-          {user ? <div onClick={signOut}>Sign Out</div> : null}
         </div>
       </div>
     </nav>
