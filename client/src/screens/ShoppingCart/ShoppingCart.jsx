@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import CarShopping from "../../components/CarShopping/CarShopping"
 
 
-const ShoppingCart = ({user, setUser}) => {
+const ShoppingCart = ({ user, setUser }) => {
   const [total, setTotal] = useState(0)
   const [shoppingCart, setShoppingCart] = useState([])
 
@@ -20,8 +20,8 @@ const ShoppingCart = ({user, setUser}) => {
               <CarShopping key={idx} idx={idx} user={user} setUser={setUser} car={item.car} car_id={item.car_id} price={item.price} priceNum={item.priceNum} item_id={item._id} quantity={item.quantity} image={item.image} shoppingCart={shoppingCart}/>
               {() => setTotal(total + (item.priceNum * item.quantity))}
             </div>
-        ))
-        : null}
+          ))
+          : null}
       </div>
       <div> Total: ${total}</div>
     </Layout>
