@@ -75,8 +75,7 @@ function ControlledCarousel() {
       <Carousel.Item interval={1500}>
         <img
           className="d-block w-100"
-          src="https://www.hdcarwallpapers.com/walls/nio_ep9_electric_supercar-HD.jpg"
-          alt="First slide"
+          src="images/cars/rimac-home-page.jpeg"
         />
         <Carousel.Caption>
           <h3>First slide label</h3>
@@ -86,7 +85,7 @@ function ControlledCarousel() {
       <Carousel.Item interval={1500}>
         <img
           className="d-block w-100"
-          src={'/backgrounds/nio_ep9_supercar-2560x1440.jpg'}
+          src="images/cars/vanda-dendrobium-006-1501514776.jpg"
           alt="Second slide"
         />
 
@@ -98,7 +97,7 @@ function ControlledCarousel() {
       <Carousel.Item interval={1500}>
         <img
           className="d-block w-100"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-j339F8QCoCG4G__dXbjAA92_4VoTNeMfRjED78JJzbzqtQPAlZYWym9-dr9UL4quKi0&usqp=CAU"
+          src="images/cars/nio_ep9_electric_supercar-2560x1440.jpg"
           alt="Third slide"
         />
 
