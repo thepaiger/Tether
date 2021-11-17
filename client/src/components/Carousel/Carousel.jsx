@@ -1,65 +1,5 @@
 import React from "react"
 import { useState } from "react"
-
-// const Carousel = () => {
-//   const [carouselIndex, setCarouselIndex] = useState(1)
-
-//   const BtnSlider = ({ direction, moveCarousel }) => {
-//     return (
-//       <button
-//         onClick={moveCarousel}
-//         className={direction === "next" ? "btn-slide next" : "btn-slide prev"}
-//       >
-//         <img src={direction === "next" ? rightArrow : leftArrow} />
-//       </button>
-//     )
-//   }
-
-//   const nextSlide = () => {
-//     if (carouselIndex !== dataSlider.length) {
-//       setCarouselIndex(carouselIndex + 1)
-//     } else if (carouselIndex === dataSlider.length) {
-//       setCarouselIndex(1)
-//     }
-//   }
-
-//   const prevSlide = () => {
-//     if (carouselIndex !== 1) {
-//       setCarouselIndex(carouselIndex - 1)
-//     }
-//     else if (carouselIndex === 1) {
-//       setCarouselIndex(dataSlider.length)
-//     }
-//   }
-//   return (
-//     <div className="container-slider">
-//       {slideIndex.map((obj, index) => {
-//         return (
-//           <div
-//             key={obj.id}
-//             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
-
-//             <img
-//               src={process.env.PUBLIC_URL + `/imageslogo.png`} />
-//           </div>
-//         )
-//       })}
-//       <BtnSlider moveSlide={nextSlide} direction={"next"} />
-//       <BtnSlider moveSlide={prevSlide} direction={"prev"} />
-
-//       <div className="container-dots">
-//         {Array.from({ length: 5 }).map((item, index) => (
-//           <div
-//             onClick={() => moveDot(index + 1)}
-//             className={carouselIndex === index + 1 ? "dot active" : "dot"}
-//           ></div>
-//         ))}
-//       </div>
-//     </div>
-//   )
-// }
-
-// import bootstrap, { Carousel } from 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -111,7 +51,5 @@ function ControlledCarousel() {
     </Carousel>
   );
 }
-
-// render(<ControlledCarousel />);
 
 export default ControlledCarousel
