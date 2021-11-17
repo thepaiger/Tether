@@ -32,7 +32,6 @@ export const signOut = async () => {
   }
 }
 
-// confirm if return is correct
 export const updateUser = async (credentials, data) => {
   try {
     const resp = await api.put(`/update/${credentials}`, data)
@@ -68,4 +67,13 @@ export const verifyUser = async () => {
     return res.data
   }
   return false
+}
+
+export const getUser = async id => {
+  try {
+    const response = await api.get(`/users/${id}`)
+    return response.data
+  } catch (error) {
+    throw error
+  }
 }

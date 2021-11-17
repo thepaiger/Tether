@@ -9,6 +9,8 @@ const CarDetail = (props) => {
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
 
+  console.log(props);
+
   useEffect(() => {
     const fetchCar = async () => {
       const car = await getCar(id);
