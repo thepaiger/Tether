@@ -4,11 +4,15 @@ import { useState, useEffect } from "react";
 import { verifyUser, updateUser } from "../../services/users";
 
 
-const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser, shoppingCart}) => {
+const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser, shoppingCart }) => {
   const [input, setInput] = useState('')
   // const [shoppingCart, setShoppingCart] = useState([])
 
-  useEffect(() => {
+  useEffect((quantity) => {
+    const resetInput = () => {
+      setInput(quantity)
+    }
+
     // setShoppingCart(user.shopping_cart)
     resetInput()
   }, [])
@@ -18,9 +22,7 @@ const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, us
   //   return `${total}`;
   // }
 
-  const resetInput = () => {
-    setInput(quantity)
-  }
+
 
   const getInput = (ev) => {
     setInput(ev.target.value)
@@ -83,28 +85,28 @@ const CarShopping = ({car, car_id, price, priceNum, item_id, quantity, image, us
           <img className="carShopping-image" src={image} alt={car} />
         </div>
       </Link>
-        <div className="carShopping-details-div">
-          <h3 className="carShopping-name">{car}</h3>
-        </div>
-        <div className="carShopping-price-div">
-          <h4 className="carShopping-price">{price}</h4>
-          <h6>each</h6>
-        </div>
-        <div className="carShopping-quantity-div">
-          <input
-            type="number"
-            name="quantity"
-            value={input}
-            onChange={handleChange}
-            required
-          />
-          <h6>quantity</h6>
-        </div>
-        <div className="carShopping-total-div">
-          <h4>${priceNum*input}</h4>
-          <h6>total</h6>
-        </div>
-      
+      <div className="carShopping-details-div">
+        <h3 className="carShopping-name">{car}</h3>
+      </div>
+      <div className="carShopping-price-div">
+        <h4 className="carShopping-price">{price}</h4>
+        <h6>each</h6>
+      </div>
+      <div className="carShopping-quantity-div">
+        <input
+          type="number"
+          name="quantity"
+          value={input}
+          onChange={handleChange}
+          required
+        />
+        <h6>quantity</h6>
+      </div>
+      <div className="carShopping-total-div">
+        <h4>${priceNum * input}</h4>
+        <h6>total</h6>
+      </div>
+
     </div>
   );
 };
