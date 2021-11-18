@@ -82,9 +82,9 @@ export const getUser = async id => {
 
 //new
 
-export const addItem = async (credentials, data) => {
+export const addItem = async (userId, data) => {
   try {
-    const resp = await api.post(`/users/add-item/${credentials}`, data)
+    const resp = await api.post(`/users/add-item/${userId}`, data)
     localStorage.setItem('token', resp.data.token)
     const user = jwtDecode(resp.data.token)
     return user

@@ -186,9 +186,9 @@ export const updateCartQuantity = async (req, res) => {
         exp: parseInt(exp.getTime() / 1000),
       }
       
-      // const token = jwt.sign(payload, TOKEN_KEY)
-      // res.status(201).json({ token })
-      res.status(201).json(user)
+      const token = jwt.sign(payload, TOKEN_KEY)
+      res.status(201).json({ token })
+      // res.status(201).json(user)
     }
   } catch (error) {
     console.log(error.message)
@@ -198,7 +198,6 @@ export const updateCartQuantity = async (req, res) => {
 
 export const addToCart = async (req, res) => {
   try {
-    // pass id and body from front end; this is a POST request
     const { id } = req.params
     const user = await User.findById(id)
     user.shopping_cart.push(req.body)
@@ -213,9 +212,9 @@ export const addToCart = async (req, res) => {
       exp: parseInt(exp.getTime() / 1000),
     }
     
-    // const token = jwt.sign(payload, TOKEN_KEY)
-    // res.status(201).json({ token })
-    res.status(201).json(user)
+    const token = jwt.sign(payload, TOKEN_KEY)
+    res.status(201).json({ token })
+    // res.status(201).json(user)
   } catch (error) {
     console.error(error)
     res.status(500).json({ error: error.message })
@@ -237,9 +236,9 @@ export const removeFromCart = async (req, res) => {
       exp: parseInt(exp.getTime() / 1000),
     }
     
-    // const token = jwt.sign(payload, TOKEN_KEY)
-    // res.status(201).json({ token })
-    res.status(201).json(user)
+    const token = jwt.sign(payload, TOKEN_KEY)
+    res.status(201).json({ token })
+    // res.status(201).json(user)
   } catch (error) {
     console.error(error)
     res.status(500).json({ error: error.message })
@@ -261,9 +260,9 @@ export const clearCart = async (req, res) => {
       exp: parseInt(exp.getTime() / 1000),
     }
     
-    // const token = jwt.sign(payload, TOKEN_KEY)
-    // res.status(201).json({ token })
-    res.status(201).json(user)
+    const token = jwt.sign(payload, TOKEN_KEY)
+    res.status(201).json({ token })
+    // res.status(201).json(user)
   } catch (error) {
     console.error(error)
     res.status(500).json({ error: error.message })

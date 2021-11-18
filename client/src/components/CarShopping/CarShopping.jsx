@@ -1,65 +1,30 @@
 import "./CarShopping.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { verifyUser, updateUser } from "../../services/users";
+import { verifyUser, updateUser, removeItem, updateQuantity } from "../../services/users";
 
 
 const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser, shoppingCart }) => {
   const [input, setInput] = useState('')
-  // const [shoppingCart, setShoppingCart] = useState([])
 
   useEffect((quantity) => {
     const resetInput = () => {
       setInput(quantity)
     }
-
-    // setShoppingCart(user.shopping_cart)
     resetInput()
   }, [])
-
-  // const getTotal = () => {
-  //   let total = priceNum * quantity;
-  //   return `${total}`;
-  // }
-
-
 
   const getInput = (ev) => {
     setInput(ev.target.value)
   }
 
   const remove = async () => {
-    const tempCart = shoppingCart
-    tempCart.splice(idx, 1)
-    const newCart = {
-      "shopping_cart": tempCart
-    }
-    await updateUser(`${user._id}`, newCart)
-    const updatedUser = await verifyUser()
+    const updatedUser = await removeItem(user._id, item_id)
     setUser(updatedUser)
   }
 
-  // const changeUser = (ev) => {
-  //   shoppingCart[idx-1].quantity = ev
-  // }
-
-  // const newFunc = async () => {
-  //   const form = {
-  //     "shopping_cart": []
-  //   }
-  //   await updateUser(user._id, form)
-  // }
-
   const editCart = async (ev) => {
-    // const tempCart = shoppingCart
-    // tempCart[idx].quantity = ev
-    // changeUser(ev)
-    const newQuantity = {
-      "quantity": `${ev}`
-    }
-    await updateUser(user._id, newQuantity)
-    // newFunc()
-    const updatedUser = await verifyUser()
+    const updatedUser = await updateQuantity(user._id, item_id, ev)
     setUser(updatedUser)
   }
 
@@ -74,7 +39,7 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
 
   return (
     <div className="carShopping">
-      <div className="carShopping-remove-icon">
+      <div className="carShopping-remove-icon" onClick={remove}>
         <img
           src={"/images/icons/bag-dash-fill.svg"}
           alt="remove from cart"
