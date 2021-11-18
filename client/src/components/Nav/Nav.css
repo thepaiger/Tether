@@ -1,50 +1,58 @@
-Nav {
+/* NAVBAR */
+nav {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 80px;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   background-color: #202123;
-  display: inline;
-  font-family: 'Roboto';
-  color: #E9E3D5;
 }
 
-.logo {
+/* LEFT-ALIGNED CONTENT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 25px;
+}
+
+/* TETHER LOGO */
+.nav-logo {
   height: auto;
   width: 160px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding-left: 1.25rem;
 }
 
-.nav-buttons {
-  margin-top: 25px;
-  margin-bottom: 15px;
-  margin-left: 25px;
-  font-size: 13px;
-}
-.sign-out-button {
-  background: none!important;
-  border: none;
-  padding: 0!important;
-  color: #E9E3D5;
-  cursor: pointer;
-  margin-left: 20px;
-  font-family: 'Roboto';
-  font-size: 13px;
-}
-
-.link {
-  padding-left: 20px;
+/* NAV LINKS */
+.nav-link-account,
+.nav-link-sign-in,
+.nav-link-models {
+  /* .nav-link-sign-out { */
   text-decoration: none;
-  color: #E9E3D5;
+  color: #e9e3d5;
+  padding: 0 0 0 80px;
+  font-size: 16px;
 }
 
+/* .nav-link-sign-out {
+  border: none;
+  background: none;
+} */
 
-.link-welcome {
-  justify-content: right;
-  right: 1rem;
-  position: absolute;
-  margin-top: 20px;
-  margin-bottom: 15px;
+/* RIGHT-ALIGNED CONTENT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  padding: 0 35px 0 0;
+}
+
+/* WELCOME MESSAGE */
+.nav-welcome {
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 80px 0 0;
 }
