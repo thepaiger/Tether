@@ -93,9 +93,9 @@ export const addItem = async (userId, data) => {
   }
 }
 
-export const updateQuantity = async (userId, itemId, quantity) => {
+export const updateQuantity = async (userId, data) => {
   try {
-    const resp = await api.put(`/users/${userId}/cart/${itemId}`, quantity)
+    const resp = await api.put(`/users/cart/${userId}`, data)
     localStorage.setItem('token', resp.data.token)
     const user = jwtDecode(resp.data.token)
     return user
@@ -103,10 +103,20 @@ export const updateQuantity = async (userId, itemId, quantity) => {
     throw error
   }
 }
+// export const updateQuantity = async (userId, itemId, data) => {
+//   try {
+//     const resp = await api.put(`/users/${userId}/cart/${itemId}`, data)
+//     localStorage.setItem('token', resp.data.token)
+//     const user = jwtDecode(resp.data.token)
+//     return user
+//   } catch (error) {
+//     throw error
+//   }
+// }
 
-export const removeItem = async (userId, itemId) => {
+export const removeItem = async (userId, idx) => {
   try {
-    const resp = await api.delete(`/users/${userId}/remove-item/${itemId}`)
+    const resp = await api.put(`/users/remove-item/${userId}`, idx)
     localStorage.setItem('token', resp.data.token)
     const user = jwtDecode(resp.data.token)
     return user

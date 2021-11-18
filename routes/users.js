@@ -14,9 +14,11 @@ router.put('/update/:id', controllers.updateUser)
 router.get('/users/:id', controllers.getUser)
 
 //custom routes
-router.put('/users/:id/cart/:cartId', controllers.updateCartQuantity)
+router.put('/users/cart/:id', controllers.updateCartQuantity)
+// router.put('/users/:id/cart/:cartId', controllers.updateCartQuantity)
 router.post('/users/add-item/:id', controllers.addToCart)
-router.delete('/users/:id/remove-item/:cartId', controllers.removeFromCart)
+// router.delete('/users/:id/remove-item/:cartId', controllers.removeFromCart)
+router.put('/users/remove-item/:id', controllers.removeFromCart)
 router.delete('/users/clear-cart/:id', controllers.clearCart)
 
 

@@ -7,9 +7,9 @@ import { clearCart } from "../../services/users"
 const ShoppingCart = ({ user, setUser }) => {
   const [total, setTotal] = useState(0)
 
-  useEffect(() => {
-    user ? setShoppingCart(user.shopping_cart) : setShoppingCart([])
-  }, [user])
+  // useEffect(() => {
+  //   user ? setShoppingCart(user.shopping_cart) : setShoppingCart([])
+  // }, [user])
 
   const clear = async () => {
     const updatedUser = await clearCart()

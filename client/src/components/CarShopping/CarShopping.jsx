@@ -7,7 +7,7 @@ import { verifyUser, updateUser, removeItem, updateQuantity } from "../../servic
 const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser, shoppingCart }) => {
   const [input, setInput] = useState('')
 
-  useEffect((quantity) => {
+  useEffect(() => {
     const resetInput = () => {
       setInput(quantity)
     }
@@ -19,21 +19,34 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
   }
 
   const remove = async () => {
-    const updatedUser = await removeItem(user._id, item_id)
+    const index = {
+      "idx": idx
+    }
+    console.log(user._id)
+    const updatedUser = await removeItem(user._id, index)
     setUser(updatedUser)
   }
 
+  // const remove = async () => {
+  //   const updatedUser = await removeItem(user._id, item_id)
+  //   setUser(updatedUser)
+  // }
+
   const editCart = async (ev) => {
-    const updatedUser = await updateQuantity(user._id, item_id, ev)
+    const data = {
+      "quantity": ev,
+      "idx": idx
+    }
+    const updatedUser = await updateQuantity(user._id, data)
     setUser(updatedUser)
   }
 
   const handleChange = (ev) => {
     getInput(ev)
-    if (ev === 0) {
+    if (ev.target.value === "0") {
       remove()
     } else {
-      editCart(ev)
+      editCart(ev.target.value)
     }
   }
 

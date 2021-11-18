@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/cars/:id" element={<CarDetail user={user} setUser={setUser} />} />
         <Route path="/user" element={<UserAccount user={user} setUser={setUser} />} />
         <Route path="/user/edit" element={<UserUpdate user={user} setUser={setUser} />} />
-        <Route path="/shoppingCart" element={<ShoppingCart user={user} setUser={setUser} />} />
+        <Route path="/cart" element={<ShoppingCart user={user} setUser={setUser} />} />
       </Routes>
     </div>
   );
