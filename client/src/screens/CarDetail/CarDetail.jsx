@@ -71,7 +71,7 @@ const CarDetail = (props) => {
           
         <div className="slider">
             <ImageSlider
-           
+           car={car}
             />
             </div>
         </div>
