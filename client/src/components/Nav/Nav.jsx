@@ -28,12 +28,12 @@ const Nav = ({ user, setUser }) => {
       <div className="nav">
         <NavLink to="/">
           <img src={'/images/logo.png'} alt="Logo" className="logo" /></NavLink>
-        <div className="links">
-          {user && <div className="link-welcome">Welcome, {user.name}</div>}
+        <div className="nav-buttons">
           {alwaysOptions}
           {user ? authenticatedOptions : unauthenticadedOptions}
           {user ? <div onClick={signOut}>Sign Out</div> : null}
         </div>
+        {user && <div className="link-welcome">Welcome, &nbsp; {user.name}</div>}
       </div>
     </nav>
   )

@@ -1,4 +1,29 @@
+Nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #202123;
+}
+
 .logo {
   height: auto;
-  width: 200px;
+  width: 160px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.nav_buttons {
+  display: inline;
+  position: absolute;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.link-welcome {
+  justify-content: right;
+  right: 1rem;
+  position: absolute;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
