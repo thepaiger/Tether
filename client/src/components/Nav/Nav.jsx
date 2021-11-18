@@ -4,17 +4,17 @@ import { NavLink } from 'react-router-dom'
 
 const authenticatedOptions = (
   <>
-    <NavLink className="link" to="/user">ACCOUNT INFO</NavLink>
+    <NavLink className="nav-link-account" to="/user">ACCOUNT INFO</NavLink>
   </>
 )
 const unauthenticadedOptions = (
   <>
-    <NavLink className="link" to="/signIn">SIGN IN</NavLink>
+    <NavLink className="nav-link-sign-in" to="/signIn">SIGN IN</NavLink>
   </>
 )
 const alwaysOptions = (
   <>
-    <NavLink className="link" to="/cars">MODELS</NavLink>
+    <NavLink className="nav-link-models" to="/cars">MODELS</NavLink>
   </>
 )
 
@@ -26,15 +26,26 @@ const Nav = ({ user, setUser }) => {
 
   return (
     <nav>
-      <div className="nav">
+      <div className="nav-left">
         <NavLink to="/">
-          <img src={'/images/logo.png'} alt="Logo" className="logo" /></NavLink>
-        <div className="nav-buttons">
+          <img className="nav-logo" src={'/images/logo.png'} alt="Logo" />
+        </NavLink>
+        <div className="nav-btns">
           {alwaysOptions}
           {user ? authenticatedOptions : unauthenticadedOptions}
-          {user ? <button className="sign-out-button" onClick={signOut}>SIGN OUT</button> : null}
+          {/* {user ? <button className="nav-link-sign-out" onClick={signOut}>SIGN OUT</button> : null} */}
         </div>
-        {user && <div className="link-welcome">Welcome, &nbsp; {user.name}</div>}
+      </div>
+      <div className="nav-right">
+        {user && <div className="nav-welcome">Welcome, &nbsp; {user.name}</div>}
+
+        <NavLink className="nav-shopping-bag" to="/cart">
+          <img
+            // onClick={handleClick}
+            src="/images/icons/bag-fill.svg"
+            alt="shopping bag"
+          />
+        </NavLink>
       </div>
     </nav>
   )
