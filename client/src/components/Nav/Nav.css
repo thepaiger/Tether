@@ -14,22 +14,32 @@ Nav {
   width: 160px;
   margin-top: 15px;
   margin-bottom: 15px;
+  padding-left: 1.25rem;
 }
 
 .nav-buttons {
-  margin-top: 20px;
+  margin-top: 25px;
   margin-bottom: 15px;
   margin-left: 25px;
-  padding-left: 10px;
+  font-size: 13px;
 }
-
 .sign-out-button {
   background: none!important;
   border: none;
   padding: 0!important;
   color: #E9E3D5;
   cursor: pointer;
+  margin-left: 20px;
+  font-family: 'Roboto';
+  font-size: 13px;
 }
+
+.link {
+  padding-left: 20px;
+  text-decoration: none;
+  color: #E9E3D5;
+}
+
 
 .link-welcome {
   justify-content: right;

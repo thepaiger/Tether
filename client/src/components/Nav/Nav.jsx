@@ -31,7 +31,7 @@ const Nav = ({ user, setUser }) => {
         <div className="nav-buttons">
           {alwaysOptions}
           {user ? authenticatedOptions : unauthenticadedOptions}
-          {user ? <button className="sign-out-button" onClick={signOut}>Sign Out</button> : null}
+          {user ? <button className="sign-out-button" onClick={signOut}>SIGN OUT</button> : null}
         </div>
         {user && <div className="link-welcome">Welcome, &nbsp; {user.name}</div>}
       </div>
