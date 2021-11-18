@@ -94,11 +94,11 @@ const UserUpdate = ({ user, setUser }) => {
     const fetchNewUserData = async () => {
       newUser = await getUser(idNumber);
       if (newUser) {
-        
-          setUser(newUser);
-          console.log("navigate user account");
-          setNavToggle(true);
-        
+
+        setUser(newUser);
+        console.log("navigate user account");
+        setNavToggle(true);
+
       }
     };
     fetchNewUserData();
@@ -155,7 +155,7 @@ const UserUpdate = ({ user, setUser }) => {
               <div className="userUpdate-btns">
                 <button onClick={handleSubmit} className="userUpdate-update-btn">
                   {" "}
-                  Update Info{" "}
+                  Update{" "}
                 </button>
                 <button onClick={handleDelete} className="userUpdate-delete-btn">
                   {" "}
