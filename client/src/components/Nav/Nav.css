@@ -1,12 +1,12 @@
-Nav {
+nav {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
   background-color: #202123;
   display: inline;
-  font-family: 'Roboto';
-  color: #E9E3D5;
+  font-family: "Roboto";
+  color: #e9e3d5;
 }
 
 .logo {
@@ -22,24 +22,25 @@ Nav {
   margin-bottom: 15px;
   margin-left: 25px;
   font-size: 13px;
+  width: 200px;
 }
+
 .sign-out-button {
-  background: none!important;
+  background: none !important;
   border: none;
-  padding: 0!important;
-  color: #E9E3D5;
+  padding: 0 !important;
+  color: #e9e3d5;
   cursor: pointer;
   margin-left: 20px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 13px;
 }
 
 .link {
   padding-left: 20px;
   text-decoration: none;
-  color: #E9E3D5;
+  color: #e9e3d5;
 }
-
 
 .link-welcome {
   justify-content: right;
