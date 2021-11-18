@@ -53,7 +53,6 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 - User Account (Edit Info)
 - Browse Cars
 - Car Detail
-- Cart Edit ("Shopping Cart")
 
 ### Server (Back End)
 
@@ -93,9 +92,9 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 | Nov 10      | Concept Approval, GitHub Setup, Development of "Team Expectations" document | Complete    |
 | Nov 11      | Wireframes and Component Struture                                           | Complete    |
 | Nov 12      | Project Approval                                                            | Complete    |
-| Nov 13 - 14 | Back End Development                                                        | In-Progress |
-| Nov 15 - 16 | Front End and Authentication                                                | Incomplete  |
-| Nov 17      | Debugging                                                                   | Incomplete  |
-| Nov 18 - 19 | Styling                                                                     | Incomplete  |
-| Nov 20 - 21 | Testing and Documentation update                                            | Incomplete  |
+| Nov 13 - 14 | Back End Development                                                        | Complete    |
+| Nov 15 - 16 | Front End and Authentication                                                | In-Progress |
+| Nov 17      | Debugging                                                                   | In-Progress |
+| Nov 18 - 19 | Styling                                                                     | In-Progress |
+| Nov 20 - 21 | Testing and Documentation update                                            | In-Progress |
 | Nov 22      | Presentation                                                                | Incomplete  |

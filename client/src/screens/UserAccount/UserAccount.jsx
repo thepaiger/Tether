@@ -14,7 +14,7 @@ const UserAccount = ({ user, setUser }) => {
     return <Navigate to='/' />
   }
   return (
-    <Layout>
+    <Layout user={user} setUser={setUser}>
       <div className="account-background-img">
         <div className="account-display-div">
           <div className="account-info-div">
@@ -24,16 +24,16 @@ const UserAccount = ({ user, setUser }) => {
               <div className="account-fields">
                 {user && <div className="account-details-name">
                   <p className="account-name-label">Name:</p>
-                  <p className="account-name">{user.name}</p></div>}
+                  <p className="account-name-input">{user.name}</p></div>}
 
                 {user && <div className="account-details-email">
                   <p className="account-email-label">Email:</p>
-                  <p className="account-email">{user.email}</p></div>}
+                  <p className="account-email-input">{user.email}</p></div>}
 
-                <div className="account-details-password">
+                {/* <div className="account-details-password">
                   <p className="account-password-label">Password:</p>
-                  <p className="account-password">********</p>
-                </div>
+                  <p className="account-password-input">********</p>
+                </div> */}
               </div>
               <div className="account-btns">
                 <Link className="account-edit-btn" to="/user/edit">Edit Info</Link>

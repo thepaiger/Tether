@@ -14,13 +14,18 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
     ev.preventDefault();
     try {
       const form = {
-
         "email": `${email}`,
         "password": `${password}`
       };
       const user = await signIn(form);
-      setUser(user);
-      setNavigateToggle(true);
+      console.log(user)
+      // console.log(user.setUser.name)
+      if (user.name === 'Error') {
+        alert("Email and/or Password are incorrect.")
+      } else {
+        setUser(user);
+        setNavigateToggle(true);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -31,7 +36,7 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
   }
 
   return (
-    <Layout>
+    <Layout user={user} setUser={setUser}>
       <div className="sign-in-background-img">
         <div className="sign-in-display-div">
           <div className="sign-in-div">

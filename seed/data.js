@@ -107,7 +107,7 @@ const insertData = async () => {
       priceNum: 330000,
       hp: "602",
       topSpeed: "155 mph" ,
-      info: "The Astin Martin RapidE is be powered by a 65 kWh battery supplied by HyperBat Limited; a new joint venture between WAE and Unipart manufacturing group. The battery is capable of 800-volt power transfers. Five thousand six hundred lithium-ion electric cells are fitted in the engine bay along with two electric motors supplied by Integral Powertrain at the rear. Both of the motors will drive the car via an Xtrac transmission featuring a limited-slip differential. A new suspension system will be implemented to better cope with the changes in the drive train.  The two electric motors will have a combined power output of 610 PS (602 hp) and 949 N⋅m (700 lb⋅ft) of torque. The car will have claimed acceleration figures of 0–97 km/h (0–60 mph) in sub-4.0 seconds' time and 80–113 km/h (50–70 mph) in 1.5 seconds, along with a top speed of 249 km/h (155 mph). Maximum performance will be accessible regardless of battery charge. A prototype was tested at the Nurbürgring to ensure that the car delivers linear power despite hard usage. The car has projected range of 322 km (200 mi) (WLTP) and will charge up to 185 miles of range an hour on a 400-volt, 50 kW charger. The car can also be charged on an 800-volt super charging station which increases the charging rate. The RapidE is fitted with low-drag wheels and low-resistance Pirelli P Zero tyres for maximum efficiency. In January 2020, it was reported that the production of the Rapide E had been cancelled.",
+      info: "The Aston Martin RapidE is be powered by a 65 kWh battery supplied by HyperBat Limited; a new joint venture between WAE and Unipart manufacturing group. The battery is capable of 800-volt power transfers. Five thousand six hundred lithium-ion electric cells are fitted in the engine bay along with two electric motors supplied by Integral Powertrain at the rear. Both of the motors will drive the car via an Xtrac transmission featuring a limited-slip differential. A new suspension system will be implemented to better cope with the changes in the drive train.  The two electric motors will have a combined power output of 610 PS (602 hp) and 949 N⋅m (700 lb⋅ft) of torque. The car will have claimed acceleration figures of 0–97 km/h (0–60 mph) in sub-4.0 seconds' time and 80–113 km/h (50–70 mph) in 1.5 seconds, along with a top speed of 249 km/h (155 mph). Maximum performance will be accessible regardless of battery charge. A prototype was tested at the Nurbürgring to ensure that the car delivers linear power despite hard usage. The car has projected range of 322 km (200 mi) (WLTP) and will charge up to 185 miles of range an hour on a 400-volt, 50 kW charger. The car can also be charged on an 800-volt super charging station which increases the charging rate. The RapidE is fitted with low-drag wheels and low-resistance Pirelli P Zero tyres for maximum efficiency. In January 2020, it was reported that the production of the Rapide E had been cancelled.",
       image: "/images/cars/astin-martin-rapide.png",
       range: "321 km (200 mi)",
       connector: "Type 2 EV Charging Cable ",
@@ -139,7 +139,7 @@ const insertData = async () => {
     {
       make: "Drako Motors" ,
       model: "GTE",
-      price: "1,250,000",
+      price: "$1,250,000",
       priceNum: 1250000,
       hp: "1,200",
       topSpeed: "206 mph" ,

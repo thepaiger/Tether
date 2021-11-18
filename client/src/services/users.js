@@ -19,7 +19,8 @@ export const signIn = async (credentials) => {
     const user = jwtDecode(resp.data.token)
     return user
   } catch (error) {
-    throw error
+    // throw error
+    return error
   }
 }
 
@@ -70,8 +71,10 @@ export const verifyUser = async () => {
 
 export const getUser = async id => {
   try {
-    const response = await api.get(`/users/${id}`)
-    return response.data
+    const resp = await api.get(`/users/${id}`)
+    localStorage.setItem('token', resp.data.token)
+    const user = jwtDecode(resp.data.token)
+    return user
   } catch (error) {
     throw error
   }
