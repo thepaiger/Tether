@@ -109,7 +109,7 @@ const UserUpdate = ({ user, setUser }) => {
   }
 
   return (
-    <Layout>
+    <Layout user={user} setUser={setUser}>
       <div className="userUpdate-background-img">
         <div className="userUpdate-display-div">
           <div className="userUpdate-info-div">

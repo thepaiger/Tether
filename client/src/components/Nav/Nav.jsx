@@ -20,9 +20,10 @@ const alwaysOptions = (
 
 const Nav = ({ user, setUser }) => {
   const signOut = () => {
-    localStorage.setItem('token', "")
-    setUser('')
+    localStorage.clear()
+    setUser('');
   }
+
   return (
     <nav>
       <div className="nav">

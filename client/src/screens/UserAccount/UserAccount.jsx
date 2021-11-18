@@ -14,7 +14,7 @@ const UserAccount = ({ user, setUser }) => {
     return <Navigate to='/' />
   }
   return (
-    <Layout>
+    <Layout user={user} setUser={setUser}>
       <div className="account-background-img">
         <div className="account-display-div">
           <div className="account-info-div">

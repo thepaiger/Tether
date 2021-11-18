@@ -25,7 +25,7 @@ const CarDetail = (props) => {
   }
 
   return (
-    <Layout>
+    <Layout user={props.user} setUser={props.setUser}>
       <div className='car-detail-background-img'>
         <div className="car-detail-background">
         <img
