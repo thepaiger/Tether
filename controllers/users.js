@@ -96,7 +96,34 @@ export const verify = async (req, res) => {
   }
 }
 
-export const changePassword = async (req, res) => { }
+export const changePassword = async (req, res) => {
+  try {
+    const { id } = req.params
+    const {password, newPassword} = req.body
+    const user = User.findById(id).select(
+      'name email password_digest shopping_cart'
+    )
+    if (await bcrypt.compare(password, user.password_digest)) {
+      user.password_digest = await bcrypt.hash(newPassword, SALT_ROUNDS)
+      user.save()
+      const payload = {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        shopping_cart: user.shopping_cart,
+        exp: parseInt(exp.getTime() / 1000),
+      }
+
+      const token = jwt.sign(payload, TOKEN_KEY)
+      res.status(201).json({ token })
+    } else {
+      res.status(401).send('Invalid Credentials')
+    }
+  } catch (error) {
+    console.log(error.message)
+    res.status(500).json({ error: error.message })
+  }
+}
 
 export const deleteUser = async (req, res) => {
   try {
@@ -144,3 +171,81 @@ export const getUser = async (req, res) => {
 //new
 
 
+export const updateCartQuantity = async (req, res) => {
+  try {
+    const { id } = req.params
+    const user = await User.findById(id)
+    user.shopping_cart[req.body.idx].quantity = req.body.quantity
+    await user.save()
+    if (user) {
+      const payload = {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        shopping_cart: user.shopping_cart,
+        exp: parseInt(exp.getTime() / 1000),
+      }
+      
+      // const token = jwt.sign(payload, TOKEN_KEY)
+      // res.status(201).json({ token })
+      res.status(201).json(user)
+    }
+  } catch (error) {
+    console.log(error.message)
+    res.status(500).json({error: error.message})
+  }
+}
+
+export const addToCart = async (req, res) => {
+  try {
+    // pass id and body from front end; this is a POST request
+    const { id } = req.params
+    const user = await User.findById(id)
+    user.shopping_cart.push(req.body)
+
+    await user.save()
+
+    const payload = {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      shopping_cart: user.shopping_cart,
+      exp: parseInt(exp.getTime() / 1000),
+    }
+    
+    // const token = jwt.sign(payload, TOKEN_KEY)
+    // res.status(201).json({ token })
+    res.status(201).json(user)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: error.message })
+  }
+}
+
+export const removeFromCart = async (req, res) => {
+  try {
+    
+    const { id } = req.params
+    const user = await User.findById(id)
+    const cart = user.shopping_cart
+    cart.splice(req.body.idx, 1)
+    user.shopping_cart = cart
+
+    await user.save()
+
+    const payload = {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      shopping_cart: user.shopping_cart,
+      exp: parseInt(exp.getTime() / 1000),
+    }
+    
+    // const token = jwt.sign(payload, TOKEN_KEY)
+    // res.status(201).json({ token })
+    res.status(201).json(user)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: error.message })
+  }
+}
