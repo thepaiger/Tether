@@ -8,6 +8,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
+  background-color: #202123;
 }
 
 /* LEFT-ALIGNED CONTENT */
