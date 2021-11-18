@@ -19,7 +19,10 @@ const Cars = (props) => {
       <div className="cars-background-img">
         <div className="cars">
           {cars.map((car, index) => {
-            return <CarDisplay car={car} key={index} />;
+            return <CarDisplay
+              car={car}
+              key={index}
+            />;
           })}
         </div>
         </div>
