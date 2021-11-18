@@ -4,6 +4,9 @@ Nav {
   width: 100%;
   z-index: 1;
   background-color: #202123;
+  display: inline;
+  font-family: 'Roboto';
+  color: #E9E3D5;
 }
 
 .logo {
@@ -13,17 +16,25 @@ Nav {
   margin-bottom: 15px;
 }
 
-.nav_buttons {
-  display: inline;
-  position: absolute;
-  margin-top: 15px;
+.nav-buttons {
+  margin-top: 20px;
   margin-bottom: 15px;
+  margin-left: 25px;
+  padding-left: 10px;
+}
+
+.sign-out-button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  color: #E9E3D5;
+  cursor: pointer;
 }
 
 .link-welcome {
   justify-content: right;
   right: 1rem;
   position: absolute;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-bottom: 15px;
 }
