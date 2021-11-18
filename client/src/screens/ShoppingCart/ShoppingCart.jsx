@@ -12,7 +12,7 @@ const ShoppingCart = ({ user, setUser }) => {
   // }, [user])
 
   const clear = async () => {
-    const updatedUser = await clearCart()
+    const updatedUser = await clearCart(user._id)
     setUser(updatedUser)
   }
   
