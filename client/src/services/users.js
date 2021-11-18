@@ -79,3 +79,50 @@ export const getUser = async id => {
     throw error
   }
 }
+
+//new
+
+export const addItem = async (credentials, data) => {
+  try {
+    const resp = await api.post(`/users/add-item/${credentials}`, data)
+    localStorage.setItem('token', resp.data.token)
+    const user = jwtDecode(resp.data.token)
+    return user
+  } catch (error) {
+    throw error
+  }
+}
+
+export const updateQuantity = async (userId, itemId, quantity) => {
+  try {
+    const resp = await api.put(`/users/${userId}/cart/${itemId}`, quantity)
+    localStorage.setItem('token', resp.data.token)
+    const user = jwtDecode(resp.data.token)
+    return user
+  } catch (error) {
+    throw error
+  }
+}
+
+export const removeItem = async (userId, itemId) => {
+  try {
+    const resp = await api.delete(`/users/${userId}/remove-item/${itemId}`)
+    localStorage.setItem('token', resp.data.token)
+    const user = jwtDecode(resp.data.token)
+    return user
+  } catch (error) {
+    throw error
+  }
+}
+
+export const clearCart = async (userId) => {
+  try {
+    const resp = await api.delete(`/users/clear-cart/${userId}`)
+    localStorage.setItem('token', resp.data.token)
+    const user = jwtDecode(resp.data.token)
+    return user
+  } catch (error) {
+    throw error
+  }
+}
+

@@ -173,9 +173,9 @@ export const getUser = async (req, res) => {
 
 export const updateCartQuantity = async (req, res) => {
   try {
-    const { id } = req.params
-    const user = await User.findById(id)
-    user.shopping_cart[req.body.idx].quantity = req.body.quantity
+    const user = await User.findById(req.params.id)
+    const itemIndex = user.shopping_cart.indexOf(req.params.cartId)
+    user.shopping_cart[itemIndex].quantity = req.body.quantity
     await user.save()
     if (user) {
       const payload = {
@@ -224,13 +224,33 @@ export const addToCart = async (req, res) => {
 
 export const removeFromCart = async (req, res) => {
   try {
+    const user = await User.findById(req.params.id)
+    const itemIndex = user.shopping_cart.indexOf(req.params.cartId)
+    user.cart.splice(itemIndex, 1)
+    await user.save()
+
+    const payload = {
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+      shopping_cart: user.shopping_cart,
+      exp: parseInt(exp.getTime() / 1000),
+    }
     
+    // const token = jwt.sign(payload, TOKEN_KEY)
+    // res.status(201).json({ token })
+    res.status(201).json(user)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: error.message })
+  }
+}
+
+export const clearCart = async (req, res) => {
+  try {
     const { id } = req.params
     const user = await User.findById(id)
-    const cart = user.shopping_cart
-    cart.splice(req.body.idx, 1)
-    user.shopping_cart = cart
-
+    user.shopping_cart = []
     await user.save()
 
     const payload = {
