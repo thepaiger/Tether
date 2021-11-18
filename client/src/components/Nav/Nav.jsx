@@ -19,16 +19,22 @@ const alwaysOptions = (
 )
 
 const Nav = ({ user, setUser }) => {
+  const signOut = () => {
+    localStorage.clear()
+    setUser('');
+  }
+
   return (
     <nav>
       <div className="nav">
         <NavLink to="/">
           <img src={'/images/logo.png'} alt="Logo" className="logo" /></NavLink>
-        <div className="links">
-          {user && <div className="link-welcome">Welcome, {user.name}</div>}
+        <div className="nav-buttons">
           {alwaysOptions}
           {user ? authenticatedOptions : unauthenticadedOptions}
+          {user ? <button className="sign-out-button" onClick={signOut}>SIGN OUT</button> : null}
         </div>
+        {user && <div className="link-welcome">Welcome, &nbsp; {user.name}</div>}
       </div>
     </nav>
   )

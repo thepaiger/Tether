@@ -1,4 +1,50 @@
+Nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #202123;
+  display: inline;
+  font-family: 'Roboto';
+  color: #E9E3D5;
+}
+
 .logo {
   height: auto;
-  width: 200px;
+  width: 160px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 1.25rem;
+}
+
+.nav-buttons {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  font-size: 13px;
+}
+.sign-out-button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  color: #E9E3D5;
+  cursor: pointer;
+  margin-left: 20px;
+  font-family: 'Roboto';
+  font-size: 13px;
+}
+
+.link {
+  padding-left: 20px;
+  text-decoration: none;
+  color: #E9E3D5;
+}
+
+
+.link-welcome {
+  justify-content: right;
+  right: 1rem;
+  position: absolute;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
