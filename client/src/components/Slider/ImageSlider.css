@@ -1,0 +1,14 @@
+
+.slider-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+.slider-div img {
+  margin: 10px;
+}

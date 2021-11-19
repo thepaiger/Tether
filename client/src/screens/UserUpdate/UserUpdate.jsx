@@ -12,12 +12,6 @@ const UserUpdate = ({ user, setUser }) => {
   const [idNumber, setIdNumber] = useState("");
   const [navToggle, setNavToggle] = useState(false);
 
-  // ==========COMMENT THIS IN/OUT FOR PASSWORD==========
-  // const [password, setPassword] = useState("********");
-  // const [confirm, setConfirm] = useState("********");
-  // const [match, setMatch] = useState(false);
-  // const [passwordToggle, setPasswordToggle] = useState(false);
-
   let form = {};
   let newUser = "";
 
@@ -25,68 +19,33 @@ const UserUpdate = ({ user, setUser }) => {
     setName(user ? user.name : "loading");
     setEmail(user ? user.email : "loading");
     setIdNumber(user ? user._id : "loading");
-    console.log(user ? user._id : "loading");
   }, [user]);
 
   // Delete user
   const handleDelete = async (event) => {
     event.preventDefault();
-    const deleted = await deleteUser(user._id);
-    console.log(deleted);
+    await deleteUser(user._id);
     setDelete(true);
     setUser(null);
+
   };
 
   if (isDeleted) {
-    console.log("navigate home");
+    localStorage.clear();
     return <Navigate to={`/`} />;
   }
 
-  // ==========COMMENT THIS IN/OUT FOR PASSWORD==========
-  // Check Password
-  // const handleConfirm = (ev) => {
-  //   setConfirm(ev.target.value);
-  //   setPasswordToggle(true);
-  //   checkPassword();
-  // };
-
-  // const checkPassword = () => {
-  //   if (password === confirm) {
-  //     setMatch(true);
-  //   } else {
-  //     setMatch(false);
-  //     return alert("Passwords entered do not match");
-  //   }
-  // };
 
   //Update User Information
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // ==========COMMENT THIS IN/OUT FOR PASSWORD==========
-    // if (passwordToggle) {
-    //   if (match) {
-    //     form = {
-    //       name,
-    //       email,
-    //       password,
-    //     };
-    //   }
-    // } else {
-    //   form = {
-    //     name,
-    //     email,
-    //   };
-    // }
-
-    // ==========COMMENT THIS OUT IF ABOVE IS COMMENTED IN==========
     form = {
       name,
       email,
     }
 
-    const updated = await updateUser(user._id, form);
-    console.log(`service return of updated: ${updated}`);
+    await updateUser(user._id, form);
     setUpdated(true);
   };
 
@@ -94,11 +53,8 @@ const UserUpdate = ({ user, setUser }) => {
     const fetchNewUserData = async () => {
       newUser = await getUser(idNumber);
       if (newUser) {
-        
-          setUser(newUser);
-          console.log("navigate user account");
-          setNavToggle(true);
-        
+        setUser(newUser);
+        setNavToggle(true);
       }
     };
     fetchNewUserData();
@@ -132,30 +88,12 @@ const UserUpdate = ({ user, setUser }) => {
                   value={email}
                   onChange={(ev) => setEmail(ev.target.value)}
                 />
-                {/* ==========COMMENT THIS IN/OUT FOR PASSWORD (through confirm password)========== */}
-                {/* <label className="userUpdate-password-label">
-                  Update Password:
-                </label>
-                <input
-                  className="userUpdate-password-input"
-                  placeholder="********"
-                  onChange={(ev) => setPassword(ev.target.value)}
-                />
-
-                <label className="userUpdate-confirm-label">
-                  Confirm Password:
-                </label>
-                <input
-                  className="userUpdate-confirm-input"
-                  placeholder="********"
-                  onChange={(ev) => handleConfirm(ev)}
-                /> */}
               </div>
 
               <div className="userUpdate-btns">
                 <button onClick={handleSubmit} className="userUpdate-update-btn">
                   {" "}
-                  Update Info{" "}
+                  Update{" "}
                 </button>
                 <button onClick={handleDelete} className="userUpdate-delete-btn">
                   {" "}

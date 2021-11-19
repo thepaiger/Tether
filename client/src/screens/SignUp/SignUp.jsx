@@ -6,7 +6,7 @@ import Layout from "../../components/Layout/Layout.jsx";
 import './SignUp.css'
 
 
-const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
+const SignUp = ({ user, setUser }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -126,11 +126,10 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
                 >
                   Password:
                 </label>
-                {/* update type to password once testing complete */}
                 <input
                   className="sign-up-password-input"
                   id="sign-up-password-input"
-                  type="text"
+                  type="password"
                   value={password}
                   placeholder="********"
                   onChange={(ev) => setPassword(ev.target.value)}
@@ -143,11 +142,10 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
                 >
                   Confirm Password:
                 </label>
-                {/* update type to password once testing complete */}
                 <input
                   className="sign-up-confirm-input"
                   id="sign-up-confirm-input"
-                  type="text"
+                  type="password"
                   value={confirm}
                   placeholder="********"
                   onChange={(ev) => handleChange(ev)}
