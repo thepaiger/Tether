@@ -29,58 +29,56 @@ const CarDetail = (props) => {
   return (
     <Layout user={props.user} setUser={props.setUser}>
       <div className="car-detail-background-img">
-      <div className="newDivForSlider">
+        <div className="car-detail-container">
           <div className="car-detail-background">
-            
-          <div className="newDiv">
-              <img className="car-detail-image" src={car.image} alt={car.model} />
-          
-             
-          </div>
 
-            <div className="car-detail-textblock-main">
-              <div className="car-detail-makeAndModel">
-                {car.make} {car.model}
+            <div className="car-detail-header-div">
+              <div className="car-detail-main-image">
+                <img className="car-detail-image" src={car.image} alt={car.model} />
               </div>
-              <div className="car-detail-price">{car.price}</div>
-              <div className="car-detail-textblock-sub">
-                <div className="car-detail-info">
-                  {car.info}
-                  <br />
+
+              <div className="car-detail-textblock-main">
+                <div className="car-detail-make-model">
+                  {car.make} {car.model}
                 </div>
+                <div className="car-detail-price">{car.price}</div>
                 <div className="car-detail-additional-info">
-                  {`Horsepower: ${car.hp}`}
+                  {`Horsepower:  ${car.hp}`}
                   <br />
-                  {`Top Speed: ${car.topSpeed}`}
+                  {`Top Speed:  ${car.topSpeed}`}
                   <br />
-                  {`Range: ${car.range}`}
+                  {`Range:  ${car.range}`}
                   <br />
-                  {`Charging Port Type: ${car.connector}`}
+                  {`Charging Port Type:  ${car.connector}`}
                   <br />
                 </div>
+                {/* <button onClick={handleButton}>{`${addToCartButton}`}</button> */}
+                <button className="button">
+                  <div className="car-detail-icon">
+                    <img
+                      className="image-detail"
+                      src="/images/icons/bag-plus-fill-detail.svg"
+                      alt="bag-plus-fill"
+                    />
+                  </div>
+                  Add to Cart
+                </button>
               </div>
-              {/* <button onClick={handleButton}>{`${addToCartButton}`}</button> */}
-              <button className="button">
-                <div className="carDetail-icon">
-                  <img
-                    className="image-detail"
-                    src="/images/icons/bag-plus-fill-detail.svg"
-                    alt="bag-plus-fill"
-                  />
-                </div>
-                Add to Cart
-              </button>
+            </div>
+
+            <div className="car-detail-bio">
+              <div className="car-detail-info">
+                {car.info}
+              </div>
             </div>
           </div>
-          <div className="outerbox">
-                <div className="gallery">
-                <ImageSlider car={car}/>
-                 </div>
-              </div>
-      
+
+          <div className="car-detail-gallery">
+            <ImageSlider car={car} />
+          </div>
         </div>
       </div>
-    </Layout>
+    </Layout >
   );
 };
 

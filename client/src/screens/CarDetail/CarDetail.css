@@ -1,10 +1,6 @@
-.newDivForSlider{
-  border:rgb(217, 240, 17) 2px solid;
-}
-
 .car-detail-background-img {
   display: flex;
-    flex-direction: row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   color: #e9e3d5;
@@ -21,37 +17,44 @@
   flex-grow: 1;
   margin: 80px 0 0 0;
 }
+
+.car-detail-container {
+  /* border: rgb(217, 240, 17) 2px solid; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .car-detail-background {
   display: flex;
   flex-direction: row;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   background-color: rgb(32, 33, 35, 0.85);
-  width: 100vw;
   box-shadow: 0 0 10px #4a4848;
-  border:red 2px solid;
+  /* border: red 2px solid; */
 }
 
-.newDiv{
+.car-detail-header-div {
+  display: flex;
+}
+
+.car-detail-main-image {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  /* border:green 2px solid; */
-  width: 60vw;
-  margin: 0 auto;
+  /* border: rgb(106, 0, 255) 2px solid; */
+  flex-grow: 2;
+  flex-shrink: 2;
 }
 .car-detail-image {
-  width: 60vw;
-  border:rgb(255, 0, 170) 2px solid;
-  
-  margin-bottom: 25px;
+  width: 100%;
+  /* border: rgb(255, 0, 170) 2px solid; */
 }
-
-
-
 
 .car-detail-textblock-main {
   display: flex;
@@ -59,93 +62,106 @@
   align-items: flex-start;
   justify-content: center;
   text-decoration: none;
-  margin: 2vh 2vw;
-  width: 30vw;
-  border:red 2px solid;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 20px 20px 10px 10px;
+  /* border: red 2px solid; */
 }
-.car-detail-makeAndModel {
+.car-detail-make-model {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  /* font-size:40px; */
-  font-size: 3vmax;
+  font-size: 32px;
   font-weight: 700;
   font-style: italic;
 }
 .car-detail-price {
   font-size: 28px;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin: 5px 0 5px 0;
 }
 .car-detail-info {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   line-height: 1.25;
-  font-size: 1.05vmax;
-  /* font-size: 16px; */
+  font-size: 16px;
   text-align: justify;
   font-style: italic;
   font-weight: 500;
 }
 .car-detail-additional-info {
-  padding: 3px;
-  margin-bottom: 3px;
-  /* font-size: 18px; */
-  font-size: 1.35vmax;
+  margin: 3px 3px 6px 3px;
+  font-size: 14px;
   line-height: 1.5;
   color: rgb(230, 200, 53);
 }
 
-.carDetail-icon {
-  display: inline;
-}
-.image-detail {
-  padding-left: 3px;
-  padding-right: 12px;
-}
 .button {
   display: flex;
+  align-items: center;
   font-family: “Roboto”, sans-serif;
   background-color: #f2f0ea;
   color: #403d3d;
   font-size: 20px;
   font-weight: 700;
-  padding: 5px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  border-radius: 5px;
+  padding: 3px 10px;
+  margin: 5px 0 0 0;
+  border-radius: 3px;
+  border: none;
 }
 
-.gallery{
-  margin:10px 50px;
+.car-detail-icon {
+  display: flex;
+  align-items: center;
+  padding: 3px 5px 3px 0;
 }
-.gallery img{
-  width:230px;
-  padding:5px;
+
+.car-detail-bio {
+  /* border: rgb(0, 255, 72) 2px solid; */
+  padding: 25px;
+}
+
+.car-detail-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(32, 33, 35, 0.85);
+  box-shadow: 0 0 10px #4a4848;
+  height: 100%;
+  width: 100%;
+  margin: 30px 0 0 0;
+}
+.car-detail-gallery img {
+  /* width: 230px; */
+  /* padding: 5px; */
   transition: 1s;
-  filter:grayscale(100%);
+  /* filter: grayscale(100%); */
 }
-.gallery img:hover{
-  filter:grayscale(0);
+.car-detail-gallery img:hover {
+  /* filter: grayscale(0); */
   transform: scale(1.1);
 }
 
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px)  {
-  .car-detail-background {
-    padding-top: 15px;
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .car-detail-header-div {
     flex-direction: column;
+    /* flex-wrap: nowrap; */
+    padding: 20px 15px 0 15px;
   }
 
   .car-detail-textblock-main {
-    width: 60vw;
+    align-items: center;
   }
-  .car-detail-price {
-    font-size: 2.75vmax;
-    margin-bottom: 5px;
+
+  .car-detail-make-model {
+    text-align: center;
   }
+
+  .car-detail-additional-info {
+    margin: 0 20px 15px 20px;
+    font-size: 15px;
+  }
+
   .car-detail-info {
-    margin-bottom: 3px;
+    line-height: 1.3;
   }
 }
