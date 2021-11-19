@@ -115,11 +115,6 @@
 
 /* MEDIA QUERIES */
 @media only screen and (max-device-width: 480px) {
-  /* SIGNUP BACKGROUND DIV */
-  .account-background-img {
-    padding: 30px 0;
-  }
-
   /* SIGNUP DIV - set responsive width */
   .account-info-div {
     width: 90vw;
