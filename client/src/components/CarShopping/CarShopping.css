@@ -1,0 +1,19 @@
+
+.carShopping {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.carShopping-image {
+  width: 30vw;
+}
+
+.carShopping-divider {
+  background:red,
+}
+
+/* .carShopping-remove-icon {
+  justify-self: center;
+} */

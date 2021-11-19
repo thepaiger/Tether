@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-import { signUp } from "../../services/users";
+import { getAllUsers, signUp } from "../../services/users";
 import Layout from "../../components/Layout/Layout.jsx";
-
 import './SignUp.css'
 
 
@@ -11,32 +10,51 @@ const SignUp = ({ user, setUser }) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
-  const [match, setMatch] = useState(false);
   const [matchToggle, setMatchToggle] = useState(false);
   const [lengthToggle, setLengthToggle] = useState(false);
   const [navigateToggle, setNavigateToggle] = useState(false);
 
+  const checkEmail = async () => {
+    const users = await getAllUsers()
+    if (users.filter(account => account.email === email).length > 0) {
+      return false
+    } else {
+      return true
+    }
+  }
+
   const handleSubmit = async (ev) => {
     ev.preventDefault();
-    if (match === true) {
-      try {
-        const form = {
-          "name": `${name}`,
-          "email": `${email}`,
-          "password": `${password}`,
-          "shopping_cart": []
-        };
-        const user = await signUp(form);
-        setUser(user);
-        // setLoggedIn(true);
-        setNavigateToggle(true);
-      } catch (error) {
-        console.error(error);
-        setEmail("");
-        setName("");
-        setPassword("");
-        setConfirm("");
+    checkPassword()
+    if (email.includes('@') && email.includes('.com')) {
+      const emailFree =  await checkEmail()
+      if (emailFree === true) {
+        if (password === confirm && password.length > 7) {
+          try {
+            const form = {
+              "name": `${name}`,
+              "email": `${email}`,
+              "password": `${password}`,
+              "shopping_cart": []
+            };
+            const user = await signUp(form);
+            setUser(user);
+            setNavigateToggle(true);
+          } catch (error) {
+            console.error(error);
+            setEmail("");
+            setName("");
+            setPassword("");
+            setConfirm("");
+          }
+        } else {
+          setMatchToggle(true)
+        }
+      } else {
+        alert(`Sorry, there is already an account for ${email}`)
       }
+    } else {
+      alert('Please use a valid email account.')
     }
   };
 
@@ -49,38 +67,34 @@ const SignUp = ({ user, setUser }) => {
   }
 
   const elseIfOne = () => {
-    setMatch(true);
     setMatchToggle(false);
     setLengthToggle(false);
   }
 
   const elseIfTwo = () => {
-    setMatch(false);
     setMatchToggle(false);
     setLengthToggle(false);
   }
 
   const elseIfThree = () => {
-    setMatch(false);
     setMatchToggle(true);
     setLengthToggle(false);
   }
 
-  const checkPassword = (v) => {
-    if (password.length > 0 && password.length < 8 && v.length < 8) {
+  const checkPassword = () => {
+    if (password.length > 0 && password.length < 8 && confirm.length < 8) {
       lengthTrue()
-    } else if (password === v && v.length > 7) {
+    } else if (password === confirm && confirm.length > 7) {
       elseIfOne()
-    } else if (password !== v && v.length === 0) {
+    } else if (password !== confirm && confirm.length === 0) {
       elseIfTwo()
-    } else if (password !== v && v.length > 7) {
+    } else if (password !== confirm && confirm.length > 7) {
       elseIfThree()
     }
   };
 
   const handleChange = (ev) => {
     setConfirm(ev.target.value);
-    checkPassword(ev.target.value);
   };
 
   return (
