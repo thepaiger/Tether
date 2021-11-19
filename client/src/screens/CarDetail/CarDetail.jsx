@@ -52,7 +52,7 @@ const CarDetail = (props) => {
                   {`Charging Port Type:  ${car.connector}`}
                   <br />
                 </div>
-                {/* <button onClick={handleButton}>{`${addToCartButton}`}</button> */}
+            
                 <button className="button">
                   <div className="car-detail-icon">
                     <img
