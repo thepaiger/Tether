@@ -110,7 +110,7 @@ const insertData = async () => {
       info: "The Aston Martin RapidE is be powered by a 65 kWh battery supplied by HyperBat Limited; a new joint venture between WAE and Unipart manufacturing group. The battery is capable of 800-volt power transfers. Five thousand six hundred lithium-ion electric cells are fitted in the engine bay along with two electric motors supplied by Integral Powertrain at the rear. Both of the motors will drive the car via an Xtrac transmission featuring a limited-slip differential. A new suspension system will be implemented to better cope with the changes in the drive train.  The two electric motors will have a combined power output of 610 PS (602 hp) and 949 N⋅m (700 lb⋅ft) of torque. The car will have claimed acceleration figures of 0–97 km/h (0–60 mph) in sub-4.0 seconds' time and 80–113 km/h (50–70 mph) in 1.5 seconds, along with a top speed of 249 km/h (155 mph). Maximum performance will be accessible regardless of battery charge. A prototype was tested at the Nurbürgring to ensure that the car delivers linear power despite hard usage. The car has projected range of 322 km (200 mi) (WLTP) and will charge up to 185 miles of range an hour on a 400-volt, 50 kW charger. The car can also be charged on an 800-volt super charging station which increases the charging rate. The RapidE is fitted with low-drag wheels and low-resistance Pirelli P Zero tyres for maximum efficiency. In January 2020, it was reported that the production of the Rapide E had been cancelled.",
       image: "/images/cars/astin-martin-rapide.png",
       range: "321 km (200 mi)",
-      connector: "Type 2 EV Charging Cable ",
+      connector: "Type 2 EV Charging Cable",
     },
     {
       make: "Audi" ,
@@ -122,7 +122,7 @@ const insertData = async () => {
       info: "The 2022 Audi e-tron Gran Turismo is a bold-looking electric car with deep engineering ties to the Porsche Taycan. In fact, the two slinky four-door gran turismos were developed alongside each other and share a cutting-edge 800-volt propulsion architecture that allows faster charging and helps ensure performance stays consistent. Aiding the e-tron GT's dual electric motors, which produce between 522 and 637 horsepower depending upon the model, is an innovative two-speed transmission that enables breathtaking take-offs. The Audi stands out from the Porsche with its more chiseled bodywork and busier front end. Inside, the e-tron is equally elegant and technologically advanced, with a selection of handsome materials and high-tech features. The RS e-tron GT1 is Audi’s new electric flagship model, and can sprint from 0 to 100 km/h (62.14 mph) in 3.3 seconds and reach a top speed of 250 km/h (155.14 mph). Its chassis includes features such as adaptive three-chamber air suspension and an electronic differential lock on the rear axle. A coating of tungsten carbide on the brake pads further enhances the performance of the brake system, while the e-tron sport sound creates a fitting acoustic backdrop for this technological masterpiece. All of these features are also available for the Audi e-tron GT quattro2. A number of options are available for both models, including up to 21-inch wheels, all-wheel steering, Matrix LED headlights with Audi laser light, and seat covers that contain a high percentage of recycled materials.  ",
       image: "/images/cars/audi-etron-gran-turismo.png",
       range: "383 km (238 mi) ",
-      connector: "Type 2 EV Charging Cable ",
+      connector: "Type 2 EV Charging Cable",
     },
     {
       make: "Dendrobium" ,
@@ -170,7 +170,7 @@ const insertData = async () => {
       info: "The NIO EP9 is a Chinese electric-powered, two-seat sports car manufactured by NIO, assisted by their Formula E racing division. The name EP9 stands for Electric Performance 9. Six EP9s have been sold to NIO investors for £2,500,000 each. NIO has announced that ten additional EP9s will be sold to the general public. However, it is not a road-legal vehicle and none of the 16 production model EP9s was ever registered for road use. The EP9 is purely designed for track use and did not comply with the laws and regulations to be registered in China. None of the 16 production model EP9s was ever exported and registered for road use outside China so far.Each of the EP9's wheels has its own motor and transmission. Each motor has 250 kW (335.25 hp), giving the car a total power output of 1 MW (1,341 hp; 1,360 PS). The EP9 is both all-wheel drive,[2] and individual-wheel drive. The car has an advanced torque vectoring system that can adjust the power output to each wheel. The EP9's battery can last up to 427 km (265 miles) before it needs to be charged. Recharging takes 45 minutes, and battery replacement takes 8 minutes as the batteries need to be removed when recharged. The EP9 can accelerate from 0 to 100 km/h (62 mph) in 2.7 seconds, 200 km/h (124 mph) in 7.1 seconds, and 300 km/h (186 mph) in 15.9 seconds, as demonstrated by Richard Hammond in The Grand Tour. The car can achieve a top speed of 350 km/h (217 mph).",
       image: "/images/cars/nextev-nio.png",
       range: "427 km (265 mi)",
-      connector: "427 km (265 mi) ",
+      connector: "Type 2 EV Charging Cable",
     },
     {
       make: "Mercedes-Benz" ,
@@ -185,7 +185,7 @@ const insertData = async () => {
       connector: "Type 2 EV Charging Cable ",
     },
     {
-      make: "Porche" ,
+      make: "Porsche" ,
       model: "918",
       price: "$845,000",
       priceNum: 845000,
@@ -242,7 +242,7 @@ const insertData = async () => {
       info: "The Tesla Roadster is an upcoming all-electric battery-powered four-seater all-wheel-drive sports car concept in development by Tesla, Inc. Tesla has claimed that it will be capable of 0 to 60 mph (0 to 97 km/h) in 1.9 seconds, which would be quicker than any street legal production car as of the announcement in 2017.  The Roadster is the successor to Tesla's first production car, which was the 2008 Roadster. Tesla CEO Elon Musk has said that Roadster should ship in 2023. Musk said in a tweet that higher-performance trim levels will be available beyond the base specifications, including a SpaceX package which would ‘include ~10 small rocket thrusters arranged seamlessly around the car’ which would supposedly allow for dramatic improvements in 'acceleration, top speed, braking & cornering'. Its claimed 0 to 400 m (0 to 1⁄4 mile) time will be 8.88 seconds, with a top speed above 400 km/h (250 mph). If the production Roadster achieves these performance numbers, it will outperform the supercars of 2019 and would have set new production car records, none of which had done better than 0–100 km/h (0–62 mph) in 2.0 seconds or 8.88 seconds in the 1/4 mile, until the release of the Rimac Nevera in August 2021. Referring to the performance, Musk stated, ‘this is what we are achieving in the prototype’” he also indicated the performance may improve in the production model and that the stated numbers refer to the anticipated base model.",
       image: "/images/cars/tesla-roadster.png ",
       range: "620 km (385 mi)",
-      connector: "NEMA 14-50 plug ",
+      connector: "NEMA 14-50 plug",
     },
   ]
 

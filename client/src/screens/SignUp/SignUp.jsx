@@ -6,7 +6,7 @@ import Layout from "../../components/Layout/Layout.jsx";
 import './SignUp.css'
 
 
-const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
+const SignUp = ({ user, setUser }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -20,10 +20,8 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
     ev.preventDefault();
     checkPassword()
     if (email.includes('@') && email.includes('.com')) {
-      if (checkEmail()) {
-        console.log('check email is true')
+      if ((checkEmail()) === true) {
         if (password === confirm && password.length > 7) {
-          console.log('hello, the passwords match')
           try {
             const form = {
               "name": `${name}`,
@@ -33,7 +31,6 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
             };
             const user = await signUp(form);
             setUser(user);
-            // setLoggedIn(true);
             setNavigateToggle(true);
           } catch (error) {
             console.error(error);
@@ -43,11 +40,9 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
             setConfirm("");
           }
         } else {
-          console.log('passwords do not match')
           setMatchToggle(true)
         }
       } else {
-        console.log('check email is true')
         alert(`Sorry, there is already an account for ${email}`)
       }
     } else {
@@ -61,11 +56,9 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
 
   const checkEmail = async () => {
     const users = await getAllUsers()
-    if (users.filter(account => account.email === email)[0]) {
-      console.log(users)
+    if (users.filter(account => account.email === email).length > 0) {
       return false
     } else {
-      console.log(users)
       return true
     }
   }
@@ -103,21 +96,9 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
       elseIfThree()
     }
   };
-  // const checkPassword = (v) => {
-  //   if (password.length > 0 && password.length < 8 && v.length < 8) {
-  //     lengthTrue()
-  //   } else if (password === v && v.length > 7) {
-  //     elseIfOne()
-  //   } else if (password !== v && v.length === 0) {
-  //     elseIfTwo()
-  //   } else if (password !== v && v.length > 7) {
-  //     elseIfThree()
-  //   }
-  // };
 
   const handleChange = (ev) => {
     setConfirm(ev.target.value);
-    // checkPassword(ev.target.value);
   };
 
   return (
@@ -162,11 +143,10 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
                 >
                   Password:
                 </label>
-                {/* update type to password once testing complete */}
                 <input
                   className="sign-up-password-input"
                   id="sign-up-password-input"
-                  type="text"
+                  type="password"
                   value={password}
                   placeholder="********"
                   onChange={(ev) => setPassword(ev.target.value)}
@@ -179,11 +159,10 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
                 >
                   Confirm Password:
                 </label>
-                {/* update type to password once testing complete */}
                 <input
                   className="sign-up-confirm-input"
                   id="sign-up-confirm-input"
-                  type="text"
+                  type="password"
                   value={confirm}
                   placeholder="********"
                   onChange={(ev) => handleChange(ev)}

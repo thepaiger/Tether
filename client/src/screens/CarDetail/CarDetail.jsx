@@ -7,13 +7,10 @@ import ImageSlider from "../../components/Slider/ImageSlider";
 import { addItem, updateQuantity } from "../../services/users";
 
 
-
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
-
-  console.log(props);
 
   useEffect(() => {
     const fetchCar = async () => {

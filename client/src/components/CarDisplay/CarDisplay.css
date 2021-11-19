@@ -78,7 +78,7 @@
   display: inline;
 } */
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
   /* .card {
     border-bottom: 2px solid rgb(58, 57, 56);
   } */

@@ -40,8 +40,8 @@ const ShoppingCart = ({ user, setUser }) => {
         {user ?
           user.shopping_cart.length > 0 ?
             user.shopping_cart.map((item, idx) => (
-              <div className='item-map-div'>
-                <CarShopping key={idx} idx={idx} user={user} setUser={setUser} car={item.car} car_id={item.car_id} price={item.price} priceNum={item.priceNum} item_id={item._id} quantity={item.quantity} image={item.image} />
+              <div className='item-map-div' key={idx}>
+                <CarShopping idx={idx} user={user} setUser={setUser} car={item.car} car_id={item.car_id} price={item.price} priceNum={item.priceNum} item_id={item._id} quantity={item.quantity} image={item.image} />
               </div>
             ))
             : <div className='empty-cart-div'>Your garage is empty</div>

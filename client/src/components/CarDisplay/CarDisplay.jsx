@@ -30,7 +30,7 @@ const CarDisplay = ({ car }) => {
           <p className="carDisplay-info">{car.info.substring(0, 200)}...</p>
         </div>
       </Link>
-     
+    
     </div>
   );
 };
