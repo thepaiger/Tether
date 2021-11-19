@@ -12,11 +12,9 @@ const ShoppingCart = ({ user, setUser }) => {
       setTotal(() => {
         let total = 0
         const cart = user.shopping_cart
-        console.log(cart)
         for (let i = 0; i < cart.length; i++) {
           total = total + (cart[i].quantity * cart[i].priceNum)
         }
-        console.log(total)
         return total.toLocaleString("en-US")
       })
   }, [user])
@@ -49,7 +47,7 @@ const ShoppingCart = ({ user, setUser }) => {
       </div>
       <div className='total-div'> Total: ${user ? total : 0}</div>
         <div className='shopping-cart-logo-div'>
-          <img src='images/logoIcon.png' className='shopping-cart-logo'/>
+          <img src='images/logoIcon.png' className='shopping-cart-logo' alt='Tether Logo'/>
         </div>
       </div>
     </Layout>

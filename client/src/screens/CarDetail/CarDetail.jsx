@@ -29,17 +29,12 @@ const CarDetail = (props) => {
     const cartItem = props.user.shopping_cart.find(item => item.car_id === car._id)
     if (cartItem) {
       const oldQuantity = (cartItem.quantity)
-      console.log(oldQuantity)
       const newQuantity = oldQuantity + 1
-      console.log(props.user._id)
-      console.log(cartItem._id)
       const itemIndex = props.user.shopping_cart.findIndex(item => item.car_id === car._id)
-      console.log(itemIndex)
       const data = {
         "quantity": newQuantity,
         "idx": itemIndex
       }
-      console.log(data)
       const updatedUser = await updateQuantity(props.user._id, data)
       props.setUser(updatedUser)
     } else {

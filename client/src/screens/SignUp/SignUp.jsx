@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { getAllUsers, signUp } from "../../services/users";
 import Layout from "../../components/Layout/Layout.jsx";
-
 import './SignUp.css'
 
 
@@ -11,16 +10,25 @@ const SignUp = ({ user, setUser }) => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
-  const [match, setMatch] = useState(false);
   const [matchToggle, setMatchToggle] = useState(false);
   const [lengthToggle, setLengthToggle] = useState(false);
   const [navigateToggle, setNavigateToggle] = useState(false);
+
+  const checkEmail = async () => {
+    const users = await getAllUsers()
+    if (users.filter(account => account.email === email).length > 0) {
+      return false
+    } else {
+      return true
+    }
+  }
 
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     checkPassword()
     if (email.includes('@') && email.includes('.com')) {
-      if ((checkEmail()) === true) {
+      const emailFree =  await checkEmail()
+      if (emailFree === true) {
         if (password === confirm && password.length > 7) {
           try {
             const form = {
@@ -54,33 +62,21 @@ const SignUp = ({ user, setUser }) => {
     return <Navigate to="/" />;
   }
 
-  const checkEmail = async () => {
-    const users = await getAllUsers()
-    if (users.filter(account => account.email === email).length > 0) {
-      return false
-    } else {
-      return true
-    }
-  }
-
   const lengthTrue = () => {
     setLengthToggle(true)
   }
 
   const elseIfOne = () => {
-    setMatch(true);
     setMatchToggle(false);
     setLengthToggle(false);
   }
 
   const elseIfTwo = () => {
-    setMatch(false);
     setMatchToggle(false);
     setLengthToggle(false);
   }
 
   const elseIfThree = () => {
-    setMatch(false);
     setMatchToggle(true);
     setLengthToggle(false);
   }

@@ -42,17 +42,6 @@ export const updateUser = async (credentials, data) => {
   }
 }
 
-// export const updateUser = async (userId, data) => {
-//   try {
-//     const resp = await api.put(`/update/${userId}`, data)
-//     localStorage.setItem('token', resp.data.token)
-//     const user = jwtDecode(resp.data.token)
-//     return user
-//   } catch (error) {
-//     throw error
-//   }
-// }
-
 export const deleteUser = async (credentials) => {
   try {
     const resp = await api.delete(`/users/${credentials}`)
@@ -61,15 +50,6 @@ export const deleteUser = async (credentials) => {
     throw error
   }
 }
-
-// export const changePassword = async (passwords, user) => {
-//   try {
-//     const resp = await api.post('/')
-//     return resp.data
-//   } catch (error) {
-//     throw error
-//   }
-// }
 
 export const verifyUser = async () => {
   const token = localStorage.getItem('token')
@@ -114,16 +94,6 @@ export const updateQuantity = async (userId, data) => {
     throw error
   }
 }
-// export const updateQuantity = async (userId, itemId, data) => {
-//   try {
-//     const resp = await api.put(`/users/${userId}/cart/${itemId}`, data)
-//     localStorage.setItem('token', resp.data.token)
-//     const user = jwtDecode(resp.data.token)
-//     return user
-//   } catch (error) {
-//     throw error
-//   }
-// }
 
 export const removeItem = async (userId, idx) => {
   try {

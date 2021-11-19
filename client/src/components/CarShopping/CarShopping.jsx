@@ -1,7 +1,7 @@
 import "./CarShopping.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { verifyUser, updateUser, removeItem, updateQuantity } from "../../services/users";
+import { removeItem, updateQuantity } from "../../services/users";
 
 
 const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser, shoppingCart }) => {
@@ -22,15 +22,9 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
     const index = {
       "idx": idx
     }
-    console.log(user._id)
     const updatedUser = await removeItem(user._id, index)
     setUser(updatedUser)
   }
-
-  // const remove = async () => {
-  //   const updatedUser = await removeItem(user._id, item_id)
-  //   setUser(updatedUser)
-  // }
 
   const editCart = async (ev) => {
     const data = {

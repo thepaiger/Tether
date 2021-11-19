@@ -3,9 +3,6 @@ import "./CarDisplay.css";
 
 
 const CarDisplay = ({ car }) => {
-  // const handleClick = () => {
-  //   console.log("clicked");
-  // };
 
   return (
     <div className="carDisplay">
@@ -17,13 +14,6 @@ const CarDisplay = ({ car }) => {
           <div className="carDisplay-make-icon">
             <h3 className="carDisplay-make">
               {car.make} {car.model}
-              {/* <div className="carDisplay-icon">
-              <img
-                onClick={handleClick}
-                src="/images/icons/bag-plus-fill.svg"
-                alt="bag-plus-fill"
-              />
-            </div> */}
             </h3>
           </div>
           <h3 className="carDisplay-price">{car.price}</h3>
