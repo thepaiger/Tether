@@ -25,14 +25,16 @@ position: fixed; */
 
 .home-logo-box {
   position: absolute;
-  bottom: 15px;
-  right: 10px;
+bottom: 15px;
+right: 10px;
+margin: auto;
 }
 
 .home-logo {
   width: 450px;
   height: auto;
   margin: 0 auto;
+  /* background-image:'/images/logo.png' ; */
 }
 
 .logo-subtext {
@@ -56,5 +58,23 @@ position: fixed; */
 .browse-inventory {
   text-decoration: none;
   color: #e9e3d5;
-  font-size: 20px;
+  font-size: 20px
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .home-background-image {
+    height: calc(100vh - 80px);
+    width: 100%;
+  }
+  
+  .home-logo-box {
+    justify-content: center;
+
+  }
+  .home-logo {
+    width: 200px;
+    justify-content: center;
+    height: auto;
+  margin: 0 auto;
+  }
 }
