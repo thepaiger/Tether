@@ -39,3 +39,9 @@ right: 10px;
   text-align: center;
   margin: 0 auto;
 }
+
+.welcome-content {
+  top: 250px;
+  left: 1.25rem;
+  position: absolute;
+}
