@@ -7,6 +7,7 @@
   height: calc(100vh - 70px - 80px);
   flex-grow: 1;
   margin: 80px 0 0 0;
+  overflow: hidden;
 }
 
 /* ACCOUNT INFO PAGE */
@@ -113,14 +114,7 @@
 }
 
 /* MEDIA QUERIES */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* SIGNUP BACKGROUND DIV */
-  .account-background-img {
-    height: calc(91.75vh - 70px - 80px);
-    /* height: calc(100% - 70px - 80px); */
-    padding: 30px 0;
-  }
-
+@media only screen and (max-device-width: 480px) {
   /* SIGNUP DIV - set responsive width */
   .account-info-div {
     width: 90vw;

@@ -61,7 +61,7 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
 
   const checkEmail = async () => {
     const users = await getAllUsers()
-    if (users.find(account => account.email === email)) {
+    if (users.filter(account => account.email === email)[0]) {
       console.log(users)
       return false
     } else {
