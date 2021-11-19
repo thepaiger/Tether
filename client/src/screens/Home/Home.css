@@ -68,17 +68,14 @@
 
   .home-logo-box {
     justify-content: center;
-<<<<<<< HEAD
-=======
     position: absolute;
   }
-  
+
   .logo-subtext {
     color: transparent;
     position: absolute;
->>>>>>> 342d65d0db09c03edaed9a478eedcd70d4d110de
   }
-  
+
   .home-logo {
     width: 200px;
     justify-content: center;
