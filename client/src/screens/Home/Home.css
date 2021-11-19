@@ -22,3 +22,14 @@ background-size: cover;
     height:100vh;
     width:100%;
 }
+
+.home-logo-box {
+  position: absolute;
+bottom: 10px;
+right: 10px;
+}
+
+.home-logo {
+  width: 450px;
+  height: auto;
+}
