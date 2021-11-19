@@ -44,7 +44,7 @@ const ShoppingCart = ({ user, setUser }) => {
                 <CarShopping key={idx} idx={idx} user={user} setUser={setUser} car={item.car} car_id={item.car_id} price={item.price} priceNum={item.priceNum} item_id={item._id} quantity={item.quantity} image={item.image} />
               </div>
             ))
-            : <div className='empty-cart-div'>Your garage is empty.</div>
+            : <div className='empty-cart-div'>Your garage is empty</div>
           : null}
       </div>
       <div className='total-div'> Total: ${user ? total : 0}</div>
