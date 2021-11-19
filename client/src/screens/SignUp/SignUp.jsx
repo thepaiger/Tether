@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-import { signUp } from "../../services/users";
+import { getAllUsers, signUp } from "../../services/users";
 import Layout from "../../components/Layout/Layout.jsx";
 
 import './SignUp.css'
@@ -19,34 +19,55 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     checkPassword()
-    if (checkEmail()) {
-      
-      if (password === confirm && password.length > 8) {
-        console.log('hello')
-        try {
-          const form = {
-            "name": `${name}`,
-            "email": `${email}`,
-            "password": `${password}`,
-            "shopping_cart": []
-          };
-          const user = await signUp(form);
-          setUser(user);
-          // setLoggedIn(true);
-          setNavigateToggle(true);
-        } catch (error) {
-          console.error(error);
-          setEmail("");
-          setName("");
-          setPassword("");
-          setConfirm("");
+    if (email.includes('@') && email.includes('.com')) {
+      if (checkEmail()) {
+        console.log('check email is true')
+        if (password === confirm && password.length > 7) {
+          console.log('hello, the passwords match')
+          try {
+            const form = {
+              "name": `${name}`,
+              "email": `${email}`,
+              "password": `${password}`,
+              "shopping_cart": []
+            };
+            const user = await signUp(form);
+            setUser(user);
+            // setLoggedIn(true);
+            setNavigateToggle(true);
+          } catch (error) {
+            console.error(error);
+            setEmail("");
+            setName("");
+            setPassword("");
+            setConfirm("");
+          }
+        } else {
+          console.log('passwords do not match')
+          setMatchToggle(true)
         }
+      } else {
+        console.log('check email is true')
+        alert(`Sorry, there is already an account for ${email}`)
       }
-    } else
+    } else {
+      alert('Please use a valid email account.')
+    }
   };
 
   if (navigateToggle) {
     return <Navigate to="/" />;
+  }
+
+  const checkEmail = async () => {
+    const users = await getAllUsers()
+    if (users.find(account => account.email === email)) {
+      console.log(users)
+      return false
+    } else {
+      console.log(users)
+      return true
+    }
   }
 
   const lengthTrue = () => {
