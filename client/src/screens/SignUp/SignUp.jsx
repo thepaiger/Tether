@@ -26,7 +26,7 @@ const SignUp = ({ user, setUser }) => {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     checkPassword()
-    if (email.includes('@') && email.includes('.com')) {
+    if (email) {
       const emailFree =  await checkEmail()
       if (emailFree === true) {
         if (password === confirm && password.length > 7) {
