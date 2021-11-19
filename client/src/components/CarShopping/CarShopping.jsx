@@ -1,80 +1,54 @@
 import "./CarShopping.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { verifyUser, updateUser } from "../../services/users";
+import { removeItem, updateQuantity } from "../../services/users";
 
 
 const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser, shoppingCart }) => {
   const [input, setInput] = useState('')
-  // const [shoppingCart, setShoppingCart] = useState([])
 
-  useEffect((quantity) => {
+  useEffect(() => {
     const resetInput = () => {
       setInput(quantity)
     }
-
-    // setShoppingCart(user.shopping_cart)
     resetInput()
-  }, [])
-
-  // const getTotal = () => {
-  //   let total = priceNum * quantity;
-  //   return `${total}`;
-  // }
-
-
+  }, [user])
 
   const getInput = (ev) => {
     setInput(ev.target.value)
   }
 
   const remove = async () => {
-    const tempCart = shoppingCart
-    tempCart.splice(idx, 1)
-    const newCart = {
-      "shopping_cart": tempCart
+    const index = {
+      "idx": idx
     }
-    await updateUser(`${user._id}`, newCart)
-    const updatedUser = await verifyUser()
+    const updatedUser = await removeItem(user._id, index)
     setUser(updatedUser)
   }
 
-  // const changeUser = (ev) => {
-  //   shoppingCart[idx-1].quantity = ev
-  // }
-
-  // const newFunc = async () => {
-  //   const form = {
-  //     "shopping_cart": []
-  //   }
-  //   await updateUser(user._id, form)
-  // }
-
   const editCart = async (ev) => {
-    // const tempCart = shoppingCart
-    // tempCart[idx].quantity = ev
-    // changeUser(ev)
-    const newQuantity = {
-      "quantity": `${ev}`
+    const data = {
+      "quantity": ev,
+      "idx": idx
     }
-    await updateUser(user._id, newQuantity)
-    // newFunc()
-    const updatedUser = await verifyUser()
+    const updatedUser = await updateQuantity(user._id, data)
     setUser(updatedUser)
   }
 
   const handleChange = (ev) => {
     getInput(ev)
-    if (ev === 0) {
+    if (ev.target.value === "0") {
       remove()
     } else {
-      editCart(ev)
+      editCart(ev.target.value)
     }
   }
 
   return (
+    <div>
+      <hr className='carShopping-divider'/>
     <div className="carShopping">
-      <div className="carShopping-remove-icon">
+      <div className="carShopping-remove-icon" onClick={remove}>
         <img
           src={"/images/icons/bag-dash-fill.svg"}
           alt="remove from cart"
@@ -103,11 +77,11 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
         <h6>quantity</h6>
       </div>
       <div className="carShopping-total-div">
-        <h4>${priceNum * input}</h4>
+        <h4>${(priceNum * input).toLocaleString("en-US")}</h4>
         <h6>total</h6>
       </div>
-
-    </div>
+      </div>
+      </div>
   );
 };
 
