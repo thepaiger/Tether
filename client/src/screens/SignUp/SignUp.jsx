@@ -6,7 +6,7 @@ import Layout from "../../components/Layout/Layout.jsx";
 import './SignUp.css'
 
 
-const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
+const SignUp = ({ user, setUser }) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");

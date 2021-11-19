@@ -5,7 +5,7 @@ import Layout from "../../components/Layout/Layout.jsx";
 
 import './SignIn.css'
 
-const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
+const SignIn = ({ user, setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [navigateToggle, setNavigateToggle] = useState(false);
@@ -18,8 +18,6 @@ const SignIn = ({ user, setUser, loggedIn, setLoggedIn }) => {
         "password": `${password}`
       };
       const user = await signIn(form);
-      console.log(user)
-      // console.log(user.setUser.name)
       if (user.name === 'Error') {
         alert("Email and/or Password are incorrect.")
       } else {

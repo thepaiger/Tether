@@ -50,7 +50,6 @@
 }
 .car-detail-image {
   width: 100%;
-
 }
 
 .car-detail-textblock-main {
@@ -132,7 +131,7 @@
   transform: scale(1.1);
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
   .car-detail-header-div {
     flex-direction: column;
     padding: 20px 15px 0 15px;
