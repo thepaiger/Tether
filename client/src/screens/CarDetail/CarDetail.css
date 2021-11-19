@@ -1,10 +1,6 @@
-.newDivForSlider{
-  border:rgb(217, 240, 17) 2px solid;
-}
-
 .car-detail-background-img {
   display: flex;
-    flex-direction: row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   color: #e9e3d5;
@@ -21,37 +17,51 @@
   flex-grow: 1;
   margin: 80px 0 0 0;
 }
+
+.car-detail-container {
+  border: rgb(217, 240, 17) 2px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 50px; */
+}
+
 .car-detail-background {
   display: flex;
   flex-direction: row;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   background-color: rgb(32, 33, 35, 0.85);
-  width: 100vw;
+  /* width: 90vw; */
+  /* padding: 50px; */
   box-shadow: 0 0 10px #4a4848;
-  border:red 2px solid;
+  border: red 2px solid;
 }
 
-.newDiv{
+.car-detail-header-div {
+  display: flex;
+}
+
+.car-detail-main-image {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  border: rgb(106, 0, 255) 2px solid;
+  flex-grow: 2;
+  flex-shrink: 2;
   /* border:green 2px solid; */
-  width: 60vw;
-  margin: 0 auto;
+  /* width: 50vw; */
+  /* margin: 0 auto; */
 }
 .car-detail-image {
-  width: 60vw;
-  border:rgb(255, 0, 170) 2px solid;
-  
-  margin-bottom: 25px;
+  width: 100%;
+  border: rgb(255, 0, 170) 2px solid;
+  /* margin-bottom: 25px; */
 }
-
-
-
 
 .car-detail-textblock-main {
   display: flex;
@@ -59,11 +69,13 @@
   align-items: flex-start;
   justify-content: center;
   text-decoration: none;
-  margin: 2vh 2vw;
-  width: 30vw;
-  border:red 2px solid;
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* margin: 2vh 2vw; */
+  /* width: 40vw; */
+  border: red 2px solid;
 }
-.car-detail-makeAndModel {
+.car-detail-make-model {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -75,7 +87,7 @@
 .car-detail-price {
   font-size: 28px;
   font-weight: 300;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 .car-detail-info {
   display: flex;
@@ -97,13 +109,6 @@
   color: rgb(230, 200, 53);
 }
 
-.carDetail-icon {
-  display: inline;
-}
-.image-detail {
-  padding-left: 3px;
-  padding-right: 12px;
-}
 .button {
   display: flex;
   font-family: “Roboto”, sans-serif;
@@ -111,28 +116,40 @@
   color: #403d3d;
   font-size: 20px;
   font-weight: 700;
-  padding: 5px;
-  padding-bottom: 10px;
-  padding-right: 10px;
+  /* padding: 5px; */
+  /* padding-bottom: 10px; */
+  /* padding-right: 10px; */
   border-radius: 5px;
 }
 
-.gallery{
-  margin:10px 50px;
+.car-detail-icon {
+  display: inline;
 }
-.gallery img{
-  width:230px;
-  padding:5px;
+
+.car-detail-bio {
+  border: rgb(0, 255, 72) 2px solid;
+}
+
+.image-detail {
+  /* padding-left: 3px;
+  padding-right: 12px; */
+}
+
+.car-detail-gallery {
+  /* margin: 10px 50px; */
+}
+.car-detail-gallery img {
+  /* width: 230px; */
+  /* padding: 5px; */
   transition: 1s;
-  filter:grayscale(100%);
+  /* filter: grayscale(100%); */
 }
-.gallery img:hover{
-  filter:grayscale(0);
+.car-detail-gallery img:hover {
+  /* filter: grayscale(0); */
   transform: scale(1.1);
 }
 
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px)  {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .car-detail-background {
     padding-top: 15px;
     flex-direction: column;
