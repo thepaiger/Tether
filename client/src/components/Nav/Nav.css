@@ -56,3 +56,52 @@ nav {
   font-weight: 500;
   padding: 0 80px 0 0;
 }
+
+/* HIDE ICONS */
+.nav-link-account-icon,
+.nav-link-sign-in-icon,
+.nav-link-models-icon,
+.nav-welcome-icon {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-device-width: 900px) {
+  /* TETHER LOGO */
+  .nav-logo {
+    height: auto;
+    width: 120px;
+  }
+
+  /* HIDE TEXT LINKS & WELCOME */
+  .nav-link-account,
+  .nav-link-sign-in,
+  .nav-link-models,
+  .nav-welcome {
+    display: none;
+  }
+
+  /* SHOW & SPACE ICONS */
+  .nav-link-account-icon,
+  .nav-link-sign-in-icon,
+  .nav-link-models-icon {
+    display: inline-block;
+    /* margin: 0 0 0 40px; */
+  }
+
+  .nav-left {
+    justify-content: flex-start;
+    flex-grow: 1;
+  }
+
+  .nav-btns {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+  }
+
+  .nav-right {
+    justify-content: space-evenly;
+    /* flex-grow: 1; */
+  }
+}
