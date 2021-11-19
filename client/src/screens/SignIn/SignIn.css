@@ -3,9 +3,11 @@
   background-image: url("../../backgrounds/2021-porsche-taycan.jpeg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   height: calc(100vh - 70px - 80px);
   flex-grow: 1;
   margin: 80px 0 0 0;
+  overflow: hidden;
 }
 
 /* SIGNIN PAGE */
@@ -118,7 +120,7 @@
 }
 
 /* MEDIA QUERIES */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-device-width: 480px) {
   /* SIGNIN DIV - set responsive width */
   .sign-in-div {
     width: 90vw;
