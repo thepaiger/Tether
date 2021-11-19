@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import "./CarDisplay.css";
 
+
 const CarDisplay = ({ car }) => {
-  const handleClick = () => {
-    console.log("clicked");
-  };
+  // const handleClick = () => {
+  //   console.log("clicked");
+  // };
 
   return (
     <div className="carDisplay">
@@ -29,6 +30,7 @@ const CarDisplay = ({ car }) => {
           <p className="carDisplay-info">{car.info.substring(0, 200)}...</p>
         </div>
       </Link>
+     
     </div>
   );
 };

@@ -19,10 +19,10 @@ const alwaysOptions = (
 )
 
 const Nav = ({ user, setUser }) => {
-  const signOut = () => {
-    localStorage.clear()
-    setUser('');
-  }
+  // const signOut = () => {
+  //   localStorage.clear()
+  //   setUser('');
+  // }
 
   return (
     <nav>
