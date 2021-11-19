@@ -120,7 +120,7 @@
 }
 
 /* MEDIA QUERIES */
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
   /* SIGNIN DIV - set responsive width */
   .sign-in-div {
     width: 90vw;

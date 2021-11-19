@@ -61,7 +61,7 @@ nav {
 }
 
 /* MEDIA QUERIES */
-@media only screen and (max-device-width: 900px) {
+@media only screen and (max-width: 900px) {
   /* TETHER LOGO */
   .nav-logo {
     height: auto;

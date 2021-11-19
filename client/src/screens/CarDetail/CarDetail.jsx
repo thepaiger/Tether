@@ -5,13 +5,10 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ImageSlider from "../../components/Slider/ImageSlider";
 
-
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
-
-  console.log(props);
 
   useEffect(() => {
     const fetchCar = async () => {
@@ -52,7 +49,7 @@ const CarDetail = (props) => {
                   {`Charging Port Type:  ${car.connector}`}
                   <br />
                 </div>
-            
+
                 <button className="button">
                   <div className="car-detail-icon">
                     <img
