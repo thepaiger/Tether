@@ -43,13 +43,13 @@ const CarDetail = (props) => {
                 </div>
                 <div className="car-detail-price">{car.price}</div>
                 <div className="car-detail-additional-info">
-                  {`Horsepower: ${car.hp}`}
+                  {`Horsepower:  ${car.hp}`}
                   <br />
-                  {`Top Speed: ${car.topSpeed}`}
+                  {`Top Speed:  ${car.topSpeed}`}
                   <br />
-                  {`Range: ${car.range}`}
+                  {`Range:  ${car.range}`}
                   <br />
-                  {`Charging Port Type: ${car.connector}`}
+                  {`Charging Port Type:  ${car.connector}`}
                   <br />
                 </div>
                 {/* <button onClick={handleButton}>{`${addToCartButton}`}</button> */}
@@ -72,13 +72,13 @@ const CarDetail = (props) => {
               </div>
             </div>
           </div>
-          {/* <div className="car-detail-gallery">
-            <ImageSlider car={car} />
-          </div> */}
 
+          <div className="car-detail-gallery">
+            <ImageSlider car={car} />
+          </div>
         </div>
       </div>
-    </Layout>
+    </Layout >
   );
 };
 
