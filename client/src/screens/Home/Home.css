@@ -24,8 +24,8 @@
 
 .home-logo-box {
   position: absolute;
-  bottom: 15px;
-  right: 10px;
+  bottom: 45px;
+  right: 40px;
   margin: auto;
 }
 
@@ -33,17 +33,17 @@
   width: 450px;
   height: auto;
   margin: 0 auto;
-  /* background-image:'/images/logo.png' ; */
 }
 
 .logo-subtext {
   text-align: center;
   margin: 0 auto;
+  font-style: italic;
 }
 
 .welcome-content {
-  top: 250px;
-  left: 2rem;
+  top: 190px;
+  left: 45px;
   position: absolute;
   text-align: left;
 }
