@@ -3,13 +3,14 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: absolute;
   width: 100%;
   padding: 50px;
   box-sizing: border-box;
   height: calc(100vh - 80px);
   flex-grow: 1;
   margin: 80px 0 0 0;
+  overflow: hidden;
 }
 
 .home-content {
@@ -67,11 +68,36 @@
 
   .home-logo-box {
     justify-content: center;
+<<<<<<< HEAD
+=======
+    position: absolute;
   }
+  
+  .logo-subtext {
+    color: transparent;
+    position: absolute;
+>>>>>>> 342d65d0db09c03edaed9a478eedcd70d4d110de
+  }
+  
   .home-logo {
     width: 200px;
     justify-content: center;
     height: auto;
     margin: 0 auto;
+  }
+
+  .welcome-content {
+    top: 85px;
+    left: 0 auto;
+    text-align: center;
+  }
+
+  .welcome-text {
+    font-size: 28px;
+    margin-bottom: 0%;
+  }
+
+  .browse-inventory {
+    font-size: 20px;
   }
 }
