@@ -7,6 +7,7 @@ import ImageSlider from "../../components/Slider/ImageSlider";
 import { addItem, updateQuantity } from "../../services/users";
 
 
+
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
@@ -62,11 +63,14 @@ const CarDetail = (props) => {
     <Layout user={props.user} setUser={props.setUser}>
       <div className="car-detail-background-img">
       <div className="newDivForSlider">
-        <div className="car-detail-background">
+          <div className="car-detail-background">
+            
           <div className="newDiv">
-            <img className="car-detail-image" src={car.image} alt={car.model}
-            />
-            </div>
+              <img className="car-detail-image" src={car.image} alt={car.model} />
+          
+             
+          </div>
+
             <div className="car-detail-textblock-main">
               <div className="car-detail-makeAndModel">
                 {car.make} {car.model}
@@ -101,12 +105,12 @@ const CarDetail = (props) => {
               </button>
             </div>
           </div>
-          
-        <div className="slider">
-            <ImageSlider
-           car={car}
-            />
-            </div>
+          <div className="outerbox">
+                <div className="gallery">
+                <ImageSlider car={car}/>
+                 </div>
+              </div>
+      
         </div>
       </div>
     </Layout>
