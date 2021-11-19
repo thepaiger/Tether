@@ -49,7 +49,7 @@ const ImageSlider = ({ car }) => {
             <img ref={ref} onClick={open} src={`/images/${car.make}/img-small2.png`} alt="1" />
           )}
         </Item>
-        {/* UPDATE ME!! */}
+   
         <Item
           original={`/images/${car.make}/img-big4.png`}
           thumbnail={`/images/${car.make}/img-small4.png`}
