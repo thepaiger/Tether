@@ -17,3 +17,8 @@ footer {
   position: absolute;
   right: 35px;
 }
+
+.footer-github img:hover {
+  filter: invert(67%) sepia(31%) saturate(6368%) hue-rotate(179deg)
+    brightness(101%) contrast(91%);
+}

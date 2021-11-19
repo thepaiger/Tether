@@ -55,9 +55,21 @@ nav {
 /* HIDE ICONS */
 .nav-link-account-icon,
 .nav-link-sign-in-icon,
-.nav-link-models-icon,
-.nav-welcome-icon {
+.nav-link-models-icon {
   display: none;
+}
+
+/* HOVER EFFECTS */
+nav a:hover {
+  color: #3aa9f4;
+}
+
+.nav-link-account-icon img:hover,
+.nav-link-sign-in-icon img:hover,
+.nav-link-models-icon img:hover,
+.nav-shopping-bag img:hover {
+  filter: invert(67%) sepia(31%) saturate(6368%) hue-rotate(179deg)
+    brightness(101%) contrast(91%);
 }
 
 /* MEDIA QUERIES */
