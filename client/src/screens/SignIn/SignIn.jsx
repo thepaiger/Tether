@@ -60,11 +60,10 @@ const SignIn = ({ user, setUser }) => {
                   Password:
                 </label>
 
-                {/* update type to password once testing complete */}
                 <input
                   className="sign-in-password-input"
                   id="sign-in-password-input"
-                  type="text"
+                  type="password"
                   value={password}
                   placeholder="********"
                   onChange={(ev) => setPassword(ev.target.value)}
