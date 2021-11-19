@@ -19,7 +19,6 @@ const SignUp = ({ user, setUser }) => {
   const handleSubmit = async (ev) => {
     ev.preventDefault();
     if (match === true) {
-      console.log('hello')
       try {
         const form = {
           "name": `${name}`,
