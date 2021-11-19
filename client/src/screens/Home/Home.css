@@ -7,11 +7,9 @@
   width: 100%;
   padding: 50px;
   box-sizing: border-box;
-<<<<<<< HEAD
-  min-height: 100%;
-min-width: 1024px;
-position: fixed; */
-  background-size: cover;
+  height: calc(100vh - 80px);
+  flex-grow: 1;
+  margin: 80px 0 0 0;
 }
 
 .home-content {
@@ -21,20 +19,6 @@ position: fixed; */
   right: 0;
   height: 100vh;
   width: 100%;
-=======
-  height: calc(100vh - 80px);
-  flex-grow: 1;
-  margin: 80px 0 0 0;
-}
-
-.home-content {
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-  height:100vh;
-  width:100%;
->>>>>>> 1ea7243dacc3489a3a43ee37e75ca13f38e8486c
 }
 
 .home-logo-box {
@@ -72,7 +56,7 @@ position: fixed; */
 .browse-inventory {
   text-decoration: none;
   color: #e9e3d5;
-  font-size: 20px
+  font-size: 20px;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -80,15 +64,14 @@ position: fixed; */
     height: calc(100vh - 80px);
     width: 100%;
   }
-  
+
   .home-logo-box {
     justify-content: center;
-
   }
   .home-logo {
     width: 200px;
     justify-content: center;
     height: auto;
-  margin: 0 auto;
+    margin: 0 auto;
   }
 }
