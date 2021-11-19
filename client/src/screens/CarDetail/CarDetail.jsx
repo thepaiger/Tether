@@ -72,11 +72,11 @@ const CarDetail = (props) => {
               </button>
             </div>
           </div>
-          <div className="outerbox">
+        
                 <div className="gallery">
                 <ImageSlider car={car}/>
                  </div>
-              </div>
+       
       
         </div>
       </div>
