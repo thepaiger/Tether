@@ -59,13 +59,13 @@ const Nav = ({ user, setUser }) => {
       <div className="nav-right">
         {user && <div className="nav-welcome">Welcome, &nbsp; {user.name}</div>}
 
-        <NavLink className="nav-shopping-bag" to="/cart">
+        {user && <NavLink className="nav-shopping-bag" to="/cart">
           <img
             // onClick={handleClick}
             src="/images/icons/bag-fill.svg"
             alt="shopping bag"
           />
-        </NavLink>
+        </NavLink>}
       </div>
     </nav>
   )
