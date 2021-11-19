@@ -8,13 +8,12 @@ const Home = (props) => {
     <Layout user={props.user} setUser={props.setUser}>
       <div className="home-background-image">
         {/* <ControlledCarousel /> */}
-        <div className='welcome-browse'>
-          <h1>WELCOME TO THE FUTURE</h1>
-          <NavLink to="/cars">Browse Inventory</NavLink>
-        </div>
-        <div className="home-logo">
+        <div className='home-content'>
+          <h1 className="welcome-text">WELCOME TO THE FUTURE</h1>
+          <NavLink to="/cars" className="browse-inventory">Browse Inventory</NavLink>
+
           <img src={'/images/logo.png'} alt="Logo" className="home-logo" />
-          <p>Your one-stop shop for Electric Supercars</p>
+          <p className="logo-subtext">Your one-stop shop for Electric Supercars</p>
         </div>
       </div>
     </Layout>
