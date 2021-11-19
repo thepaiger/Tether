@@ -18,27 +18,31 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
 
   const handleSubmit = async (ev) => {
     ev.preventDefault();
-    if (match === true) {
-      console.log('hello')
-      try {
-        const form = {
-          "name": `${name}`,
-          "email": `${email}`,
-          "password": `${password}`,
-          "shopping_cart": []
-        };
-        const user = await signUp(form);
-        setUser(user);
-        // setLoggedIn(true);
-        setNavigateToggle(true);
-      } catch (error) {
-        console.error(error);
-        setEmail("");
-        setName("");
-        setPassword("");
-        setConfirm("");
+    checkPassword()
+    if (checkEmail()) {
+      
+      if (password === confirm && password.length > 8) {
+        console.log('hello')
+        try {
+          const form = {
+            "name": `${name}`,
+            "email": `${email}`,
+            "password": `${password}`,
+            "shopping_cart": []
+          };
+          const user = await signUp(form);
+          setUser(user);
+          // setLoggedIn(true);
+          setNavigateToggle(true);
+        } catch (error) {
+          console.error(error);
+          setEmail("");
+          setName("");
+          setPassword("");
+          setConfirm("");
+        }
       }
-    }
+    } else
   };
 
   if (navigateToggle) {
@@ -67,21 +71,32 @@ const SignUp = ({ user, setUser, loggedIn, setLoggedIn }) => {
     setLengthToggle(false);
   }
 
-  const checkPassword = (v) => {
-    if (password.length > 0 && password.length < 8 && v.length < 8) {
+  const checkPassword = () => {
+    if (password.length > 0 && password.length < 8 && confirm.length < 8) {
       lengthTrue()
-    } else if (password === v && v.length > 7) {
+    } else if (password === confirm && confirm.length > 7) {
       elseIfOne()
-    } else if (password !== v && v.length === 0) {
+    } else if (password !== confirm && confirm.length === 0) {
       elseIfTwo()
-    } else if (password !== v && v.length > 7) {
+    } else if (password !== confirm && confirm.length > 7) {
       elseIfThree()
     }
   };
+  // const checkPassword = (v) => {
+  //   if (password.length > 0 && password.length < 8 && v.length < 8) {
+  //     lengthTrue()
+  //   } else if (password === v && v.length > 7) {
+  //     elseIfOne()
+  //   } else if (password !== v && v.length === 0) {
+  //     elseIfTwo()
+  //   } else if (password !== v && v.length > 7) {
+  //     elseIfThree()
+  //   }
+  // };
 
   const handleChange = (ev) => {
     setConfirm(ev.target.value);
-    checkPassword(ev.target.value);
+    // checkPassword(ev.target.value);
   };
 
   return (
