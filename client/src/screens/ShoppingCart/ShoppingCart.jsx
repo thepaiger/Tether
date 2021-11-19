@@ -2,36 +2,55 @@ import Layout from "../../components/Layout/Layout"
 import { useEffect, useState } from 'react'
 import CarShopping from "../../components/CarShopping/CarShopping"
 import { clearCart } from "../../services/users"
+import './ShoppingCart.css'
 
 
 const ShoppingCart = ({ user, setUser }) => {
   const [total, setTotal] = useState(0)
 
-  // useEffect(() => {
-  //   user ? setShoppingCart(user.shopping_cart) : setShoppingCart([])
-  // }, [user])
+  useEffect(() => {
+      setTotal(() => {
+        let total = 0
+        const cart = user.shopping_cart
+        console.log(cart)
+        for (let i = 0; i < cart.length; i++) {
+          total = total + (cart[i].quantity * cart[i].priceNum)
+        }
+        console.log(total)
+        return total.toLocaleString("en-US")
+      })
+  }, [user])
 
   const clear = async () => {
     const updatedUser = await clearCart(user._id)
     setUser(updatedUser)
   }
+
   
   return (
     <Layout user={user} setUser={setUser} >
-      <div>
+      <div className='shopping-cart-display-div'>
+        <div className='shopping-cart-top-div'>
+          <div className='cart-title-div'>SHOPPING CART</div>
+          <div className='clear-button-div'>
+            <button onClick={clear} className='clear-button'>Clear Cart</button>
+          </div>
+        </div>
+      <div className='cart-div'>
         {user ?
-          user.shopping_cart ?
+          user.shopping_cart.length > 0 ?
             user.shopping_cart.map((item, idx) => (
-              <div>
+              <div className='item-map-div'>
                 <CarShopping key={idx} idx={idx} user={user} setUser={setUser} car={item.car} car_id={item.car_id} price={item.price} priceNum={item.priceNum} item_id={item._id} quantity={item.quantity} image={item.image} />
               </div>
             ))
-            : <div>Your cart is empty.</div>
+            : <div className='empty-cart-div'>Your garage is empty.</div>
           : null}
       </div>
-      <div> Total: ${total}</div>
-      <div>
-        <button value='Clear Cart' onClick={clear}/>
+      <div className='total-div'> Total: ${user ? total : 0}</div>
+        <div className='shopping-cart-logo-div'>
+          <img src='images/logoIcon.png' className='shopping-cart-logo'/>
+        </div>
       </div>
     </Layout>
   )

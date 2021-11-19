@@ -90,6 +90,13 @@ const UserUpdate = ({ user, setUser }) => {
     setUpdated(true);
   };
 
+  //   const updated = await updateUser(user._id, form);
+  //   setUser(updated)
+  //   console.log(`service return of updated: ${updated}`);
+  //   setUpdated(true);
+  //   setNavToggle(true);
+  // };
+
   if (isUpdated) {
     const fetchNewUserData = async () => {
       newUser = await getUser(idNumber);

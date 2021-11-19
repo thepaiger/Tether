@@ -12,7 +12,7 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
       setInput(quantity)
     }
     resetInput()
-  }, [])
+  }, [user])
 
   const getInput = (ev) => {
     setInput(ev.target.value)
@@ -51,6 +51,8 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
   }
 
   return (
+    <div>
+      <hr className='carShopping-divider'/>
     <div className="carShopping">
       <div className="carShopping-remove-icon" onClick={remove}>
         <img
@@ -81,11 +83,11 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
         <h6>quantity</h6>
       </div>
       <div className="carShopping-total-div">
-        <h4>${priceNum * input}</h4>
+        <h4>${(priceNum * input).toLocaleString("en-US")}</h4>
         <h6>total</h6>
       </div>
-
-    </div>
+      </div>
+      </div>
   );
 };
 

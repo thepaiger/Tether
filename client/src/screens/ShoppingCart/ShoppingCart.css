@@ -1,0 +1,59 @@
+
+
+.shopping-cart-display-div {
+  margin-top: 80px;
+  background-image: url(../../backgrounds/Black-Grid.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px;
+  box-sizing: border-box;
+  height: calc(100% - 70px - 80px);
+  flex-grow: 1;
+  margin: 80px 0 0 0;
+}
+
+.cart-title-div {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-style: italic;
+  /* font-size: 20px; */
+  font-weight: 500;
+  padding: 0 80px 0 0;
+}
+
+.shopping-cart-logo-div {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.shopping-cart-logo {
+  height: 7vh;
+  width: 7vh;
+}
+
+.shopping-cart-top-div {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+}
+
+.clear-button {
+  height: 30px;
+  width: 100px;
+  /* font-weight: bold; */
+  font-size: 17px;
+}
+
+.empty-cart-div {
+  font-size: 100px;
+  opacity: 0.5;
+  text-align: center;
+}
+
+.total-div{
+  font-size: 30px;
+}
