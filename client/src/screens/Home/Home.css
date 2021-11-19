@@ -25,11 +25,17 @@ background-size: cover;
 
 .home-logo-box {
   position: absolute;
-bottom: 10px;
+bottom: 15px;
 right: 10px;
 }
 
 .home-logo {
   width: 450px;
   height: auto;
+  margin: 0 auto;
+}
+
+.logo-subtext {
+  text-align: center;
+  margin: 0 auto;
 }
