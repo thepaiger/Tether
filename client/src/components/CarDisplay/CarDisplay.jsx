@@ -6,7 +6,7 @@ const CarDisplay = ({ car }) => {
   return (
     <div className="carDisplay">
       <Link className="card" to={`/cars/${car._id}`}>
-        <div className="carDisplay-header">
+        <div className="carDisplay-header" >
           <img className="carDisplay-image" src={car.image} alt={car.model} />
         </div>
 
