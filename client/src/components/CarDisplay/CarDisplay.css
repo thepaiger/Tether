@@ -16,6 +16,12 @@
   border: none;
 }
 
+/* HOVER EFFECTS */
+.card:hover {
+  transform: scale(1.03);
+  transition: all 0.4s ease-in-out;
+}
+
 /*CARD DISPLAY FLEX*/
 .card {
   display: flex;
