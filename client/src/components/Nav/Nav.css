@@ -24,6 +24,7 @@ nav {
 .nav-logo {
   height: auto;
   width: 160px;
+  box-sizing: border-box;
 }
 
 /* NAV LINKS */
@@ -60,8 +61,12 @@ nav {
 }
 
 /* HOVER EFFECTS */
-nav a:hover {
+.nav-link-account:hover,
+.nav-link-sign-in:hover,
+.nav-link-models:hover {
   color: #3aa9f4;
+  border-bottom: solid #3aa9f4 4px;
+  transition: all ease-in-out 200ms;
 }
 
 .nav-link-account-icon img:hover,
