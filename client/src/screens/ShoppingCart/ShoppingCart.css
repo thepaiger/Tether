@@ -57,3 +57,21 @@
 .total-div{
   font-size: 30px;
 }
+
+.clear-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .empty-cart-div {
+    font-size: 85px;
+  }
+
+  .clear-button {
+    display: none;
+  }
+
+  .clear-icon {
+    display: inline-block;
+  }
+}

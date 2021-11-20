@@ -14,6 +14,26 @@
   background:red,
 }
 
-/* .carShopping-remove-icon {
-  justify-self: center;
+.quantity-input {
+  width: 40px;
+}
+
+.carShopping-details-div,
+.carShopping-price-div,
+.carShopping-quantity-div,
+.carShopping-total-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .carShopping-price-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.carShopping-quantity-div {
+  display: flex;
+  flex-direction: column;
 } */

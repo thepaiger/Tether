@@ -32,6 +32,7 @@ const ShoppingCart = ({ user, setUser }) => {
           <div className='cart-title-div'>SHOPPING CART</div>
           <div className='clear-button-div'>
             <button onClick={clear} className='clear-button'>Clear Cart</button>
+            <img src="/images/icons/bag-x-fill.svg" alt='bag-x-fill' onClick={clear} className='clear-icon'/>
           </div>
         </div>
       <div className='cart-div'>

@@ -68,7 +68,7 @@ const UserUpdate = ({ user, setUser }) => {
     <Layout user={user} setUser={setUser}>
       <div className="userUpdate-background-img">
         <div className="userUpdate-display-div">
-          <div className="userUpdate-info-div">
+          <div className="userUpdate-info-div" data-aos="zoom-in" data-aos-duration='500'>
             <form className="userUpdate-form">
               <h2>Account Info</h2>
 

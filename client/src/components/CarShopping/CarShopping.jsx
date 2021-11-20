@@ -72,7 +72,8 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
           name="quantity"
           value={input}
           onChange={handleChange}
-          required
+            required
+            className='quantity-input'
         />
         <h6>quantity</h6>
       </div>
