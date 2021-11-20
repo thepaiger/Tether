@@ -12,7 +12,7 @@ const ImageSlider = ({ car }) => {
         <Item
           original={`/images/${car.make}/img-big1.png`}
           thumbnail={`/images/${car.make}/img-small1.png`}
-          width="1036"
+          width="1200"
           height="768"
         >
           {({ ref, open }) => (
@@ -22,7 +22,7 @@ const ImageSlider = ({ car }) => {
         <Item
           original={`/images/${car.make}/img-big2.png`}
           thumbnail={`/images/${car.make}/img-small2.png`}
-          width="1036"
+          width="1200"
           height="768"
         >
           {({ ref, open }) => (
@@ -32,7 +32,7 @@ const ImageSlider = ({ car }) => {
         <Item
           original={`/images/${car.make}/img-big3.png`}
           thumbnail={`/images/${car.make}/img-small3.png`}
-          width="1036"
+          width="1200"
           height="768"
         >
           {({ ref, open }) => (
@@ -42,7 +42,7 @@ const ImageSlider = ({ car }) => {
         <Item
           original={`/images/${car.make}/img-big4.png`}
           thumbnail={`/images/${car.make}/img-small4.png`}
-          width="1120"
+          width="1200"
           height="768"
         >
           {({ ref, open }) => (
@@ -53,13 +53,15 @@ const ImageSlider = ({ car }) => {
         <Item
           original={`/images/${car.make}/img-big5.png`}
           thumbnail={`/images/${car.make}/img-small5.png`}
-          width="1120"
+          width="1200"
           height="768"
         >
           {({ ref, open }) => (
             <img ref={ref} onClick={open} src={`/images/${car.make}/img-small5.png`} alt="image5" />
           )}
         </Item>
+
+        
       </Gallery>
     </div>
   );
