@@ -116,6 +116,14 @@
 }
 
 .sign-up-submit:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #3aa9f4;
+  transition: all ease-in-out 200ms;
+  cursor: pointer;
+}
+
+.sign-up-submit:active {
+  transform: scale(1);
 }
 
 /* RETURN TO SIGNIN */
