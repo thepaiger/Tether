@@ -42,7 +42,7 @@
 }
 
 .welcome-content {
-  top: 190px;
+  top: 180px;
   left: 45px;
   position: absolute;
   text-align: left;
@@ -58,6 +58,12 @@
   text-decoration: none;
   color: #e9e3d5;
   font-size: 20px;
+}
+
+.browse-inventory:hover {
+  color: #3aa9f4;
+  border-bottom: solid #3aa9f4 4px;
+  transition: ease-in-out 0.25s;
 }
 
 @media only screen and (max-width: 480px) {

@@ -24,6 +24,7 @@ nav {
 .nav-logo {
   height: auto;
   width: 160px;
+  box-sizing: border-box;
 }
 
 /* NAV LINKS */
@@ -55,9 +56,25 @@ nav {
 /* HIDE ICONS */
 .nav-link-account-icon,
 .nav-link-sign-in-icon,
-.nav-link-models-icon,
-.nav-welcome-icon {
+.nav-link-models-icon {
   display: none;
+}
+
+/* HOVER EFFECTS */
+.nav-link-account:hover,
+.nav-link-sign-in:hover,
+.nav-link-models:hover {
+  color: #3aa9f4;
+  border-bottom: solid #3aa9f4 4px;
+  transition: all ease-in-out 200ms;
+}
+
+.nav-link-account-icon img:hover,
+.nav-link-sign-in-icon img:hover,
+.nav-link-models-icon img:hover,
+.nav-shopping-bag img:hover {
+  filter: invert(67%) sepia(31%) saturate(6368%) hue-rotate(179deg)
+    brightness(101%) contrast(91%);
 }
 
 /* MEDIA QUERIES */
