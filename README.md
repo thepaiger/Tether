@@ -2,7 +2,7 @@
 
 ## Overview
 
-Tether is an e-Commerce application dedicated to high-performance, luxury, electric sports cars or supercars. Browse the site to see beautiful vehicles that are both high-tech and good for the environment. Our goal is to streamline access to purchasing environmentally-friendly supercars.
+Tether is an application dedicated to high-performance, luxury, electric sports cars or supercars. Browse the site to see beautiful vehicles that are both high-tech and good for the environment. Our goal is to streamline access to purchasing environmentally-friendly supercars.
 
 ## Team Members
 

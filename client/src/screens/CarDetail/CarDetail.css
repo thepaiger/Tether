@@ -49,6 +49,7 @@
   flex-grow: 2;
   flex-shrink: 2;
 }
+
 .car-detail-image {
   width: 100%;
 }
@@ -63,6 +64,7 @@
   flex-shrink: 1;
   margin: 20px 20px 10px 10px;
 }
+
 .car-detail-make-model {
   display: flex;
   flex-direction: column;
@@ -71,11 +73,13 @@
   font-weight: 700;
   font-style: italic;
 }
+
 .car-detail-price {
   font-size: 28px;
   font-weight: 300;
   margin: 5px 0 5px 0;
 }
+
 .car-detail-info {
   line-height: 1.25;
   font-size: 16px;
@@ -83,6 +87,7 @@
   font-style: italic;
   font-weight: 500;
 }
+
 .car-detail-additional-info {
   margin: 3px 3px 6px 3px;
   font-size: 14px;
@@ -90,6 +95,7 @@
   color: rgb(230, 200, 53);
 }
 
+/* ADD TO CART BUTTON */
 .button {
   display: flex;
   align-items: center;
@@ -100,8 +106,22 @@
   font-weight: 700;
   padding: 3px 10px;
   margin: 5px 0 0 0;
+  box-sizing: border-box;
+  border: solid 1px #625d5d;
   border-radius: 3px;
-  border: none;
+}
+
+/* HOVER EFFECTS */
+.button:hover {
+  /* color: #3aa9f4; */
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #3aa9f4;
+  transition: all ease-in-out 200ms;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(1);
 }
 
 .car-detail-icon {
@@ -128,6 +148,7 @@
 .car-detail-gallery img {
   transition: 1s;
 }
+
 .car-detail-gallery img:hover {
   transform: scale(1.1);
 }
