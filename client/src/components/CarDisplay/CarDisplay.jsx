@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./CarDisplay.css";
 
 const CarDisplay = ({ car }) => {
+
   return (
     <div className="carDisplay">
       <Link className="card" to={`/cars/${car._id}`}>
