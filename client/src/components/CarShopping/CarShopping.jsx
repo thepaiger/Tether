@@ -46,42 +46,42 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
 
   return (
     <div>
-      <hr className='carShopping-divider'/>
-    <div className="carShopping">
-      <div className="carShopping-remove-icon" onClick={remove}>
-        <img
-          src={"/images/icons/bag-dash-fill.svg"}
-          alt="remove from cart"
-        />
-      </div>
-      <Link className="carShopping-link" to={`/cars/${car_id}`}>
-        <div className="carShopping-image-div">
-          <img className="carShopping-image" src={image} alt={car} />
+      <hr className='carShopping-divider' />
+      <div className="carShopping">
+        <div className="carShopping-remove-icon" onClick={remove}>
+          <img
+            src={"/images/icons/bag-dash-fill.svg"}
+            alt="remove from cart"
+          />
         </div>
-      </Link>
-      <div className="carShopping-details-div">
-        <h3 className="carShopping-name">{car}</h3>
+        <Link className="carShopping-link" to={`/cars/${car_id}`}>
+          <div className="carShopping-image-div">
+            <img className="carShopping-image" src={image} alt={car} />
+          </div>
+        </Link>
+        <div className="carShopping-details-div">
+          <h3 className="carShopping-name">{car}</h3>
+        </div>
+        <div className="carShopping-price-div">
+          <h4 className="carShopping-price">{price}</h4>
+          <h6>each</h6>
+        </div>
+        <div className="carShopping-quantity-div">
+          <input
+            type="number"
+            name="quantity"
+            value={input}
+            onChange={handleChange}
+            required
+          />
+          <h6>quantity</h6>
+        </div>
+        <div className="carShopping-total-div">
+          <h4>${(priceNum * input).toLocaleString("en-US")}</h4>
+          <h6>total</h6>
+        </div>
       </div>
-      <div className="carShopping-price-div">
-        <h4 className="carShopping-price">{price}</h4>
-        <h6>each</h6>
-      </div>
-      <div className="carShopping-quantity-div">
-        <input
-          type="number"
-          name="quantity"
-          value={input}
-          onChange={handleChange}
-          required
-        />
-        <h6>quantity</h6>
-      </div>
-      <div className="carShopping-total-div">
-        <h4>${(priceNum * input).toLocaleString("en-US")}</h4>
-        <h6>total</h6>
-      </div>
-      </div>
-      </div>
+    </div>
   );
 };
 
