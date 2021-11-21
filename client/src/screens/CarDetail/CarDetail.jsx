@@ -5,11 +5,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ImageSlider from "../../components/Slider/ImageSlider";
 import { addItem, updateQuantity } from "../../services/users";
-// import AOS from 'aos'
 
-// AOS.init(({
-//   duration: 1200,
-// }))
 
 
 const CarDetail = (props) => {

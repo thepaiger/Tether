@@ -79,6 +79,14 @@ const SignIn = ({ user, setUser }) => {
             </form>
           </div>
         </div>
+
+        <div className="sign-in-logo-div">
+          <img
+            className="sign-in-logo"
+            src="images/logoIcon.png"
+            alt="Tether Logo"
+          />
+        </div>
       </div>
     </Layout>
   );

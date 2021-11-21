@@ -21,15 +21,15 @@
 
 /* SET ACCOUNT INFO DIV SIZE/COLOR/DISPLAY */
 .account-info-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 450px;
   height: fit-content;
   box-sizing: border-box;
   border: solid 1px #625d5d;
   background-color: rgb(32, 33, 35, 0.85);
   box-shadow: 0 0 10px #4a4848;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* SET FORM DISPLAY */
@@ -121,6 +121,7 @@
 .account-sign-out-btn:active {
   transform: scale(1);
 }
+
 /* MEDIA QUERIES */
 @media only screen and (max-width: 480px) {
   /* SIGNUP DIV - set responsive width */

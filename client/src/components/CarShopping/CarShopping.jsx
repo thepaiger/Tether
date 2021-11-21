@@ -45,8 +45,6 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
   }
 
   return (
-    <div>
-      <hr className='carShopping-divider'/>
     <div className="carShopping">
       <div className="carShopping-remove-icon" onClick={remove}>
         <img
@@ -64,7 +62,7 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
       </div>
       <div className="carShopping-price-div">
         <h4 className="carShopping-price">{price}</h4>
-        <h6>each</h6>
+        <h6 className="carShopping-each">each</h6>
       </div>
       <div className="carShopping-quantity-div">
         <input
@@ -75,14 +73,14 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
             required
             className='quantity-input'
         />
-        <h6>quantity</h6>
       </div>
       <div className="carShopping-total-div">
-        <h4>${(priceNum * input).toLocaleString("en-US")}</h4>
-        <h6>total</h6>
+        <h4 className="carShopping-total-price">
+          ${(priceNum * input).toLocaleString("en-US")}
+        </h4>
+        <h6 className="carShopping-total">total</h6>
       </div>
-      </div>
-      </div>
+    </div>
   );
 };
 
