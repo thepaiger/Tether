@@ -101,7 +101,7 @@ const SignUp = ({ user, setUser }) => {
     <Layout user={user} setUser={setUser}>
       <div className="sign-up-background-img">
         <div className="sign-up-display-div">
-          <div className="sign-up-div">
+          <div className="sign-up-div" data-aos="zoom-in" data-aos-duration='500'>
             <form className="sign-up-form" onSubmit={(ev) => handleSubmit(ev)}>
               <h2>Create an Account</h2>
 

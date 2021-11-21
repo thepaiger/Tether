@@ -58,11 +58,11 @@ const CarDetail = ({ user, setUser }) => {
           <div className="car-detail-background">
 
             <div className="car-detail-header-div">
-              <div className="car-detail-main-image">
+              <div className="car-detail-main-image" data-aos="fade-right" data-aos-duration="600">
                 <img className="car-detail-image" src={car.image} alt={car.model} />
               </div>
 
-              <div className="car-detail-textblock-main">
+              <div className="car-detail-textblock-main" data-aos="fade-left" data-aos-duration="600">
                 <div className="car-detail-make-model">
                   {car.make} {car.model}
                 </div>
@@ -77,7 +77,6 @@ const CarDetail = ({ user, setUser }) => {
                   {`Charging Port Type:  ${car.connector}`}
                   <br />
                 </div>
-
                 {user ? <button className="button" onClick={handleButton}>
                   <div className="car-detail-icon">
                     <img
@@ -91,13 +90,13 @@ const CarDetail = ({ user, setUser }) => {
               </div>
             </div>
             <div className="car-detail-bio">
-              <div className="car-detail-info">
+              <div className="car-detail-info" data-aos="zoom-out" data-aos-duration="600">
                 {car.info}
               </div>
             </div>
           </div>
 
-          <div className="car-detail-gallery">
+          <div className="car-detail-gallery" >
             <ImageSlider car={car} />
           </div>
         </div>
@@ -107,3 +106,6 @@ const CarDetail = ({ user, setUser }) => {
 };
 
 export default CarDetail;
+
+
+//data-aos="fade-up" data-aos-duration="800"

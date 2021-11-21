@@ -55,7 +55,7 @@
 }
 
 .carShopping-quantity-div input {
-  text-align: center;
+  /* text-align: center; */
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;

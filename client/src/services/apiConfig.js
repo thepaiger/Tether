@@ -10,6 +10,7 @@ const api = axios.create({
   baseURL: process.env.NODE_ENV === 'production'
     ? 'https://tether-database.herokuapp.com/api'
     : 'https://tether-database.herokuapp.com/api'
+    // : 'http://localhost:3000/api'
 })
 
 api.interceptors.request.use(async (config) => {
