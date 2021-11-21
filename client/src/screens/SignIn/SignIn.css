@@ -124,19 +124,6 @@
   color: #e9e3d5;
 }
 
-/* // LOGO */
-.sign-in-logo-div {
-  /* display: flex; */
-  /* flex-direction: row-reverse; */
-  bottom: 160px;
-  z-index: 100;
-}
-
-.sign-in-logo {
-  height: 7vh;
-  width: 7vh;
-}
-
 /* MEDIA QUERIES */
 @media only screen and (max-width: 480px) {
   /* SIGNIN DIV - set responsive width */

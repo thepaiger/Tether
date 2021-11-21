@@ -136,9 +136,6 @@
   color: #e9e3d5;
 }
 
-.return-sign-in a:hover {
-}
-
 /* MEDIA QUERIES */
 @media only screen and (max-width: 480px) {
   /* SIGNUP BACKGROUND DIV */

@@ -99,7 +99,7 @@ export const verify = async (req, res) => {
 export const changePassword = async (req, res) => {
   try {
     const { id } = req.params
-    const {password, newPassword} = req.body
+    const { password, newPassword } = req.body
     const user = User.findById(id).select(
       'name email password_digest shopping_cart'
     )
@@ -157,7 +157,7 @@ export const getUser = async (req, res) => {
         shopping_cart: user.shopping_cart,
         exp: parseInt(exp.getTime() / 1000),
       }
-      
+
       const token = jwt.sign(payload, TOKEN_KEY)
       res.status(201).json({ token })
     }
@@ -167,9 +167,6 @@ export const getUser = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 }
-
-//new
-
 
 export const updateCartQuantity = async (req, res) => {
   try {
@@ -184,14 +181,13 @@ export const updateCartQuantity = async (req, res) => {
         shopping_cart: user.shopping_cart,
         exp: parseInt(exp.getTime() / 1000),
       }
-      
+
       const token = jwt.sign(payload, TOKEN_KEY)
       res.status(201).json({ token })
-      // res.status(201).json(user)
     }
   } catch (error) {
     console.log(error.message)
-    res.status(500).json({error: error.message})
+    res.status(500).json({ error: error.message })
   }
 }
 
@@ -210,10 +206,9 @@ export const addToCart = async (req, res) => {
       shopping_cart: user.shopping_cart,
       exp: parseInt(exp.getTime() / 1000),
     }
-    
+
     const token = jwt.sign(payload, TOKEN_KEY)
     res.status(201).json({ token })
-    // res.status(201).json(user)
   } catch (error) {
     console.error(error)
     res.status(500).json({ error: error.message })
@@ -233,7 +228,7 @@ export const removeFromCart = async (req, res) => {
       shopping_cart: user.shopping_cart,
       exp: parseInt(exp.getTime() / 1000),
     }
-    
+
     const token = jwt.sign(payload, TOKEN_KEY)
     res.status(201).json({ token })
     // res.status(201).json(user)
@@ -257,10 +252,9 @@ export const clearCart = async (req, res) => {
       shopping_cart: user.shopping_cart,
       exp: parseInt(exp.getTime() / 1000),
     }
-    
+
     const token = jwt.sign(payload, TOKEN_KEY)
     res.status(201).json({ token })
-    // res.status(201).json(user)
   } catch (error) {
     console.error(error)
     res.status(500).json({ error: error.message })

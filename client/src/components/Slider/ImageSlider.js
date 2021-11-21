@@ -5,7 +5,6 @@ import { Gallery, Item } from 'react-photoswipe-gallery'
 
 
 const ImageSlider = ({ car }) => {
-
   return (
     <div className="slider-div">
       <Gallery>
@@ -49,7 +48,6 @@ const ImageSlider = ({ car }) => {
             <img ref={ref} onClick={open} src={`/images/gallery-images/${car.model}/img-small4.png`} alt="image4" />
           )}
         </Item>
-   
         <Item
           original={`/images/gallery-images/${car.model}/img-big5.png`}
           thumbnail={`/images/gallery-images/${car.model}/img-small5.png`}
@@ -60,8 +58,6 @@ const ImageSlider = ({ car }) => {
             <img ref={ref} onClick={open} src={`/images/gallery-images/${car.model}/img-small5.png`} alt="image5" />
           )}
         </Item>
-
-        
       </Gallery>
     </div>
   );

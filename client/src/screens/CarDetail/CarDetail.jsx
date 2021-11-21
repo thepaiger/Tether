@@ -106,6 +106,3 @@ const CarDetail = ({ user, setUser }) => {
 };
 
 export default CarDetail;
-
-
-//data-aos="fade-up" data-aos-duration="800"

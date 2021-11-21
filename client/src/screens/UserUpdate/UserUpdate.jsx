@@ -36,7 +36,7 @@ const UserUpdate = ({ user, setUser }) => {
   }
 
 
-  //Update User Information
+  // Update User Information
   const handleSubmit = async (event) => {
     event.preventDefault();
 
