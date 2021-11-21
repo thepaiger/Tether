@@ -1,13 +1,64 @@
 /*CAR SHOPPING FLEX*/
 .carShopping {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  margin: 0 20px;
+  padding: 20px 0;
   border-top: 2px solid rgb(58, 57, 56);
 }
 
 .carShopping-image {
   width: 30vw;
+}
+
+.carShopping-details-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 150px;
+}
+
+.carShopping-name {
+  margin: 0;
+}
+
+.carShopping-price-div {
+}
+
+.carShopping-price {
+  margin: 0;
+}
+
+.carShopping-each {
+  margin: 10px 0 0 0;
+}
+
+.carShopping-quantity-div input {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #202123;
+  background-color: #f2f0ea;
+  border: solid 1px #625d5d;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 30px;
+  width: 40px;
+  padding: 0 0 0 10px;
+}
+
+.carShopping-total-div {
+}
+
+.carShopping-total-price {
+  margin: 0;
+}
+
+.carShopping-total {
+  margin: 10px 0 0 0;
 }

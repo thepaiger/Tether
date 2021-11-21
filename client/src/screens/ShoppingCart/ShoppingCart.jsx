@@ -29,7 +29,7 @@ const ShoppingCart = ({ user, setUser }) => {
         <div className="shopping-cart-display-div">
           <div className="shopping-cart-div">
             <div className="shopping-cart-header">
-              <h2>SHOPPING CART</h2>
+              <h2>GARAGE CONTENTS</h2>
               <button onClick={clear} className="shopping-cart-clear-btn">
                 Clear Cart
               </button>

@@ -40,11 +40,13 @@
   display: flex;
   justify-content: center;
 }
+
 /*CAR DISPLAY IMAGE*/
 .carDisplay-image {
   /* width: 500px; */
   width: 37vw;
 }
+
 /*CAR DISPLAY COLUMN*/
 .carDisplay-column {
   display: flex;
@@ -69,6 +71,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .carDisplay-price {
   margin: 0;
   font-weight: 300;
