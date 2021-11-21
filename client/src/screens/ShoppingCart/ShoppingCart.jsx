@@ -63,13 +63,6 @@ const ShoppingCart = ({ user, setUser }) => {
               <p>Total: ${user ? total : 0}</p>
             </div>
           </div>
-          {/* <div className="shopping-cart-logo-div">
-            <img
-              className="shopping-cart-logo"
-              src="images/logoIcon.png"
-              alt="Tether Logo"
-            />
-          </div> */}
         </div>
 
       </div>
