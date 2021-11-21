@@ -6,11 +6,11 @@ Tether is an application dedicated to high-performance, luxury, electric sports 
 
 ## Team Members
 
-- Darryl Falls (GitHub: DarrylFalls)
-- Mike Nezzer (GitHub: mnezz113)
-- Paige Hoeppner (GitHub: thepaiger)
-- Tyrus Henry (GitHub: TyrusHenry0x)
-- Brianna Groden (GitHub: bgcuse603)
+- Darryl Falls <a href="https://github.com/DarrylFalls"> (GitHub: DarrylFalls)</a>
+- Mike Nezzer <a href="https://github.com/mnezz1131">(GitHub: mnezz113)</a>
+- Paige Hoeppner <a href="https://github.com/thepaiger"> (GitHub: thepaiger) </a>
+- Tyrus Henry <a href="https://github.com/TyrusHenry0x">(GitHub: TyrusHenry0x) </a>
+- Brianna Groden <a href="https://github.com/thepaiger">(GitHub: bgcuse603)</a>
 
 ## Wireframe
 
