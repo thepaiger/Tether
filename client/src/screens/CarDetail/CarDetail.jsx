@@ -83,7 +83,7 @@ const CarDetail = (props) => {
                   <br />
                 </div>
             
-                <button className="button" onClick={handleButton}>
+                {props.user ? <button className="button" onClick={handleButton}>
                   <div className="car-detail-icon">
                     <img
                       className="image-detail"
@@ -92,7 +92,7 @@ const CarDetail = (props) => {
                     />
                   </div>
                   Add to Cart
-                </button>
+                </button> : null}
               </div>
             </div>
             <div className="car-detail-bio">
@@ -102,7 +102,7 @@ const CarDetail = (props) => {
             </div>
           </div>
 
-          <div className="car-detail-gallery" data-aos="fade-up" data-aos-duration="800">
+          <div className="car-detail-gallery" >
             <ImageSlider car={car} />
           </div>
         </div>
@@ -112,3 +112,6 @@ const CarDetail = (props) => {
 };
 
 export default CarDetail;
+
+
+//data-aos="fade-up" data-aos-duration="800"

@@ -17,14 +17,19 @@ const Cars = (props) => {
   return (
     <Layout user={props.user} setUser={props.setUser}>
       <div className="cars-background-img">
-        <div className="cars">
+        {cars.length > 0 ?
+          <div className="cars">
           {cars.map((car, index) => {
             return <CarDisplay
               car={car}
               key={index}
             />;
           })}
-        </div>
+          </div> 
+          :
+          <div className='cars-loading-div'>
+            Loading...
+          </div>}
         </div>
     </Layout>
   );

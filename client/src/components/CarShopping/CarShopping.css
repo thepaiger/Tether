@@ -37,3 +37,18 @@
   display: flex;
   flex-direction: column;
 } */
+
+@media only screen and (max-width: 900px) {
+  .carShopping {
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+
+  .carShopping-image {
+    width: 70vw;
+  }
+
+  .carShopping-remove-icon {
+    order: 2;
+  }
+}
