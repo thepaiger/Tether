@@ -1,19 +1,13 @@
-
+/*CAR SHOPPING FLEX*/
 .carShopping {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  align-content: center;
+  width: 100%;
+  padding: 20px;
+  border-top: 2px solid rgb(58, 57, 56);
 }
 
 .carShopping-image {
   width: 30vw;
 }
-
-.carShopping-divider {
-  background:red,
-}
-
-/* .carShopping-remove-icon {
-  justify-self: center;
-} */
