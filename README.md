@@ -10,7 +10,7 @@ Tether is an application dedicated to high-performance, luxury, electric sports 
 - Mike Nezzer <a href="https://github.com/mnezz1131">(GitHub: mnezz113)</a>
 - Paige Hoeppner <a href="https://github.com/thepaiger"> (GitHub: thepaiger) </a>
 - Tyrus Henry <a href="https://github.com/TyrusHenry0x">(GitHub: TyrusHenry0x) </a>
-- Brianna Groden <a href="https://github.com/thepaiger">(GitHub: bgcuse603)</a>
+- Brianna Groden <a href="https://github.com/bgcuse603">(GitHub: bgcuse603)</a>
 
 ## Wireframe
 
