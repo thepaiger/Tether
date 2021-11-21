@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { removeItem, updateQuantity } from "../../services/users";
 
 
-const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser, shoppingCart }) => {
+const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser }) => {
   const [input, setInput] = useState('')
 
   useEffect(() => {

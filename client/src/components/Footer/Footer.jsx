@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="small-logo-div">
         <img
           className="small-logo"
-          src="images/logoIcon.png"
+          src="/images/logoIcon.png"
           alt="Tether Logo"
         />
       </div>
