@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { removeItem, updateQuantity } from "../../services/users";
 
 
-const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser, shoppingCart }) => {
+const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser }) => {
   const [input, setInput] = useState('')
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
   }
 
   return (
-    <div className="carShopping">
+    <div className="carShopping" data-aos='fade-down' data-aos-delay={idx < 4 ? `${idx*200}` : '0'}>
       <div className="carShopping-remove-icon" onClick={remove}>
         <img
           src={"/images/icons/bag-dash-fill.svg"}

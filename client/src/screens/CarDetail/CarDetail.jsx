@@ -7,8 +7,7 @@ import ImageSlider from "../../components/Slider/ImageSlider";
 import { addItem, updateQuantity } from "../../services/users";
 
 
-
-const CarDetail = (props) => {
+const CarDetail = ({ user, setUser }) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
@@ -27,17 +26,17 @@ const CarDetail = (props) => {
   }
 
   const handleButton = async () => {
-    const cartItem = props.user.shopping_cart.find(item => item.car_id === car._id)
+    const cartItem = user.shopping_cart.find(item => item.car_id === car._id)
     if (cartItem) {
       const oldQuantity = (cartItem.quantity)
       const newQuantity = oldQuantity + 1
-      const itemIndex = props.user.shopping_cart.findIndex(item => item.car_id === car._id)
+      const itemIndex = user.shopping_cart.findIndex(item => item.car_id === car._id)
       const data = {
         "quantity": newQuantity,
         "idx": itemIndex
       }
-      const updatedUser = await updateQuantity(props.user._id, data)
-      props.setUser(updatedUser)
+      const updatedUser = await updateQuantity(user._id, data)
+      setUser(updatedUser)
     } else {
       const newCar = {
         car: `${car.make} ${car.model}`,
@@ -47,23 +46,23 @@ const CarDetail = (props) => {
         priceNum: car.priceNum,
         image: `${car.image}`
       }
-      const addCar = await addItem(props.user._id, newCar)
-      props.setUser(addCar)
+      const addCar = await addItem(user._id, newCar)
+      setUser(addCar)
     }
   }
 
   return (
-    <Layout user={props.user} setUser={props.setUser}>
+    <Layout user={user} setUser={setUser}>
       <div className="car-detail-background-img">
         <div className="car-detail-container">
           <div className="car-detail-background">
 
             <div className="car-detail-header-div">
-              <div className="car-detail-main-image" data-aos="fade-right" data-aos-duration="800">
+              <div className="car-detail-main-image" data-aos="fade-right" data-aos-duration="600">
                 <img className="car-detail-image" src={car.image} alt={car.model} />
               </div>
 
-              <div className="car-detail-textblock-main" data-aos="fade-left" data-aos-duration="800">
+              <div className="car-detail-textblock-main" data-aos="fade-left" data-aos-duration="600">
                 <div className="car-detail-make-model">
                   {car.make} {car.model}
                 </div>
@@ -78,8 +77,7 @@ const CarDetail = (props) => {
                   {`Charging Port Type:  ${car.connector}`}
                   <br />
                 </div>
-            
-                {props.user ? <button className="button" onClick={handleButton}>
+                {user ? <button className="button" onClick={handleButton}>
                   <div className="car-detail-icon">
                     <img
                       className="image-detail"
@@ -92,7 +90,7 @@ const CarDetail = (props) => {
               </div>
             </div>
             <div className="car-detail-bio">
-              <div className="car-detail-info" data-aos="zoom-out" data-aos-duration="800">
+              <div className="car-detail-info" data-aos="zoom-out" data-aos-duration="600">
                 {car.info}
               </div>
             </div>
