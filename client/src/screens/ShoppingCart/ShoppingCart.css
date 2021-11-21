@@ -98,53 +98,16 @@
 .shopping-cart-total {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   width: 100%;
   height: fit-content;
+  border-top: 2px solid rgb(58, 57, 56);
+  padding: 20px 0 0 0;
 }
 
 .shopping-cart-total p {
   margin: 0;
-}
-
-/* .cart-title-div {
-  font-size: 40px;
-  text-transform: uppercase;
-  font-style: italic;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
-  padding: 0 80px 0 0;
+  font-style: italic;
 }
-
-.shopping-cart-logo-div {
-  display: flex;
-  flex-direction: row-reverse;
-}
-
-.shopping-cart-logo {
-  height: 7vh;
-  width: 7vh;
-}
-
-.shopping-cart-top-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.clear-button {
-  height: 30px;
-  width: 100px;
-  font-weight: bold;
-  font-size: 17px;
-}
-
-.empty-cart-div {
-  font-size: 100px;
-  opacity: 0.5;
-  text-align: center;
-}
-
-.total-div {
-  font-size: 30px;
-} */
