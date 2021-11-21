@@ -8,6 +8,14 @@ const Footer = () => {
       <a className="footer-github" href="https://github.com/DarrylFalls/Tether">
         <img src={'/images/icons/github.svg'} alt='github link'></img>
       </a>
+
+      <div className="small-logo-div">
+        <img
+          className="small-logo"
+          src="images/logoIcon.png"
+          alt="Tether Logo"
+        />
+      </div>
     </footer >
   )
 }
