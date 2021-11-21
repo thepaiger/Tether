@@ -36,8 +36,8 @@ const SignIn = ({ user, setUser }) => {
   return (
     <Layout user={user} setUser={setUser}>
       <div className="sign-in-background-img">
-        <div className="sign-in-display-div">
-          <div className="sign-in-div">
+        <div className="sign-in-display-div" >
+          <div className="sign-in-div" data-aos="zoom-in" data-aos-duration='500'>
             <form className="sign-in-form" onSubmit={(ev) => handleSubmit(ev)}>
               <h2>Sign In</h2>
 

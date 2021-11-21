@@ -2,15 +2,15 @@
 
 ## Overview
 
-Tether is an e-Commerce application dedicated to high-performance, luxury, electric sports cars or supercars. Browse the site to see beautiful vehicles that are both high-tech and good for the environment. Our goal is to streamline access to purchasing environmentally-friendly supercars.
+Tether is an application dedicated to high-performance, luxury, electric sports cars or supercars. Browse the site to see beautiful vehicles that are both high-tech and good for the environment. Our goal is to streamline access to purchasing environmentally-friendly supercars.
 
 ## Team Members
 
-- Darryl Falls (GitHub: DarrylFalls)
-- Mike Nezzer (GitHub: mnezz113)
-- Paige Hoeppner (GitHub: thepaiger)
-- Tyrus Henry (GitHub: TyrusHenry0x)
-- Brianna Groden (GitHub: bgcuse603)
+- Darryl Falls <a href="https://github.com/DarrylFalls"> (GitHub: DarrylFalls)</a>
+- Mike Nezzer <a href="https://github.com/mnezz1131">(GitHub: mnezz113)</a>
+- Paige Hoeppner <a href="https://github.com/thepaiger"> (GitHub: thepaiger) </a>
+- Tyrus Henry <a href="https://github.com/TyrusHenry0x">(GitHub: TyrusHenry0x) </a>
+- Brianna Groden <a href="https://github.com/bgcuse603">(GitHub: bgcuse603)</a>
 
 ## Wireframe
 
@@ -23,13 +23,15 @@ Figma Project Page: https://www.figma.com/file/hL5hx1s2vx825bTnfZORZS/Project-3?
 
 ## Component Hierarchy
 
-<a href="https://imgur.com/i0yNcmZ"><img src="https://i.imgur.com/i0yNcmZ.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/jnhI6Wt"><img src="https://i.imgur.com/jnhI6Wt.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/ONUmDv8"><img src="https://i.imgur.com/ONUmDv8.jpg" title="source: imgur.com" /></a>
 
-Whimsical Flowchart: https://whimsical.com/componentstructurerev01-Wufbh6jN6k2we83hzLuJLb
+Whimsical Flowchart: https://whimsical.com/component-structure-rev02-DeGAGrUok3WdBKcbNw7LZ6
 
 ## Schema
 
-<a href="https://imgur.com/gd38Vdt"><img src="https://i.imgur.com/gd38Vdt.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/LIubaTj"><img src="https://i.imgur.com/LIubaTj.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/UlL6NTH"><img src="https://i.imgur.com/UlL6NTH.jpg" title="source: imgur.com" /></a>
 
 ## Team Expectations
 
@@ -50,7 +52,7 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 - Sign In
 - Sign Up ("Create an Account")
 - User Account ("Account Info")
-- User Account (Edit Info)
+- User Update (Edit Info)
 - Browse Cars
 - Car Detail
 
@@ -87,14 +89,14 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 
 ## Project Schedule
 
-| Day         | Deliverable                                                                 | Status      |
-| ----------- | --------------------------------------------------------------------------- | ----------- |
-| Nov 10      | Concept Approval, GitHub Setup, Development of "Team Expectations" document | Complete    |
-| Nov 11      | Wireframes and Component Struture                                           | Complete    |
-| Nov 12      | Project Approval                                                            | Complete    |
-| Nov 13 - 14 | Back End Development                                                        | Complete    |
-| Nov 15 - 16 | Front End and Authentication                                                | In-Progress |
-| Nov 17      | Debugging                                                                   | In-Progress |
-| Nov 18 - 19 | Styling                                                                     | In-Progress |
-| Nov 20 - 21 | Testing and Documentation update                                            | In-Progress |
-| Nov 22      | Presentation                                                                | Incomplete  |
+| Day         | Deliverable                                                                 | Status     |
+| ----------- | --------------------------------------------------------------------------- | ---------- |
+| Nov 10      | Concept Approval, GitHub Setup, Development of "Team Expectations" document | Complete   |
+| Nov 11      | Wireframes and Component Struture                                           | Complete   |
+| Nov 12      | Project Approval                                                            | Complete   |
+| Nov 13 - 14 | Back End Development                                                        | Complete   |
+| Nov 15 - 16 | Front End and Authentication                                                | Complete   |
+| Nov 17      | Debugging                                                                   | Complete   |
+| Nov 18 - 19 | Styling                                                                     | Complete   |
+| Nov 20 - 21 | Testing and Documentation update                                            | Complete   |
+| Nov 22      | Presentation                                                                | Incomplete |

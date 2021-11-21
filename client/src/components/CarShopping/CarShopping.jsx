@@ -1,80 +1,52 @@
 import "./CarShopping.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { verifyUser, updateUser } from "../../services/users";
+import { removeItem, updateQuantity } from "../../services/users";
 
 
-const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser, shoppingCart }) => {
+const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, user, idx, setUser }) => {
   const [input, setInput] = useState('')
-  // const [shoppingCart, setShoppingCart] = useState([])
 
-  useEffect((quantity) => {
+  useEffect(() => {
     const resetInput = () => {
       setInput(quantity)
     }
-
-    // setShoppingCart(user.shopping_cart)
     resetInput()
-  }, [])
-
-  // const getTotal = () => {
-  //   let total = priceNum * quantity;
-  //   return `${total}`;
-  // }
-
-
+  }, [user])
 
   const getInput = (ev) => {
     setInput(ev.target.value)
   }
 
   const remove = async () => {
-    const tempCart = shoppingCart
-    tempCart.splice(idx, 1)
-    const newCart = {
-      "shopping_cart": tempCart
+    const index = {
+      "idx": idx
     }
-    await updateUser(`${user._id}`, newCart)
-    const updatedUser = await verifyUser()
+    const updatedUser = await removeItem(user._id, index)
     setUser(updatedUser)
   }
 
-  // const changeUser = (ev) => {
-  //   shoppingCart[idx-1].quantity = ev
-  // }
-
-  // const newFunc = async () => {
-  //   const form = {
-  //     "shopping_cart": []
-  //   }
-  //   await updateUser(user._id, form)
-  // }
-
   const editCart = async (ev) => {
-    // const tempCart = shoppingCart
-    // tempCart[idx].quantity = ev
-    // changeUser(ev)
-    const newQuantity = {
-      "quantity": `${ev}`
+    const data = {
+      "quantity": ev,
+      "idx": idx
     }
-    await updateUser(user._id, newQuantity)
-    // newFunc()
-    const updatedUser = await verifyUser()
+    const updatedUser = await updateQuantity(user._id, data)
     setUser(updatedUser)
   }
 
   const handleChange = (ev) => {
     getInput(ev)
-    if (ev === 0) {
+    if (ev.target.value === "0") {
       remove()
     } else {
-      editCart(ev)
+      editCart(ev.target.value)
     }
   }
 
   return (
-    <div className="carShopping">
-      <div className="carShopping-remove-icon">
+    <div className="carShopping" data-aos='fade-down' data-aos-delay={idx < 4 ? `${idx*200}` : '0'}>
+      <div className="carShopping-remove-icon" onClick={remove}>
         <img
           src={"/images/icons/bag-dash-fill.svg"}
           alt="remove from cart"
@@ -90,7 +62,7 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
       </div>
       <div className="carShopping-price-div">
         <h4 className="carShopping-price">{price}</h4>
-        <h6>each</h6>
+        <h6 className="carShopping-each">each</h6>
       </div>
       <div className="carShopping-quantity-div">
         <input
@@ -98,15 +70,16 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
           name="quantity"
           value={input}
           onChange={handleChange}
-          required
+            required
+            className='quantity-input'
         />
-        <h6>quantity</h6>
       </div>
       <div className="carShopping-total-div">
-        <h4>${priceNum * input}</h4>
-        <h6>total</h6>
+        <h4 className="carShopping-total-price">
+          ${(priceNum * input).toLocaleString("en-US")}
+        </h4>
+        <h6 className="carShopping-total">total</h6>
       </div>
-
     </div>
   );
 };

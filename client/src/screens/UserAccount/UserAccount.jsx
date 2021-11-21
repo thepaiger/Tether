@@ -17,7 +17,7 @@ const UserAccount = ({ user, setUser }) => {
     <Layout user={user} setUser={setUser}>
       <div className="account-background-img">
         <div className="account-display-div">
-          <div className="account-info-div">
+          <div className="account-info-div" data-aos="zoom-in" data-aos-duration='500'>
             <div className="account-form">
               <h2>Account Info</h2>
 

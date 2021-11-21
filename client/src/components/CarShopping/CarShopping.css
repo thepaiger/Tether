@@ -1,0 +1,138 @@
+/*CAR SHOPPING FLEX*/
+.carShopping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 20px;
+  padding: 20px 0;
+  border-top: 2px solid rgb(58, 57, 56);
+}
+
+.carShopping-remove-icon {
+  margin: 0 0 0 15px;
+}
+
+.carShopping-remove-icon:hover {
+  filter: invert(67%) sepia(31%) saturate(6368%) hue-rotate(179deg)
+    brightness(101%) contrast(91%);
+  cursor: pointer;
+}
+
+.carShopping-image {
+  width: 30vw;
+}
+
+.carShopping-details-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 150px;
+}
+
+.carShopping-name {
+  margin: 0;
+  font-size: 22px;
+}
+
+.carShopping-price-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 95px;
+}
+
+.carShopping-price {
+  margin: 0;
+  font-weight: 400;
+}
+
+.carShopping-each {
+  margin: 10px 0 0 0;
+  font-weight: 400;
+}
+
+.carShopping-quantity-div input {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #202123;
+  background-color: #f2f0ea;
+  border: solid 1px #625d5d;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 30px;
+  width: 55px;
+  padding: 0 0 0 10px;
+}
+
+.carShopping-total-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 95px;
+  margin: 0 15px 0 0;
+}
+
+.carShopping-total-price {
+  margin: 0;
+  font-weight: 400;
+}
+
+.carShopping-total {
+  margin: 10px 0 0 0;
+  font-weight: 400;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 975px) {
+  .carShopping {
+    flex-direction: column;
+  }
+
+  .carShopping-remove-icon {
+    display: none;
+  }
+
+  .carShopping-image {
+    width: 60vw;
+  }
+
+  .carShopping-details-div {
+    margin: 15px 0;
+  }
+
+  .carShopping-name {
+    font-size: 24px;
+  }
+
+  .carShopping-price-div {
+    align-items: center;
+  }
+
+  .carShopping-price,
+  .carShopping-total-price {
+    font-size: 18px;
+  }
+
+  .carShopping-each,
+  .carShopping-total {
+    font-size: 14px;
+  }
+
+  .carShopping-quantity-div {
+    margin: 15px 0;
+  }
+
+  .carShopping-quantity-div input {
+    padding: 0;
+  }
+
+  .carShopping-total-div {
+    align-items: center;
+    margin: 0;
+  }
+}
