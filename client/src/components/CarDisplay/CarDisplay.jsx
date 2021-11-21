@@ -29,6 +29,3 @@ const CarDisplay = ({ car }) => {
   );
 };
 export default CarDisplay;
-
-// data-aos='fade-down' data-aos-offset="300"
-//  data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement='center-bottom' data-aos-offset={window.innerWidth > 450 ? "150" : "100"}
