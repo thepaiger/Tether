@@ -4,6 +4,10 @@
 
 Tether is an application dedicated to high-performance, luxury, electric sports cars or supercars. Browse the site to see beautiful vehicles that are both high-tech and good for the environment. Our goal is to streamline access to purchasing environmentally-friendly supercars.
 
+## Live Site
+
+- https://tether-supercars.netlify.app
+
 ## Team Members
 
 - Darryl Falls <a href="https://github.com/DarrylFalls"> (GitHub: DarrylFalls)</a>
@@ -100,3 +104,8 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 | Nov 18 - 19 | Styling                                                                     | Complete   |
 | Nov 20 - 21 | Testing and Documentation update                                            | Complete   |
 | Nov 22      | Presentation                                                                | Incomplete |
+
+
+## Resources
+
+- <a href='https://docs.google.com/spreadsheets/d/1YgD4y1NR6KrtdkBQUNngejY7v4_OrXmnr01ufn6SJP0/edit#gid=0'>Resources Document</a>
