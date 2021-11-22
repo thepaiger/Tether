@@ -7,16 +7,16 @@ Tether is an application dedicated to high-performance, luxury, electric sports 
 ## Team Members
 
 - Darryl Falls <a href="https://github.com/DarrylFalls"> (GitHub: DarrylFalls)</a>
-- Mike Nezzer <a href="https://github.com/mnezz1131">(GitHub: mnezz113)</a>
+- Mike Nezzer <a href="https://github.com/mnezz1131">(GitHub: mnezz1131)</a>
 - Paige Hoeppner <a href="https://github.com/thepaiger"> (GitHub: thepaiger) </a>
 - Tyrus Henry <a href="https://github.com/TyrusHenry0x">(GitHub: TyrusHenry0x) </a>
 - Brianna Groden <a href="https://github.com/bgcuse603">(GitHub: bgcuse603)</a>
 
 ## Wireframe
 
-<a href="https://imgur.com/Hr9zLit"><img src="https://i.imgur.com/Hr9zLit.jpg" title="source: imgur.com" /></a>
-<a href="https://imgur.com/yhnwyPy"><img src="https://i.imgur.com/yhnwyPy.jpg" title="source: imgur.com" /></a>
-<a href="https://imgur.com/5xK8WIv"><img src="https://i.imgur.com/5xK8WIv.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/zPotYhO"><img src="https://i.imgur.com/zPotYhO.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/MmGsqp2"><img src="https://i.imgur.com/MmGsqp2.jpg" title="source: imgur.com" /></a>
+<a href="https://imgur.com/RTUtqAn"><img src="https://i.imgur.com/RTUtqAn.jpg" title="source: imgur.com" /></a>
 
 To view complete project wireframes please visit,
 Figma Project Page: https://www.figma.com/file/hL5hx1s2vx825bTnfZORZS/Project-3?node-id=0%3A1
