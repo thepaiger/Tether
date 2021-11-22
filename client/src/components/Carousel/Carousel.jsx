@@ -1,73 +1,49 @@
-// import React from "react"
-// import { useState } from "react"
-// import { NavLink } from "react-router-dom";
-// import './Carousel.css'
-
-// function ControlledCarousel() {
-//   const [index, setIndex] = useState(0);
-
-//   const handleSelect = (selectedIndex, e) => {
-//     setIndex(selectedIndex);
-//   };
-
-//   return (
-//     <Carousel activeIndex={index} onSelect={handleSelect}>
-//       <Carousel.Item interval={4500}>
-//         <img
-//           className="d-block w-100"
-//           src="images/cars/rimac-home-page.jpeg"
-//         />
+import { useEffect, useState } from "react"
+import './Carousel.css'
 
 
-//         <Carousel.Caption>
-//           <div className="home-logo">
-//             <img src={'/images/logo.png'} alt="Logo" className="home-logo" />
-//             <p>Your one-stop shop for Electric Supercars</p>
 
-//           </div>
-//         </Carousel.Caption>
+const ControlledCarousel = ({children}) => {
+  const [count, setCount] = useState(1)
 
-//         <Carousel.Caption>
-//           <div className='welcome-browse'>
-//             <h1>WELCOME TO THE FUTURE</h1>
-//             <NavLink to="/cars">Browse Inventory</NavLink>
 
-//           </div>
-//         </Carousel.Caption>
+  
+  const changeCount = () => {
+    if (count === 1) {
+      setCount(2)
+    } else if (count === 2) {
+      setCount(3)
+    } else if (count === 3) {
+      setCount(1)
+    }
+  }
 
-//       </Carousel.Item >
-//       <Carousel.Item interval={4500}>
-//         <img
-//           className="d-block w-100"
-//           src="images/cars/vanda-dendrobium-006-1501514776.jpg"
-//           alt="Second slide"
-//         />
+  useEffect(() => {
+    setTimeout(() => {
+      changeCount()
+    }, 2000)
+  })
 
-//         <Carousel.Caption>
-//           <div className='welcome-browse'>
-//             <h1>WELCOME TO THE FUTURE</h1>
-//             <NavLink to="/cars">Browse Inventory</NavLink>
-//           </div>
-//         </Carousel.Caption>
-//       </Carousel.Item>
+  return (
+    <div className='carousel-display-div'>
+      <div className="carousel-children">
+        {children}
+      </div>
+      <div className='img1-div image-div'>
+        <img src='/images/backgrounds/2021-porsche-taycan.jpeg' alt='taycan' className='img1' className='img'/>
+      </div>
+      <div className='img2-div image-div'>
+        <img src='/images/backgrounds/lamborghini-terzo-millennio.jpg' alt='terzo' className='img2' className='img'/>
+      </div>
+      <div className='img3-div image-div'>
+        <img src='/images/backgrounds/rimac-home-page.jpeg' alt='nevera' className='img3' className='img'/>
+      </div>
+    </div>
+  )
+}
 
-//       <Carousel.Item interval={4500}>
-//         <img
-//           className="d-block w-100"
-//           src="images/cars/nio_ep9_electric_supercar-2560x1440.jpg"
-//           alt="Third slide"
-//         />
+export default ControlledCarousel
 
-//         <Carousel.Caption>
-//           <div className='welcome-browse'>
-//             <h1>WELCOME TO THE FUTURE</h1>
-//             <NavLink to="/cars">Browse Inventory</NavLink>
-//           </div>
-//         </Carousel.Caption>
-//       </Carousel.Item>
-//     </Carousel>
-//   );
-// }
-
-// export default ControlledCarousel
-
+// /images/backgrounds/2021-porsche-taycan.jpeg
+// /images/backgrounds/lamborghini-terzo-millennio.jpg
+// /images/backgrounds/rimac-home-page.jpeg
