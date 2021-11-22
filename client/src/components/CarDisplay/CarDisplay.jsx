@@ -1,16 +1,20 @@
 import { Link } from "react-router-dom";
 import "./CarDisplay.css";
+import AOS from 'aos'
+
+AOS.init(({
+  duration: 1200,
+}))
 
 const CarDisplay = ({ car }) => {
 
   return (
-    <div className="carDisplay">
+    <div className="carDisplay" >
       <Link className="card" to={`/cars/${car._id}`}>
-        <div className="carDisplay-header" >
+        <div className="carDisplay-header" data-aos="fade-right" data-aos-duration="800" data-aos-anchor-placement='center-bottom' data-aos-offset={window.innerWidth > 450 ? "150" : "300"} >
           <img className="carDisplay-image" src={car.image} alt={car.model} />
         </div>
-
-        <div className="carDisplay-column">
+        <div className="carDisplay-column" data-aos="fade-left" data-aos-duration="700" data-aos-anchor-placement='center-bottom' data-aos-offset={window.innerWidth > 450 ? "150" : "200"}>
           <div className="carDisplay-make-icon">
             <h3 className="carDisplay-make">
               {car.make} {car.model}
@@ -18,7 +22,7 @@ const CarDisplay = ({ car }) => {
           </div>
 
           <h3 className="carDisplay-price">{car.price}</h3>
-          <p className="carDisplay-info">{car.info.substring(0, 200)}...</p>
+          <p className="carDisplay-info">{window.innerWidth > 900 ? car.info.substring(0, 200) : car.info.substring(0, 100)}...</p>
         </div>
       </Link>
     </div>

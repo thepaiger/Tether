@@ -26,7 +26,7 @@ const App = () => {
   }, [])
 
   return (
-    <div className="App">
+    <div className="app">
       <Routes>
         <Route exact path="/" element={<Home user={user} setUser={setUser} />} />
         <Route path="/signIn" element={<SignIn setUser={setUser} />} />

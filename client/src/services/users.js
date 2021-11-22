@@ -19,7 +19,6 @@ export const signIn = async (credentials) => {
     const user = jwtDecode(resp.data.token)
     return user
   } catch (error) {
-    // throw error
     return error
   }
 }
@@ -70,8 +69,6 @@ export const getUser = async id => {
     throw error
   }
 }
-
-//new
 
 export const addItem = async (userId, data) => {
   try {
