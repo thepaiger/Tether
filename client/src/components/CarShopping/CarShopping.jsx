@@ -45,7 +45,7 @@ const CarShopping = ({ car, car_id, price, priceNum, item_id, quantity, image, u
   }
 
   return (
-    <div className="carShopping" data-aos='fade-down' data-aos-delay={idx < 4 ? `${idx*200}` : '0'}>
+    <div className="carShopping" data-aos='fade-down' data-aos-delay={idx < 3 ? `${idx*200}` : '0'}>
       <div className="carShopping-remove-icon" onClick={remove}>
         <img
           src={"/images/icons/bag-dash-fill.svg"}

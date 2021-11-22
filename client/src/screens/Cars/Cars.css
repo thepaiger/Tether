@@ -5,7 +5,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  height: fit-content;
   padding: 50px;
   box-sizing: border-box;
   height: calc(100% - 70px - 80px);
