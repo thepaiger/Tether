@@ -103,7 +103,7 @@ Google Documents Site: https://docs.google.com/document/d/1WIVd730eglJfuX89WsNf0
 | Nov 17      | Debugging                                                                   | Complete   |
 | Nov 18 - 19 | Styling                                                                     | Complete   |
 | Nov 20 - 21 | Testing and Documentation update                                            | Complete   |
-| Nov 22      | Presentation                                                                | Incomplete |
+| Nov 22      | Presentation                                                                | Complete   |
 
 
 ## Resources
